@@ -106,7 +106,7 @@ Responsive media queries
 }
 .overlay-detail a i {
     text-align: center;
-    position: absolute;
+    position: relative;
     bottom: -140px;
     font-size: 24px;
     color: #fff;
@@ -134,9 +134,10 @@ Responsive media queries
 	margin-bottom: 50px;
 }
 .title-text{
-	padding: 0px 25px 0px 0px;
+	padding: 0;
 	font-size: 24px;
-    letter-spacing: 5px;
+    letter-spacing: 50px;
+    text-align: justify;
 }
 .about-text p{
 	color: #444;

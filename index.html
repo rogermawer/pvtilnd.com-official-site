@@ -71,11 +71,11 @@
         
         $(document).ready(function(){
             $(".projects img").hover(function(){
-                $(this).addClass("projects-img")
-                $(".website-name").show();
+                $(this).addClass("projects-img").next().show();
+                
             }, function(){
-                $(this).removeClass("projects-img")
-                $(".website-name").hide();
+                $(this).removeClass("projects-img").next().hide();
+                
             }
                 );
         });
@@ -124,8 +124,10 @@
           <div class="row">
             <div class="col-md-12 wow fadeIn delay-05s">
               <div class="banner-text">
-                <h2 class="title-text">Roger Mawer</h2>
-                <p class="title-text" style="font-size: 20px">Web Design</p>
+                <h2 class="title-text text-center">Roger Mawer</h2>
+                <!--
+                  <p class="text-center" style="font-size: 20px;letter-spacing: 5px">Web Design</p>
+-->
               </div>
               <div class="overlay-detail text-center">
                   <a href="#about"><i class="fa fa-angle-down"></i></a>
@@ -173,34 +175,33 @@
             <div class="col-md-12">
               <div id="myGrid" class="grid-padding">
                 <div class="row">
-                  <div class="col-md-4 col-sm-4 padding-right-zero projects">
+                  <div class="col-md-4 col-sm-4 padding-right-zero">
                     
                     <div class="projects">  
-                    <img src="/img/wisemind-landscape.PNG" class="img-responsive">
+                        <img src="/img/wisemind-landscape.PNG" class="img-responsive">
                         <div class="website-name">WISEMINDMUSIC.COM</div>
-                      </div>
-                    <img src="img/port01.jpg" class="img-responsive">
-                    <img src="img/port02.jpg" class="img-responsive">
-                    <img src="img/portfolio01.jpg" class="img-responsive">
-                  </div>
+                    </div>
+                   
+                    </div> 
+                  
+                    
                   <div class="col-md-4 col-sm-4 padding-right-zero">
                     
                       <div class="projects">
-                      <img src="img/books.jpg" class="img-responsive">
-                          <div class="website-name">BOOKGALFROMCAL</div>
-                      </div>
-                    <img src="img/portfolio02.jpg" class="img-responsive">
-                    <img src="img/port02.jpg" class="img-responsive">
-                    <img src="img/portfolio01.jpg" class="img-responsive">
-                    <img src="img/port03.jpg" class="img-responsive">
-                  </div>
+                        <img src="img/books.jpg" class="img-responsive">
+                        <div class="website-name">BOOKGALFROMCAL</div>
+                        </div>
+                    
+                    </div>
+                      
+                  
                   <div class="col-md-4 col-sm-4 padding-right-zero">
-                    <img src="img/port01.jpg" class="img-responsive">
-                    <img src="img/portfolio01.jpg" class="img-responsive">
-                    <img src="img/portfolio02.jpg" class="img-responsive">
-                    <img src="img/port03.jpg" class="img-responsive">
-                    <img src="img/portfolio02.jpg" class="img-responsive">
-                    <img src="img/port02.jpg" class="img-responsive">
+                       <div class="projects">
+                        <img src="img/port01.jpg" class="img-responsive">
+                        <div class="website-name"></div>
+                        </div>
+                     
+                    
                   </div>
                 </div>
               </div>
