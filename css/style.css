@@ -8,8 +8,8 @@
 body, html {height:100%}
 body {
 	line-height: 1.4;
-	font-family: 'Roboto', sans-serif;
     font-size: 18px;
+    font-family: 'Nunito', sans-serif;
     letter-spacing: 0.5px;
     font-size: 15px;
 	font-weight: 400;
@@ -83,7 +83,7 @@ Responsive media queries
 }
 
 .bg-color{
-	background-color: RGBA(0, 0, 0, 0.67);
+	background-color: RGBA(0, 0, 0, 0.6);
 	height: 100%;
 }
 .navbar-border{
@@ -91,7 +91,7 @@ Responsive media queries
 .banner-text{
 	padding: 15px 40px;
 	color: #fff;
-	margin-top: 170px;
+	margin-top: 300px;
 }
 .banner-text h2, .banner-text p{
 	font-size: 40px;
@@ -138,6 +138,7 @@ Responsive media queries
 	font-size: 24px;
     letter-spacing: 40px;
     text-align: justify;
+    font-weight:bold;
 
 }
 .about-text p{
