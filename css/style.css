@@ -107,7 +107,7 @@ Responsive media queries
 .overlay-detail a i {
     text-align: center;
     position: relative;
-    bottom: -140px;
+    bottom: -40px;
     font-size: 24px;
     color: #fff;
     width: 40px;
@@ -241,7 +241,7 @@ blockquote {
 }
 
 footer {
-    padding: 40px 0;
+    padding: 0;
     background-color: RGBA(8, 7, 7, 0.92); 
 
 }
@@ -354,9 +354,7 @@ Responsive media queries
 	.text-center-xs{
 		text-align: center !important;
 	}
-	.social-list{
-		margin-bottom: 15px;
-	}
+	
 	.banner-text h2, .banner-text p {
     font-size: 30px;
 	}
@@ -386,4 +384,16 @@ Responsive media queries
     color: #fff;
     font-size: 2em;
     z-index: 55;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+
+}
+
+.social-list i {
+    color:#fff
 }
