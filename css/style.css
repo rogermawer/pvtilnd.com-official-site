@@ -43,7 +43,7 @@ Responsive media queries
 ************************************
 ***********************************/
 .header {
-    background: url('/img/3.jpg') no-repeat fixed;
+    background-color: #fff;
     background-size: cover;
     min-height: 630px;
     position: relative;
@@ -83,7 +83,7 @@ Responsive media queries
 }
 
 .bg-color{
-	background-color: RGBA(0, 0, 0, 0.6);
+	background-color: RGBA(0, 0, 0,);
 	height: 100%;
 }
 .navbar-border{
@@ -91,7 +91,8 @@ Responsive media queries
 .banner-text{
 	padding: 15px 40px;
 	color: #fff;
-	margin-top: 300px;
+	margin-top: 0px;
+    text-align: center;
 }
 .banner-text h2, .banner-text p{
 	font-size: 40px;
@@ -122,7 +123,7 @@ Responsive media queries
 
 }
 #about{
-	background-color: lightgrey;
+	background-color: #fff;
 	background-size: cover;
 	margin-bottom: -3px;
 }
@@ -137,8 +138,9 @@ Responsive media queries
 	padding: 0;
 	font-size: 24px;
     letter-spacing: 40px;
-    text-align: justify;
+    text-align: center;
     font-weight:bold;
+    color:#000;
 
 }
 .about-text p{

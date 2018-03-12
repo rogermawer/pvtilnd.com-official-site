@@ -18,45 +18,40 @@
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       
 <style>
-    .carousel-inner>.item>a>img,
-    .carousel-inner>.item>img,
-    .img-responsive,
-    .thumbnail a>img,
-    .thumbnail>img{display:block;max-width:100%;height:auto}
+
     
-.col-md-push-12{left:100%}
-.col-md-push-11{left:91.66666667%}   
-.col-md-push-10{left:83.33333333%}
-.col-md-push-9{left:75%}
-.col-md-push-8{left:66.66666667%}
-.col-md-push-7{left:58.33333333%}
-.col-md-push-6{left:50%}
-.col-md-push-5{left:41.66666667%}
-.col-md-push-4{left:33.33333333%}
-.col-md-push-3{left:25%}
-.col-md-push-2{left:16.66666667%}
-.col-md-push-1{left:8.33333333%}
-.col-md-push-0{left:auto}
-    
-    
-    .col-center{
-        margin: 0 auto;
-        float: none;
+    .centered {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.content-box {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 9999;
+    cursor: pointer;
+}
+
+.text-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+    .hidden{
+        display: none;
     }
-    
-@media (max-width: 576px) {
-  .col-md-push-2{left:0%}
-  }
-}
-
-@media (max-width: 768px) {
-  .col-md-push-2{left:0%}
-}
-    
-.col-md-offset-12{margin-left:100%}.col-md-offset-11{margin-left:91.66666667%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-9{margin-left:75%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-6{margin-left:50%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-3{margin-left:25%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-0{margin-left:0}}
-    
-    
-
 
 </style>
       
@@ -65,16 +60,19 @@
         
       
         
-        $(document).ready(function(){
-            $(".projects img").hover(function(){
-                $(this).addClass("projects-img").next().show();
-                
-            }, function(){
-                $(this).removeClass("projects-img").next().hide();
-                
-            }
-                );
+    $(document).ready(function(){
+        $('').click(function(){                                      $(this).animate({width:'80%',height:'300px',top:'25%',right:'10%',zIndex:'999'},1000);
+            });
+        $('.nav-item').click(function(){
+            $(this).next().removeClass('hidden');
+            $('.nav-item').not(this).animate({right:'95%'})
         });
+        $('.content-box').click(function(){
+            $(this).addClass('hidden');
+            $('.nav-item').not(this).animate({right:'0%'})
+        });
+        
+    });
       
         
         
@@ -85,7 +83,7 @@
     
   <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" onload="myFunction()" class="header">
   
-      <div class="bg-color">
+      <div class="bg-color centered">
         <header id="main-header">
         <nav class="navbar navbar-default navbar-fixed-top">
           <div class="container">
@@ -103,45 +101,113 @@
 
 -->
             
-            <div class="collapse navbar-collapse" id="lauraMenu">
-              <ul class="nav navbar-nav navbar-right navbar-border">
-                <li class="active"><a href="#main-header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#testimonial">Testimonial</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-              </ul>
-            </div>
+                <div class="collapse navbar-collapse" id="">
+                  <ul class="nav navbar-nav navbar-right navbar-border">
+                    <li class="active"><a href="#main-header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#testimonial">Testimonial</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                  </ul>
+                </div>
           </div>
         </nav>
         </header>
-        <div class="wrapper">
-        <div class="container">
+        
+        
           <div class="row">
-            <div class="col-md-12 wow fadeIn delay-05s">
-              <div class="banner-text">
-                  <h2 class="title-text text-center">Beach Eagle</h2>
-                  <p class="text-center" style="font-size: 17px;letter-spacing: 8px">Is just a seagull</p>
-                <!--
-                  <p class="text-center" style="font-size: 20px;letter-spacing: 5px">Web Design</p>
--->
+              <div style="" class="col-md-12 fadeIn delay-05s">
+                <div style="padding-left:80px" class="banner-text">
+                  <h2 class="title-text">PVTILND</h2>
+                </div>
               </div>
-              <div class="text-center">
-                  <a href="about.html"><i style="font-size: 2em;color: #fff;border-color: #fff;border-radius: 50%;border-width: 5px" class="fa fa-arrow-right"></i></a>
+          </div>
+          
+          
+          <!-- nav items? -->
+          
+          <div id="bio" style="">
+              <div style="height:50px;position: absolute;right:25%;top:0;border-right:20px solid #FF5E00;border-left: 0px solid transparent;border-bottom: 0px solid transparent;border-top:0px solid transparent;overflow: hidden" class="nav-item"></div>
+              
+              <div class="hidden content-box">
+                <div class="text-box">BIO BOX</div>
               </div>
-            </div>
+              
           </div>
+          
+           <div id="store" style="">
+             
+                <div class="nav-item" style="position: absolute;right:23%;top:88%;overflow:hidden;border-color: #580E7F;border-right:20px solid transparent;border-left: 20px solid transparent;border-bottom: 20px solid #580E7F;border-top: 20px solid transparent" class=""></div>
+               
+               <div class="hidden content-box">
+                <div class="text-box">STORE BOX</div>
+              </div>
+              
           </div>
+          
+          <div id="links" style="">
+              <div class="nav-item" style="width:20px;position: absolute;right:88%;top:62%;height:20px;border-color: blue;border-right:20px solid blue;border-left: 20px solid transparent;border-bottom: 20px solid blue;overflow: hidden" class=""></div>
+              
+               <div class="hidden content-box">
+                <div class="text-box">LINKS BOX</div>
+              </div>
+              
+          </div>
+          
+          <div id="tourdates" style="">
+              <div class="nav-item" style="width:20px;height: 20px;position: absolute;right:60%;top:75%;border-right:20px solid #FBC210;border-left: 0px solid transparent;border-bottom: 0px solid transparent;border-top:0px solid transparent;overflow: hidden" class=""></div>
+              
+               <div class="hidden content-box">
+                <div class="text-box">TOURDATES BOX</div>
+              </div>
+              
+          </div>
+          
+           <div id="contactus" style="">
+              <div class="nav-item" style="width:30px;height:30px;border-radius: 50%;position: absolute;right:93%;top:10%;background-color: green;overflow: hidden"></div>
+               
+                <div class="hidden content-box">
+                <div class="text-box">CONTACT BOX</div>
+              </div>
+               
+          </div>
+          
+          <div id="points" style="">
+              <div class="nav-item" style="width:80px;position: absolute;right:79%;top:30%;border-right:20px solid red;border-left: 20px solid red;border-bottom: 10px solid red;border-top:10px solid red;overflow: hidden"></div>
+              
+               <div class="hidden content-box">
+                <div class="text-box">POINTS BOX</div>
+              </div>
+              
+          </div>
+          
+          <div id="pictures" style="">
+              <div class="nav-item" style="height:80px;position: absolute;right:43%;top:18%;border-right:20px solid transparent;border-left: 20px solid #018F83;border-bottom: 20px solid transparent;border-top:20px solid transparent;overflow: hidden;"></div>
+              
+               <div class="hidden content-box">
+                <div class="text-box">PICTURES BOX</div>
+              </div>
+            
+                  
+          </div>
+          
+          
+          <div id="freebox" style="">
+              <div class="nav-item" style="width:60px;height:30px;border-radius: 50%;position: absolute;right:13%;top:60%;background-color:  #2FCCCB;overflow: hidden"></div>
+              
+               <div class="hidden content-box">
+                <div class="text-box">FREE BOX</div>
+              </div>
+              
+          </div>
+          
+          
         </div>
-        </div>
-      
-    <!--  
       
  
-   -->   
   
                 
-      
+
       
       
       

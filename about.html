@@ -19,12 +19,11 @@
       
 <style>
     .left-nav{
-        position: relative;
+        position: absolute;
         left:0;
         z-index: 3;
         opacity:0.8;
-        width:300px;
-        max-width: 25%;
+        width:25%;
         height: 100%;
         background-color: #000;
         color:#fff
@@ -32,6 +31,19 @@
     
     .left-nav p {
         padding-left:15px;
+    }
+    
+    .works-display{
+        position:absolute;
+        right:0;
+        width:75%;
+        height:100%;
+    }
+    
+    .works-display iframe{
+        width:100%;
+        height:100%;
+        display: none;
     }
 
 
@@ -50,6 +62,11 @@
             }
             }
       });
+        $(document).ready(function(){
+            $(".works").click(function(){
+                $("#bookgalfromcal").show();
+            })
+        })
         
       
         
@@ -68,14 +85,16 @@
         <div class="container">
             <h2>WORKS</h2>
             
-            <p>www.wisemindmusic.com</p>
-            <p>www.bookgalfromcal.com</p>
+            <p class="works">www.wisemindmusic.com</p>
+            <p class="works">www.bookgalfromcal.com</p>
             <p>www.alamoproductions.com</p>
             <p>www.pvtilnd.com</p>
-            
-            
-            
+       
         </div>
+      </div>
+      
+      <div class="works-display">
+          <iframe id="bookgalfromcal" src="http://www.bookgalfromcal.com"></iframe>
       </div>
   
                 
