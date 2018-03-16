@@ -60,19 +60,28 @@
         
       
         
-    $(document).ready(function(){
-        $('').click(function(){                                      $(this).animate({width:'80%',height:'300px',top:'25%',right:'10%',zIndex:'999'},1000);
-            });
+   $(document).ready(function(){
+       var classes=[]
         $('.nav-item').click(function(){
+            $('.nav-item').each(function(){
+                var originalPosition = $(this).css("right");
+                classes.push(originalPosition);
+                });
             $(this).next().removeClass('hidden');
-            $('.nav-item').not(this).animate({right:'95%'})
+            $('.nav-item').not(this).animate({right:'95%'});
         });
         $('.content-box').click(function(){
+            var i = 0;
             $(this).addClass('hidden');
-            $('.nav-item').not(this).animate({right:'0%'})
+            while (i < $('.nav-item').length) {
+                $('.nav-item').each(function(){
+                    $(this).animate({right:classes[i]});
+                    i++; 
+                    
+                });
+            };
         });
-        
-    });
+   });
       
         
         
@@ -83,7 +92,7 @@
     
   <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" onload="myFunction()" class="header">
   
-      <div class="bg-color centered">
+        <div class="bg-color centered">
         <header id="main-header">
         <nav class="navbar navbar-default navbar-fixed-top">
           <div class="container">
@@ -119,6 +128,7 @@
               <div style="" class="col-md-12 fadeIn delay-05s">
                 <div style="padding-left:80px" class="banner-text">
                   <h2 class="title-text">PVTILND</h2>
+                    <p id="demo" style="color:#000"></p>
                 </div>
               </div>
           </div>
@@ -127,6 +137,7 @@
           <!-- nav items? -->
           
           <div id="bio" style="">
+              <!-- orange box -->
               <div style="height:50px;position: absolute;right:25%;top:0;border-right:20px solid #FF5E00;border-left: 0px solid transparent;border-bottom: 0px solid transparent;border-top:0px solid transparent;overflow: hidden" class="nav-item"></div>
               
               <div class="hidden content-box">
@@ -136,7 +147,7 @@
           </div>
           
            <div id="store" style="">
-             
+             <!-- purple triangle -->
                 <div class="nav-item" style="position: absolute;right:23%;top:88%;overflow:hidden;border-color: #580E7F;border-right:20px solid transparent;border-left: 20px solid transparent;border-bottom: 20px solid #580E7F;border-top: 20px solid transparent" class=""></div>
                
                <div class="hidden content-box">
@@ -146,6 +157,7 @@
           </div>
           
           <div id="links" style="">
+              <!-- dark blue shape -->
               <div class="nav-item" style="width:20px;position: absolute;right:88%;top:62%;height:20px;border-color: blue;border-right:20px solid blue;border-left: 20px solid transparent;border-bottom: 20px solid blue;overflow: hidden" class=""></div>
               
                <div class="hidden content-box">
@@ -155,6 +167,7 @@
           </div>
           
           <div id="tourdates" style="">
+              <!-- yellow square -->
               <div class="nav-item" style="width:20px;height: 20px;position: absolute;right:60%;top:75%;border-right:20px solid #FBC210;border-left: 0px solid transparent;border-bottom: 0px solid transparent;border-top:0px solid transparent;overflow: hidden" class=""></div>
               
                <div class="hidden content-box">
@@ -164,6 +177,7 @@
           </div>
           
            <div id="contactus" style="">
+               <!--green circle -->
               <div class="nav-item" style="width:30px;height:30px;border-radius: 50%;position: absolute;right:93%;top:10%;background-color: green;overflow: hidden"></div>
                
                 <div class="hidden content-box">
@@ -173,6 +187,7 @@
           </div>
           
           <div id="points" style="">
+              <!-- red rectangle -->
               <div class="nav-item" style="width:80px;position: absolute;right:79%;top:30%;border-right:20px solid red;border-left: 20px solid red;border-bottom: 10px solid red;border-top:10px solid red;overflow: hidden"></div>
               
                <div class="hidden content-box">
@@ -182,6 +197,7 @@
           </div>
           
           <div id="pictures" style="">
+              <!-- teal paralellagram -->
               <div class="nav-item" style="height:80px;position: absolute;right:43%;top:18%;border-right:20px solid transparent;border-left: 20px solid #018F83;border-bottom: 20px solid transparent;border-top:20px solid transparent;overflow: hidden;"></div>
               
                <div class="hidden content-box">
@@ -193,6 +209,7 @@
           
           
           <div id="freebox" style="">
+              <!-- light blue oval -->
               <div class="nav-item" style="width:60px;height:30px;border-radius: 50%;position: absolute;right:13%;top:60%;background-color:  #2FCCCB;overflow: hidden"></div>
               
                <div class="hidden content-box">
