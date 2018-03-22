@@ -16,6 +16,7 @@
     
     
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
       
 <style>
 
@@ -94,8 +95,14 @@
                 });
             };
         });
+       
    });
       
+        $( function() {
+            $( ".draggable" ).draggable({
+                scroll: false
+            });
+        } );
         
         
       
@@ -151,7 +158,7 @@
           
           <div id="bio" style="">
               <!-- orange box -->
-              <div style="height:50px;position: absolute;right:25%;top:0;border-right:20px solid #FF5E00;border-left: 0px solid transparent;border-bottom: 0px solid transparent;border-top:0px solid transparent;overflow: hidden" class="nav-item"></div>
+              <div style="height:50px;width:20px;position: absolute;right:25%;top:0;border-right:20px solid #FF5E00;border-left: 0px solid transparent;border-bottom: 0px solid transparent;border-top:0px solid transparent;overflow: hidden" class="draggable ui-widget-content nav-item"></div>
               
               <div class="hidden content-box">
                 <div class="text-box">BIO BOX</div>
@@ -161,7 +168,7 @@
           
            <div id="store" style="">
              <!-- purple triangle -->
-                <div class="nav-item" style="position: absolute;right:23%;top:88%;overflow:hidden;border-color: #580E7F;border-right:20px solid transparent;border-left: 20px solid transparent;border-bottom: 20px solid #580E7F;border-top: 20px solid transparent" class=""></div>
+                <div class="draggable ui-widget-content nav-item" style="height:20px;width:20px;position: absolute;right:23%;top:88%;overflow:hidden;border-color: #580E7F;border-right:20px solid transparent;border-left: 20px solid transparent;border-bottom: 20px solid #580E7F;border-top: 20px solid transparent"></div>
                
                <div class="hidden content-box">
                 <div class="text-box">STORE BOX</div>
@@ -171,7 +178,7 @@
           
           <div id="links" style="">
               <!-- dark blue shape -->
-              <div class="nav-item" style="width:20px;position: absolute;right:88%;top:62%;height:20px;border-color: blue;border-right:20px solid blue;border-left: 20px solid transparent;border-bottom: 20px solid blue;overflow: hidden" class=""></div>
+              <div class="draggable ui-widget-content nav-item" style="width:20px;position: absolute;right:88%;top:62%;height:20px;border-color: blue;border-right:20px solid blue;border-left: 20px solid transparent;border-bottom: 20px solid blue;overflow: hidden"></div>
               
                <div class="hidden content-box">
                 <div class="text-box">LINKS BOX</div>
@@ -181,7 +188,7 @@
           
           <div id="tourdates" style="">
               <!-- yellow square -->
-              <div class="nav-item" style="width:20px;height: 20px;position: absolute;right:60%;top:75%;border-right:20px solid #FBC210;border-left: 0px solid transparent;border-bottom: 0px solid transparent;border-top:0px solid transparent;overflow: hidden" class=""></div>
+              <div class="draggable ui-widget-content nav-item" style="width:20px;height: 20px;position: absolute;right:60%;top:75%;border-right:20px solid #FBC210;border-left: 0px solid transparent;border-bottom: 0px solid transparent;border-top:0px solid transparent;overflow: hidden"></div>
               
                <div class="hidden content-box">
                 <div class="text-box">TOURDATES BOX</div>
@@ -191,7 +198,7 @@
           
            <div id="contactus" style="">
                <!--green circle -->
-              <div class="nav-item" style="width:30px;height:30px;border-radius: 50%;position: absolute;right:93%;top:10%;background-color: green;overflow: hidden"></div>
+              <div class="draggable ui-widget-content nav-item" style="width:30px;height:30px;border-radius: 50%;position: absolute;right:93%;top:10%;background-color: green;overflow: hidden"></div>
                
                 <div class="hidden content-box">
                 <div class="text-box">CONTACT BOX</div>
@@ -201,7 +208,7 @@
           
           <div id="points" style="">
               <!-- red rectangle -->
-              <div class="nav-item" style="width:80px;position: absolute;right:79%;top:30%;border-right:20px solid red;border-left: 20px solid red;border-bottom: 10px solid red;border-top:10px solid red;overflow: hidden"></div>
+              <div class="draggable ui-widget-content nav-item" style="width:80px;position: absolute;right:79%;top:30%;border-right:20px solid red;border-left: 20px solid red;border-bottom: 10px solid red;border-top:10px solid red;overflow: hidden"></div>
               
                <div class="hidden content-box">
                 <div class="text-box">POINTS BOX</div>
@@ -211,7 +218,7 @@
           
           <div id="pictures" style="">
               <!-- teal paralellagram -->
-              <div class="nav-item" style="height:80px;position: absolute;right:43%;top:18%;border-right:20px solid transparent;border-left: 20px solid #018F83;border-bottom: 20px solid transparent;border-top:20px solid transparent;overflow: hidden;"></div>
+              <div class="draggable ui-widget-content nav-item" style="height:80px;position: absolute;right:43%;top:18%;border-right:20px solid transparent;border-left: 20px solid #018F83;border-bottom: 20px solid transparent;border-top:20px solid transparent;overflow: hidden;"></div>
               
                <div class="hidden content-box">
                 <div class="text-box">PICTURES BOX</div>
@@ -223,7 +230,7 @@
           
           <div id="freebox" style="">
               <!-- light blue oval -->
-              <div class="nav-item" style="width:60px;height:30px;border-radius: 50%;position: absolute;right:13%;top:60%;background-color:  #2FCCCB;overflow: hidden"></div>
+              <div class="draggable ui-widget-content nav-item" style="width:60px;height:30px;border-radius: 50%;position: absolute;right:13%;top:60%;background-color:  #2FCCCB;overflow: hidden"></div>
               
                <div class="hidden content-box">
                 <div class="text-box">FREE BOX</div>
@@ -244,8 +251,9 @@
       
       
 
-  
+   
     <script src="js/jquery-3.2.1.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
     <script src="js/jquery.easing.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/jquery.bxslider.min.js"></script>
