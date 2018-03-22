@@ -61,21 +61,31 @@
       
         
    $(document).ready(function(){
-       var classes=[]
+       var rights=[]
+       var tops=[]
         $('.nav-item').click(function(){
             $('.nav-item').each(function(){
-                var originalPosition = $(this).css("right");
-                classes.push(originalPosition);
+                var originalRightPosition = $(this).css("right");
+                rights.push(originalRightPosition);
+                var originalTopPosition = $(this).css("top");
+                tops.push(originalTopPosition);
                 });
             $(this).next().removeClass('hidden');
-            $('.nav-item').not(this).animate({right:'95%'});
+            var i = 0;
+            /* find new random position */
+            $('.nav-item').each(function(){
+                var newTopPosition = Math.floor((Math.random() * 90)+1) + '%';
+                var newRightPosition = Math.floor((Math.random() * 90)+1) + '%';
+                $(this).animate({right:newRightPosition,top:newTopPosition});
+            });
+            
         });
         $('.content-box').click(function(){
             var i = 0;
             $(this).addClass('hidden');
             while (i < $('.nav-item').length) {
                 $('.nav-item').each(function(){
-                    $(this).animate({right:classes[i]});
+                    $(this).animate({right:rights[i],top:tops[i]});
                     i++; 
                     
                 });
