@@ -43,7 +43,7 @@ Responsive media queries
 ************************************
 ***********************************/
 .header {
-    background-color: #fff;
+    background-color: #000;
     background-size: cover;
     min-height: 630px;
     position: relative;
@@ -140,7 +140,7 @@ Responsive media queries
     letter-spacing: 40px;
     text-align: center;
     font-weight:bold;
-    color:#000;
+    color:#fff;
 
 }
 .about-text p{
