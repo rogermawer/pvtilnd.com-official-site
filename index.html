@@ -102,7 +102,8 @@
             */
         });
        
-        $('.content-box').dblclick(function(){
+       /* use double click for desktop, but mobile? IDK */
+        $('.content-box').click(function(){
             var i = 0;
             $(this).addClass('hidden');
             while (i < $('.nav-item').length) {
