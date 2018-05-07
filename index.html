@@ -11,9 +11,11 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+
+
     
     
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -65,6 +67,11 @@
     .text{
         font-size: 18px;
     }
+    .boxclose{
+        position: relative;
+        top:0;
+        left:98%;
+    }
 
 </style>
       
@@ -94,8 +101,8 @@
         });
        
        //store position of shapes when clicked. use 'mouseover' for desktop, click for //mobile
-        $('.nav-item').mouseover(function(){
-            $(this).next().removeClass('hidden');
+        $('.nav-item').click(function(){
+            $(this).next().fadeIn(800);
             
             var i = 0;
             /* find and move to new random position 
@@ -108,9 +115,9 @@
         });
        
        /* use double click for desktop, but mobile? IDK */
-        $('.content-box').click(function(){
+        $('.boxclose').click(function(){
             var i = 0;
-            $(this).addClass('hidden');
+            $('.content-box').fadeOut(100);
             while (i < $('.nav-item').length) {
                 $('.nav-item').each(function(){
                     $(this).animate({right:ogRight[i],top:ogTop[i]});
@@ -164,7 +171,8 @@
                 <div style="position: absolute;right:25%;top:0;height:50px;width:20px;border-right:20px solid #FF5E00;border-left: 0px solid transparent;border-bottom: 0px solid transparent;border-top:0px solid transparent;overflow: hidden" class="draggable ui-widget-content nav-item"></div>
               
               <div class="hidden content-box">
-                <div class="text-box container pt-4">
+                <div class="text-box container">
+                    <span class="boxclose"><i class="fas fa-times"></i></span>
                     <h1>-PVTILND-</h1>
                     <p class="text">Since the release of their 2014 groovily anthemic EP “A Good Look,” Private Island has quickly caught the attention of the indie &amp; alternative music scene. 2016’s “Sunbreak” saw the band build on their individual talents focusing on delicate harmonies, while maintaining the prominent basslines and signature guitar sound listeners have quickly come to expect. Following the success of “Sunbreak,” and the Hype Machine chart topping single “Drugs,” the band hit the road for their first US co-headling tour in 2017 with New York’s Future Generations. </p>
                     
@@ -203,7 +211,9 @@
                 <div class="draggable ui-widget-content nav-item" style="height:20px;width:20px;position: absolute;right:23%;top:88%;overflow:hidden;border-color: #580E7F;border-right:20px solid transparent;border-left: 20px solid transparent;border-bottom: 20px solid #580E7F;border-top: 20px solid transparent"></div>
                
                <div class="hidden content-box">
-                <div class="text-box">STORE BOX</div>
+                <div class="text-box container">
+                    <span class="boxclose"><i class="fas fa-times"></i></span>
+                    STORE BOX</div>
               </div>
               
           </div>
@@ -213,7 +223,9 @@
               <div class="draggable ui-widget-content nav-item" style="width:20px;position: absolute;right:88%;top:62%;height:20px;border-color: blue;border-right:20px solid blue;border-left: 20px solid transparent;border-bottom: 20px solid blue;overflow: hidden"></div>
               
                <div class="hidden content-box">
-                <div class="text-box">LINKS BOX</div>
+                <div class="text-box container">
+                    <span class="boxclose"><i class="fas fa-times"></i></span>
+                    LINKS BOX</div>
               </div>
               
           </div>
@@ -223,7 +235,8 @@
               <div class="draggable ui-widget-content nav-item" style="width:20px;height: 20px;position: absolute;right:60%;top:75%;border-right:20px solid #FBC210;border-left: 0px solid transparent;border-bottom: 0px solid transparent;border-top:0px solid transparent;overflow: hidden"></div>
               
                <div class="hidden content-box">
-                <div class="text-box">
+                <div class="text-box container">
+                    <span class="boxclose"><i class="fas fa-times"></i></span>
                     <h1 style="text-align: center">SCORE BOARD</h1>
                     <!-- no labels. only usernames and points -->
                     <p>1st - </p>
@@ -238,11 +251,16 @@
           </div>
           
            <div id="contactus" style="">
-               <!--green circle -->
+               <!--green circle 
               <div class="draggable ui-widget-content nav-item" style="width:30px;height:30px;border-radius: 50%;position: absolute;right:93%;top:10%;background-color: green;overflow: hidden"></div>
+-->
+              <div class="draggable ui-widget-content nav-item" style="position: absolute;right:93%;top:10%;overflow: hidden"><i class="far fa-envelope" style="font-size: 40px"></i></div>
+
+
                
                 <div class="hidden content-box">
                 <div class="text-box container">
+                    <span class="boxclose"><i class="fas fa-times"></i></span>
                      <form id="contact-form" data-toggle="validator" method="post" action="contact.php" role="form">
 
                         <div class="messages"></div>
@@ -304,9 +322,12 @@
           <div id="tourdates" style="">
               <!-- red rectangle -->
               <div class="draggable ui-widget-content nav-item" style="width:80px;position: absolute;right:79%;top:30%;border-right:20px solid red;border-left: 20px solid red;border-bottom: 10px solid red;border-top:10px solid red;overflow: hidden"></div>
+                  
+                  
               
               <div class="hidden content-box">
-                <div class="text-box">
+                <div class="text-box container">
+                    <span class="boxclose"><i class="fas fa-times"></i></span>
                    <script charset="utf-8" src="https://widget.bandsintown.com/main.min.js"></script><a class="bit-widget-initializer" data-artist-name="private island" data-display-local-dates="false" data-display-past-dates="true" data-auto-style="false" data-text-color="#FFFFFF" data-link-color="#22CB65" data-popup-background-color="#000000" data-background-color="#000000" data-display-limit="15" data-link-text-color="#FFFFFF"></a>
                    </div>
               </div>
@@ -323,7 +344,8 @@
                <div class="hidden content-box">
                 
                 <!-- instagram feed -->
-                <div class="text-box">
+                <div class="text-box container">
+                    <span class="boxclose"><i class="fas fa-times"></i></span>
                  <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/759983e4090856ab8946d8be493a8a41.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
 
 
@@ -341,7 +363,9 @@
               <div class="draggable ui-widget-content nav-item" style="width:60px;height:30px;border-radius: 50%;position: absolute;right:13%;top:60%;background-color:  #2FCCCB;overflow: hidden"></div>
               
                <div class="hidden content-box">
-                <div class="text-box">FREE BOX</div>
+                <div class="text-box container">
+                    <span class="boxclose"><i class="fas fa-times"></i></span>
+                    FREE BOX</div>
               </div>
               
           </div>
