@@ -472,6 +472,7 @@ Responsive media queries
         position: relative;
         top:0;
         left:98%;
+        font-size: 30px;
     }
     
     #socials{
@@ -481,4 +482,7 @@ Responsive media queries
     }
     
 
-
+#contact-form{
+    max-width: 500px;
+    margin: auto;
+}
