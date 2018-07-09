@@ -9,7 +9,6 @@
     
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans|Roboto:300,400|Questrial|Satisfy">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -18,116 +17,43 @@
 
     
     
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       <script src="/js/jquery-3.2.1.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
       
+      
 <style>
-    body{
-       
-    }
     
-    .centered {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-}
-
-.content-box {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top:0;
-    bottom:0;
-    right:0;
-    left:0;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 99;
-    cursor: pointer;
-}
-
-.text-box{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 80%;
-    height: 80%;
-    font-size: 30px;
-    overflow-y:scroll;
-    background-color: rgba(0,0,0,0.8);
-    color: white;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    z-index: -1;
-}
-
-    .hidden{
-        display: none;
-    }
-    
-    .text{
-        font-size: 18px;
-    }
-    .boxclose{
-        position: relative;
-        top:0;
-        left:98%;
-    }
+ 
 
 </style>
       
       
     <script>
-        
+        $(document).ready(function(){
+            var clicked = true;
+            $('#links').click(function(){
+                if (clicked === true){
+                    $('#socials').stop().fadeIn(800);
+                    clicked = false;
+
+                }else{
+                    $('#socials').stop().fadeOut(800);
+                    clicked = true;
+                }
+            });
+        });
       
         
    $(document).ready(function(){
-       /*
-        $( function() {
-            $( ".draggable" ).draggable({
-                scroll: false
-            });
-        } );
-        */
-       var ogRight=[]
-       var ogTop=[]
-       var rights=[]
-       var tops=[]
-       
-       $('.nav-item').each(function(){
-            var ogRights = $(this).css("right");
-            ogRight.push(ogRights);
-            var ogTops = $(this).css("top");
-            ogTop.push(ogTops);
-        });
-       
-       //store position of shapes when clicked. use 'mouseover' for desktop, click for //mobile
         $('.nav-item').click(function(){
             $(this).next().fadeIn(800);
-            
-            var i = 0;
-            /* find and move to new random position 
-            $('.nav-item').each(function(){
-                var newTopPosition = Math.floor((Math.random() * 90)+1) + '%';
-                var newRightPosition = Math.floor((Math.random() * 90)+1) + '%';
-                $(this).animate({right:newRightPosition,top:newTopPosition});
-            });
-            */
         });
-       
        /* use double click for desktop, but mobile? IDK */
         $('.boxclose').click(function(){
-            var i = 0;
             $('.content-box').fadeOut(100);
-            while (i < $('.nav-item').length) {
-                $('.nav-item').each(function(){
-                    $(this).animate({right:ogRight[i],top:ogTop[i]});
-                    i++; 
-                });
-            };
-            rights=[]
-            tops=[]
+            
         });
-       
    });
       
        
@@ -138,14 +64,22 @@
       </script>
   </head>
     
-  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" onload="myFunction()" class="header">
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" class="header">
   
         <div class="bg-color centered">
         <header id="main-header">
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-expand fixed-top">
+            <div class="navrbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item mr-2"><a href="#" style="color:#212529">Music</a></li>
+                <li class="nav-item mr-2"><a href="#" style="color:#212529">Pics</a></li>
+                <li class="nav-item mr-2"><a href="#" style="color:#212529">Live</a></li>
+                <li class="nav-item mr-2"><a href="#" style="color:#212529">Store</a></li>
+                <li class="nav-item mr-2"><a href="#" style="color:#212529">Contact</a></li>
+            </ul>
+            </div>
           <div class="container">
         
-
             
                 
           </div>
@@ -155,20 +89,24 @@
         
           <div class="row">
               <div style="" class="col-md-12 fadeIn delay-05s">
-                <div style="padding-left:80px" class="banner-text">
-                  <h2 class="title-text">PVTILND</h2>
-                    <p id="demo" style="color:#000"></p>
+                <div style="" class="banner-text">
+                 <h2 class="title-text">PVT&bull;ILND</h2>
+                    <p id="demo"></p>
+                    <div style="height: 50px">
+                        <p id="socials" style="display: none;">
+                            <i class="fab fa-instagram"></i> <i class="fab fa-facebook-square"></i> <i class="fab fa-spotify"></i> <i class="fab fa-twitter"></i></p>
+                    </div>
                 </div>
               </div>
           </div>
           
           
-          <!-- nav items? -->
+          <!-- nav items -->
           
           <div id="bio" style="">
               <!-- orange box -->
               
-                <div style="position: absolute;right:25%;top:0;height:50px;width:20px;border-right:20px solid #FF5E00;border-left: 0px solid transparent;border-bottom: 0px solid transparent;border-top:0px solid transparent;overflow: hidden" class="draggable ui-widget-content nav-item"></div>
+                <div class="nav-item" style="position: absolute;right:25%;top:40px;height:50px;width:20px;border-right:20px solid #FF5E00;border-left: 0px solid transparent;border-bottom: 0px solid transparent;border-top:0px solid transparent;overflow: hidden"></div>
               
               <div class="hidden content-box">
                 <div class="text-box container">
@@ -208,7 +146,7 @@
           
            <div id="store" style="">
              <!-- purple triangle -->
-                <div class="draggable ui-widget-content nav-item" style="height:20px;width:20px;position: absolute;right:23%;top:88%;overflow:hidden;border-color: #580E7F;border-right:20px solid transparent;border-left: 20px solid transparent;border-bottom: 20px solid #580E7F;border-top: 20px solid transparent"></div>
+                <div class="nav-item" style="height:20px;width:20px;position: absolute;right:23%;top:88%;overflow:hidden;border-color: #580E7F;border-right:20px solid transparent;border-left: 20px solid transparent;border-bottom: 20px solid #580E7F;border-top: 20px solid transparent"></div>
                
                <div class="hidden content-box">
                 <div class="text-box container">
@@ -220,7 +158,7 @@
           
           <div id="links" style="">
               <!-- dark blue shape -->
-              <div class="draggable ui-widget-content nav-item" style="width:20px;position: absolute;right:88%;top:62%;height:20px;border-color: blue;border-right:20px solid blue;border-left: 20px solid transparent;border-bottom: 20px solid blue;overflow: hidden"></div>
+              <div class="" style="width:20px;position: absolute;right:88%;top:62%;height:20px;border-color: blue;border-right:20px solid blue;border-left: 20px solid transparent;border-bottom: 20px solid blue;overflow: hidden"></div>
               
                <div class="hidden content-box">
                 <div class="text-box container">
@@ -232,7 +170,7 @@
           
           <div id="points" style="">
               <!-- yellow square -->
-              <div class="draggable ui-widget-content nav-item" style="width:20px;height: 20px;position: absolute;right:60%;top:75%;border-right:20px solid #FBC210;border-left: 0px solid transparent;border-bottom: 0px solid transparent;border-top:0px solid transparent;overflow: hidden"></div>
+              <div class="nav-item" style="width:20px;height: 20px;position: absolute;right:60%;top:75%;border-right:20px solid #FBC210;border-left: 0px solid transparent;border-bottom: 0px solid transparent;border-top:0px solid transparent;overflow: hidden"></div>
               
                <div class="hidden content-box">
                 <div class="text-box container">
@@ -254,7 +192,7 @@
                <!--green circle 
               <div class="draggable ui-widget-content nav-item" style="width:30px;height:30px;border-radius: 50%;position: absolute;right:93%;top:10%;background-color: green;overflow: hidden"></div>
 -->
-              <div class="draggable ui-widget-content nav-item" style="position: absolute;right:93%;top:10%;overflow: hidden"><i class="far fa-envelope" style="font-size: 40px"></i></div>
+              <div class="nav-item" style="width:60px;height:30px;border-radius: 50%;position: absolute;right:13%;top:60%;background-color:  #2FCCCB;overflow: hidden"></div>
 
 
                
@@ -303,7 +241,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="form_message">Message *</label>
-                                        <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                                        <textarea id="form_message" name="message" class="form-control" placeholder="Message for us *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
@@ -321,7 +259,7 @@
           
           <div id="tourdates" style="">
               <!-- red rectangle -->
-              <div class="draggable ui-widget-content nav-item" style="width:80px;position: absolute;right:79%;top:30%;border-right:20px solid red;border-left: 20px solid red;border-bottom: 10px solid red;border-top:10px solid red;overflow: hidden"></div>
+              <div class="nav-item" style="width:80px;position: absolute;right:79%;top:30%;border-right:20px solid red;border-left: 20px solid red;border-bottom: 10px solid red;border-top:10px solid red;overflow: hidden"></div>
                   
                   
               
@@ -339,7 +277,7 @@
           
           <div id="pictures" style="">
               <!-- teal paralellagram -->
-              <div class="draggable ui-widget-content nav-item" style="height:80px;position: absolute;right:43%;top:18%;border-right:20px solid transparent;border-left: 20px solid #018F83;border-bottom: 20px solid transparent;border-top:20px solid transparent;overflow: hidden;"></div>
+              <div class="nav-item" style="height:80px;position: absolute;right:43%;top:18%;border-right:20px solid transparent;border-left: 20px solid #018F83;border-bottom: 20px solid transparent;border-top:20px solid transparent;overflow: hidden;"></div>
               
                <div class="hidden content-box">
                 
@@ -358,17 +296,6 @@
           </div>
           
           
-          <div id="freebox" style="">
-              <!-- light blue oval -->
-              <div class="draggable ui-widget-content nav-item" style="width:60px;height:30px;border-radius: 50%;position: absolute;right:13%;top:60%;background-color:  #2FCCCB;overflow: hidden"></div>
-              
-               <div class="hidden content-box">
-                <div class="text-box container">
-                    <span class="boxclose"><i class="fas fa-times"></i></span>
-                    FREE BOX</div>
-              </div>
-              
-          </div>
           
           
         </div>
@@ -384,13 +311,13 @@
       
       
 
-    <script src="validator.js"></script>
-    <script src="contact.js"></script>
     <script src="js/jquery-3.2.1.js"></script>
     <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
     <script src="js/jquery.easing.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/custom.js"></script>
+    <script src="/contact-form/contact.js"></script>
+    <script src="validator.js"></script>
     
     
   </body>
