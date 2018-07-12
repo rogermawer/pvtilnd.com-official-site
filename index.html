@@ -25,7 +25,7 @@
 <style>
 .bounce {
      animation:bounce 1s;
-    -webkit-animation:bounce 1s;
+    -webkit-animation:bounce .8s;
     animation-iteration-count: 1;
     -webkit-animation-iteration-count: 1;
 }
@@ -69,15 +69,22 @@
         
    
         /* bouncy class */
+           
         $(document).ready(function(){
-            $('.nav-item').each(function(i){
-                var row = $(this);
+            looper();
+            setInterval(function(){
+                looper();
+            }, 60000);
+        });
+            
+      function looper(){
+           $('.nav-item').each(function(i){
+                var x = $(this);
                 setTimeout(function() {
-                    row.addClass('bounce');
+                    x.toggleClass('bounce');
                 }, 10000*i);
             });
-        });
-      
+      }
        
         
         
