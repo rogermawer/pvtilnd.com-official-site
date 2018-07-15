@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Roger Mawer</title>
+    <title>Private Island Beta</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     
@@ -24,19 +24,34 @@
       
 <style>
 .bounce {
-     animation:bounce 1s;
+    animation:bounce .8s;
     -webkit-animation:bounce .8s;
     animation-iteration-count: 1;
     -webkit-animation-iteration-count: 1;
 }
+    
+    .merch{
+        width:500px;
+        padding:15px;
+    }
+    
+     .merch:hover{
+        /* IE 8 */
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
 
-@-webkit-keyframes bounce {
-  0%       { bottom:5px; }
-  25%, 75% { bottom:15px; }
-  50%      { bottom:20px; }
-  100%     {bottom:0;}
-}
+          /* IE 5-7 */
+          filter: alpha(opacity=80);
 
+          /* Netscape */
+          -moz-opacity: 0.8;
+
+          /* Safari 1.x */
+          -khtml-opacity: 0.8;
+
+          /* Good browsers */
+          opacity: 0.8;
+    }
+    
 </style>
       
       
@@ -77,20 +92,40 @@
             setInterval(function(){
                 looper();
             }, 60000);
+        
         });
-            
-      function looper(){
-           $('.nav-item').each(function(i){
+        
+        /* random number booth min max included 
+        function rndNum(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) ) + min;
+        }
+        */
+        
+     function looper(x){
+         var items = $('.nav-item');
+         var shuffledItems = shuffle(items);
+           $(shuffledItems).each(function(i){
                 var x = $(this);
                 setTimeout(function() {
                     x.toggleClass('bounce');
                 }, 10000*i);
             });
       }
-       
         
-        
-      
+        function shuffle(array) {
+              var m = array.length, t, i;
+              // While there remain elements to shuffle…
+              while (m) {
+                // Pick a remaining element…
+                i = Math.floor(Math.random() * m--);
+                // And swap it with the current element.
+                t = array[m];
+                array[m] = array[i];
+                array[i] = t;
+              }
+              return array;
+            }
+
       
       </script>
   </head>
@@ -101,19 +136,16 @@
         <header id="main-header">
         <nav class="navbar navbar-expand fixed-top">
             <div class="navrbar-collapse">
-            <ul class="navbar-nav mr-auto">
-                <li class="mr-2"><a href="https://open.spotify.com/artist/21MZoYDTcbPsC5crOQVqho?si=zwGlBnTETve0IFcdFnI5mg" style="color:#212529">Music</a></li>
-                <li class="mr-2"><a href="#" style="color:#212529">Pics</a></li>
-                <li class="mr-2"><a href="/live.html" style="color:#212529">Live</a></li>
-                <li class="mr-2"><a href="#" style="color:#212529">Store</a></li>
-                <li class="mr-2"><a href="#" style="color:#212529">Contact</a></li>
+            <ul class="navbar-nav mr-auto pi-nav-links">
+                <li class="mr-2"><a href="https://open.spotify.com/artist/21MZoYDTcbPsC5crOQVqho?si=zwGlBnTETve0IFcdFnI5mg" target="_blank">Music</a></li>
+                <!--
+                <li class="mr-2"><a href="/pics.html">Pics</a></li>
+-->
+                <li class="mr-2"><a href="/live.html">Live</a></li>
+                <li class="mr-2"><a href="https://thehyv.shop/collections/private-island" target="_blank">Store</a></li>
+                <li class="mr-2"><a href="/contact.html">Contact</a></li>
             </ul>
             </div>
-          <div class="container">
-        
-            
-                
-          </div>
         </nav>
         </header>
         
@@ -125,7 +157,7 @@
                     <p id="demo"></p>
                     <div style="height: 50px">
                         <p id="socials" style="display: none;">
-                            <a href=""><img src="/img/instagram-2016-png-transparent-logo.png" style="width:20px;vertical-align: middle" width="20"></a><a href=""><i class="fab fa-facebook-square" style="color:#4267B2"></i></a><a href="https://open.spotify.com/artist/21MZoYDTcbPsC5crOQVqho?si=zwGlBnTETve0IFcdFnI5mg"><i class="fab fa-spotify" style="color:#1ED760"></i></a><a href=""><i class="fab fa-twitter" style="color:#1DA1F2"></i></a></p>
+                            <a href="https://www.instagram.com/pvtilnd/"><img src="/img/instagram-2016-png-transparent-logo.png" style="width:20px;vertical-align: middle" width="20"></a><a href="https://www.facebook.com/PVTILND/"><i class="fab fa-facebook-square" style="color:#4267B2"></i></a><a href="https://open.spotify.com/artist/21MZoYDTcbPsC5crOQVqho?si=zwGlBnTETve0IFcdFnI5mg" target="_blank"><i class="fab fa-spotify" style="color:#1ED760"></i></a><a href="https://twitter.com/pvtilnd"><i class="fab fa-twitter" style="color:#1DA1F2"></i></a></p>
                     </div>
                 </div>
               </div>
@@ -140,9 +172,10 @@
                 <div class="nav-item" style="position: absolute;right:25%;top:40px;height:50px;width:20px;border-right:20px solid #FF5E00;border-left: 0px solid transparent;border-bottom: 0px solid transparent;border-top:0px solid transparent;overflow: hidden"></div>
               
               <div class="hidden content-box">
-                <div class="text-box container">
+                <div class="text-box container about-us">
                     <span class="boxclose"><i class="fas fa-times"></i></span>
                     <h1>-PVTILND-</h1>
+                    <p class="text">An approachable band from Southern California.</p>
                     <p class="text">Since the release of their 2014 groovily anthemic EP “A Good Look,” Private Island has quickly caught the attention of the indie &amp; alternative music scene. 2016’s “Sunbreak” saw the band build on their individual talents focusing on delicate harmonies, while maintaining the prominent basslines and signature guitar sound listeners have quickly come to expect. Following the success of “Sunbreak,” and the Hype Machine chart topping single “Drugs,” the band hit the road for their first US co-headling tour in 2017 with New York’s Future Generations. </p>
                     
                     <p class="text">That fall, Private Island hit the road with LA’s Mating Ritual, a tour capped off by a sold out headline show at The Roxy. Now, Private Island is moving forward with “Sunbreak”’s natural successor, “Night Drive”. Singles “Turbulence,” “Juvenile,” &amp; “Crime” portend the stated switch as nocturnal R&amp;B production infects the band’s, to this point, brightly shimmering style. With “Night Drive” Private Island intends to show us Los Angeles by streetlight, and proves that in a city full of stars, there’s no such thing as pitch black. Private Island is Christian Lum, Tommy Nickerson, Cameron Anderson, Roger Mawer and Tim Barbour.</p>
@@ -182,7 +215,16 @@
                <div class="hidden content-box">
                 <div class="text-box container">
                     <span class="boxclose"><i class="fas fa-times"></i></span>
-                    STORE BOX</div>
+                   <a href="https://thehyv.shop/collections/private-island">https://thehyv.shop/collections/private-island</a>
+                    <div class="row">
+                        <div class="sm-col-6 mx-auto"><a href="https://thehyv.shop/collections/private-island"><img class="img-fluid merch" src="/img/pi-dad-hat.png"></a></div>
+                        <div class="lg-col-6 mx-auto"><a href="https://thehyv.shop/collections/private-island"><img class="img-fluid merch" src="/img/pi-sunbreak-cover.jpg"></a></div>
+                    </div>
+                    <div class="row">
+                        <div class="sm-col-6 mx-auto"><a href="https://thehyv.shop/collections/private-island"><img class="img-fluid merch" src="/img/pi-ndshirt-white.jpg"></a></div>
+                        <div class="md-col-6 mx-auto"><a href="https://thehyv.shop/collections/private-island"><img class="img-fluid merch" src="/img/pi-ndshirt-blk.jpg"></a></div>
+                    </div>
+                  </div>
               </div>
               
           </div>
@@ -230,6 +272,10 @@
                 <div class="hidden content-box">
                 <div class="text-box container">
                     <span class="boxclose"><i class="fas fa-times"></i></span>
+                   <div style="text-align: center"> 
+                    <p>MGMT &mdash; ALEX@TRIBEMGMTGROUP.COM</p>
+                    <p>Booking &mdash; Russ</p>
+                    </div>
                      <form id="contact-form" data-toggle="validator" method="post" action="contact.php" role="form">
                          
                          <p>Join our mailing list to be the first to know about new music, shows and other things</p>
@@ -241,14 +287,14 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="form_name">Firstname *</label>
+                                        <label for="form_name"></label>
                                         <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="form_lastname">Lastname *</label>
+                                        <label for="form_lastname"></label>
                                         <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
                                         <div class="help-block with-errors"></div>
                                     </div>
@@ -257,7 +303,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="form_email">Email *</label>
+                                        <label for="form_email"></label>
                                         <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
                                         <div class="help-block with-errors"></div>
                                     </div>

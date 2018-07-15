@@ -490,3 +490,7 @@ Responsive media queries
     margin: auto;
 }
 
+.pi-nav-links li a{
+        color:#212529;
+        padding-bottom:0
+    }
