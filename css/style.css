@@ -494,3 +494,20 @@ Responsive media queries
         color:#212529;
         padding-bottom:0
     }
+.with-errors{
+        color:#d20000
+    }
+    
+    .center-me{
+    position: relative;
+    top: 25%;
+    left: 0;
+    overflow-y:scroll;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    }
+
+/* hide scroll bars */
+::-webkit-scrollbar {
+   display: none
+}
