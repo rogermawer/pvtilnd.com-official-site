@@ -50,7 +50,8 @@ Responsive media queries
     text-align: center;
     font-weight:bold;
     color:#fff;
-    border-bottom: 1px solid white;
+    margin-bottom: 0;
+    border-bottom: 1px solid #fff;
 
 }
 
@@ -60,13 +61,13 @@ responsive media queries
 */
 @media (min-width: 551px) and (max-width: 980px){
 	.title-text{
-	margin-bottom: 15px;
+	margin-bottom: 0px;
 	}
 }
 @media (min-width: 100px) and (max-width: 550px) {
 	
 .title-text{
-	margin-bottom: 15px;
+	margin-bottom: 0px;
 	}
 }
 
