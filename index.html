@@ -51,6 +51,19 @@
           opacity: 0.8;
     }
     
+    .quick-links p, .quick-links iframe{
+        padding: 10px;
+        margin:0;
+        line-height: 32px;
+        height: 50px;
+        font-size: 14px;
+    }
+  
+    
+    .quick-links {
+        display: flex;
+    }
+    
 </style>
       
       
@@ -150,10 +163,15 @@
         
         
           <div class="row">
-              <div style="" class="col-md-12 fadeIn delay-05s">
+              <div style="" class="col-md-12">
                 <div style="" class="banner-text">
             
                  <h2 class="title-text">PVT&bull;ILND</h2>
+                <div class="quick-links">
+                 <p>Tour</p>
+                 <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:21MZoYDTcbPsC5crOQVqho&size=basic&theme=dark&show-count=0" width="112" height="50" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe>
+                 <p>MGMT</p>
+                </div>
                         
         
                     <p id="demo"></p>
@@ -250,8 +268,11 @@
                 <div class="text-box container">
                     <span class="boxclose"><i class="fas fa-times"></i></span>
                     <h1 style="text-align: center"></h1>
-                    <!-- no labels. only usernames and points -->
-                    <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/238973799&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                
+                    <div class="centered">
+                    <iframe src="https://open.spotify.com/embed/artist/21MZoYDTcbPsC5crOQVqho" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    
+                    </div>
                     
                    </div>
               </div>
