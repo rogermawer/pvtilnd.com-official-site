@@ -126,11 +126,21 @@ responsive media queries
 #socials{
     display: flex;
     justify-content: space-between;
-    font-size: 1.5em
+    font-size: 1.5em;
 }
-#socials i{
+#socials li{
     vertical-align: middle;
-}  
+    padding-left: 0;
+    padding-right: 20px
+}
+#socials p a img{
+    vertical-align: middle;
+    padding-left: 0;
+    padding-right: 20px
+}
+.boxclose a i{
+    color: #fff
+}
 
 #contact-form{
     max-width: 500px;
@@ -138,6 +148,10 @@ responsive media queries
 }
 
 .pi-nav-links li a{
+    color:#212529;
+    padding-bottom:0
+}
+.pi-nav-links p a{
     color:#212529;
     padding-bottom:0
 }
@@ -186,4 +200,11 @@ responsive media queries
 
 .spotify-player {
     width: 50%;
+}
+
+.nav-item{
+    cursor: pointer;
+}
+.about-us {
+    text-align: center
 }
