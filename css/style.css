@@ -183,3 +183,7 @@ responsive media queries
 ::-webkit-scrollbar {
    display: none
 }
+
+.spotify-player {
+    width: 50%;
+}
