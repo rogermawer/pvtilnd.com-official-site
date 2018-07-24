@@ -209,6 +209,10 @@ responsive media queries
     text-align: center
 }
 
+.btn{
+    border-radius: 0px;
+}
+
 
 .btn-success {
   color: #fff;
@@ -226,3 +230,7 @@ responsive media queries
     color: #fff;
     background-color: #CB9118;
     border-color: #CB9118;
+}
+.form-control{
+    border-radius: 0px;
+}
