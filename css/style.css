@@ -25,7 +25,7 @@ Responsive media queries
 }
 
 .bg-color{
-    background-color: #fff;
+    background-color: #fff; /* #FBECD7 */
     height: 100%;
 }
     
@@ -199,7 +199,7 @@ responsive media queries
 }
 
 .spotify-player {
-    width: 50%;
+    width: 80%;
 }
 
 .nav-item{
@@ -208,3 +208,20 @@ responsive media queries
 .about-us {
     text-align: center
 }
+
+.btn-success {
+  color: #fff;
+  background-color: #CB9118;
+  border-color: #CB9118;
+}
+
+.btn-success:hover {
+  color: #fff;
+  background-color: #3C7C97;
+  border-color: #3C7C97;
+}
+
+.btn-success.disabled, .btn-success:disabled {
+    color: #fff;
+    background-color: #CB9118;
+    border-color: #CB9118;
