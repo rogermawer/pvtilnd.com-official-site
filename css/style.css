@@ -13,11 +13,6 @@ body {
 	font-weight: 400;
 }
 
-/***********************************
-************************************
-Responsive media queries
-************************************
-***********************************/
 .header {
     background-size: cover;
     min-height: 630px;
@@ -121,6 +116,7 @@ responsive media queries
     top:0;
     left:98%;
     font-size: 30px;
+    font-weight: 200;
 }
     
 #socials{
