@@ -85,7 +85,7 @@ responsive media queries
     bottom:0;
     right:0;
     left:0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.7);
     z-index: 99;
     cursor: pointer;
 }
@@ -97,8 +97,8 @@ responsive media queries
     width: 80%;
     height: 80%;
     overflow-y:scroll;
-    background-color: rgba(0,0,0,0.8);
-    color: white;
+    background-color: rgba(0,0,0,0);
+    color: #fff;
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
     z-index: -1;
