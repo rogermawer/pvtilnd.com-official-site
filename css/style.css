@@ -20,7 +20,8 @@ body {
 }
 
 .bg-color{
-    background-color: #fffff4; /* #FBECD7 */
+    background-color: #fffff4;
+    height: 100%;/* #FBECD7 */
 }
     
 .banner-text{
@@ -110,6 +111,10 @@ responsive media queries
     
 .text{
     font-size: 18px;
+}
+
+.light-text{
+    font-weight: 200;
 }
 .boxclose{
     position: relative;

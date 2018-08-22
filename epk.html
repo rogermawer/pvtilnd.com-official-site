@@ -52,6 +52,9 @@
     .navbar-nav li{
         font-weight: 600;
     }
+    .navbar-collapse{
+        width:100%;
+    }
 
 </style>
       
@@ -67,19 +70,17 @@
       </script>
   </head>
     
-  <body>
+  <body class="bg-color">
   
-        <div class="bg-color">
+        
 
-          <div>
+          
             
             <nav class="navbar navbar-expand">
                 <div class="navrbar-collapse">
                     <ul class="navbar-nav mr-auto pi-nav-links">
+                        <li class="mr-2" style=""><a href="/index.html">HOME</a></li>
                         <li class="mr-2"><a href="https://open.spotify.com/artist/21MZoYDTcbPsC5crOQVqho?si=zwGlBnTETve0IFcdFnI5mg" target="_blank">Music</a></li>
-                        <!--
-                        <li class="mr-2"><a href="/pics.html">Pics</a></li>
-        -->
                         <li class="mr-2"><a href="#video">Video</a></li>
                         <li class="mr-2"><a href="#pictures">Pictures</a></li>
                         <li class="mr-2"><a href="#contact">Contact</a></li>
@@ -117,20 +118,18 @@
                           <iframe class="full-page-video" width="560" height="315" src="https://www.youtube.com/embed/BONJYMHfEQA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                       </div>
                   </div>
-                  <div class="about">
-                      <p class="text">Since the release of their 2014 groovily anthemic EP “A Good Look,” Private Island has quickly caught the attention of the indie &amp; alternative music scene. 2016’s “Sunbreak” saw the band build on their individual talents focusing on delicate harmonies, while maintaining the prominent basslines and signature guitar sound listeners have quickly come to expect. Following the success of “Sunbreak,” and the Hype Machine chart topping single “Drugs,” the band hit the road for their first US co-headling tour in 2017 with New York’s Future Generations. </p>
+                  <div id="about">
+                      <p class="text light-text">Since the release of their 2014 groovily anthemic EP “A Good Look,” Private Island has quickly caught the attention of the indie &amp; alternative music scene. 2016’s “Sunbreak” saw the band build on their individual talents focusing on delicate harmonies, while maintaining the prominent basslines and signature guitar sound listeners have quickly come to expect. Following the success of “Sunbreak,” and the Hype Machine chart topping single “Drugs,” the band hit the road for their first US co-headling tour in 2017 with New York’s Future Generations. </p>
                     
-                    <p class="text">That fall, Private Island hit the road with LA’s Mating Ritual, a tour capped off by a sold out headline show at The Roxy. Now, Private Island is moving forward with “Sunbreak”’s natural successor, “Night Drive”. Singles “Turbulence,” “Juvenile,” &amp; “Crime” portend the stated switch as nocturnal R&amp;B production infects the band’s, to this point, brightly shimmering style. With “Night Drive” Private Island intends to show us Los Angeles by streetlight, and proves that in a city full of stars, there’s no such thing as pitch black. Private Island is Christian Lum, Tommy Nickerson, Cameron Anderson, Roger Mawer and Tim Barbour.</p>
+                    <p class="text light-text">That fall, Private Island hit the road with LA’s Mating Ritual, a tour capped off by a sold out headline show at The Roxy. Now, Private Island is moving forward with “Sunbreak”’s natural successor, “Night Drive”. Singles “Turbulence,” “Juvenile,” &amp; “Crime” portend the stated switch as nocturnal R&amp;B production infects the band’s, to this point, brightly shimmering style. With “Night Drive” Private Island intends to show us Los Angeles by streetlight, and proves that in a city full of stars, there’s no such thing as pitch black. Private Island is Christian Lum, Tommy Nickerson, Cameron Anderson, Roger Mawer and Tim Barbour.</p>
                   </div>
                   <div id="contact">
                    <div style="text-align: center;margin-bottom:20px"> 
                        <p style="display: inline-block;padding-right:5px;border-right: 1px solid black"><strong>MGMT</strong><br> ALEX@TRIBEMGMTGROUP.COM</p>
-                       <p style="display: inline-block"><strong>BOOKING</strong><br>RBRANTLEY@APA-AGENCY.COM</p>
+                       <p style="display: inline-block"><strong>GLOBAL BOOKING</strong><br>RBRANTLEY@APA-AGENCY.COM</p>
                     </div>
                      <form id="contact-form" data-toggle="validator" method="post" action="contact.php" role="form">
-                         
-                         <p>Join our mailing list to be the first to know about new music, shows and other things</p>
-
+              
                         <div class="messages"></div>
 
                         <div class="controls">
@@ -171,7 +170,7 @@
                             </div>
                             
                             <div class="row">
-                                <!--
+                                
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="form_message">Message *</label>
@@ -179,7 +178,7 @@
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
-                            --->
+                           
                                 <div style="text-align: center" class="col-md-12">
                                     <input type="submit" class="btn btn-success btn-send" value="Submit">
                                 </div>
@@ -189,10 +188,9 @@
 
                     </form>
                   </div>
-                    </div>
-      </div>
+                </div>
+      
      
-      </div>
       
      
       
