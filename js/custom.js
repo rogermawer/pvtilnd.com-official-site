@@ -1,51 +1,29 @@
-(function ($) {
-    
-    // Init Wow
-    wow = new WOW( {
-        animateClass: 'animated',
-        offset:       100
-    });
-    wow.init();
-    
-    // Navigation scrolls
-    $('.navbar-nav li a').bind('click', function(event) {
-        $('.navbar-nav li').removeClass('active');
-        $(this).closest('li').addClass('active');
-        var $anchor = $(this);
-        var nav = $($anchor.attr('href'));
-        if (nav.length) {
-        $('html, body').stop().animate({				
-            scrollTop: $($anchor.attr('href')).offset().top				
-        }, 1500, 'easeInOutExpo');
-        
-        event.preventDefault();
-        }
-    });
-    
-    // About section scroll
-    $(".overlay-detail a").on('click', function(event) {
-        event.preventDefault();
-        var hash = this.hash;
-        $('html, body').animate({
-            scrollTop: $(hash).offset().top
-        }, 900, function(){
-            window.location.hash = hash;
-        });
-    });
-       
-    //jQuery to collapse the navbar on scroll
-    $(window).scroll(function() {
-        if ($(".navbar-default").offset().top > 50) {
-            $(".navbar-fixed-top").addClass("top-nav-collapse");
-        } else {
-            $(".navbar-fixed-top").removeClass("top-nav-collapse");
-        }
-    });
-    
-    // Testimonials Slider
-    $('.bxslider').bxSlider({
-      adaptiveHeight: true,
-      mode: 'fade'
-    });
-    
-})(jQuery);
+/* smooth scrolling */
+
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 300, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+
+
+
