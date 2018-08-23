@@ -72,7 +72,8 @@
     
     @media only screen and (max-width: 900px) {
         .spotify-player{
-            width: 100%
+            width: 100%;
+        
         }
     }
 }
@@ -150,6 +151,20 @@
               }
               return array;
             }
+<<<<<<< HEAD
+
+        
+$(document).ready(function(){
+    $('#links').click(function(){
+        $(this).parent().css('overflow','');
+        $(this).animate({'right': '+=500px', opacity: 0}); //send to left 500px
+        $(this).animate({'right': '-=1000px'}); //send to opposite side
+        $(this).animate({'right': '+=500px', opacity: 1}); //send from opposite side
+    });          
+});    
+    
+=======
+>>>>>>> parent of 691de08... follow animation
 
       
       </script>
@@ -274,8 +289,16 @@
               <div class="hidden content-box">
                 <div class="text-box container">
                     <span class="boxclose"><i class="fas fa-times"></i></span>
+
+                <div>
+
                     <h1 style="text-align: center"></h1>
                 <div class="centered">
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> parent of 691de08... follow animation
                     <div class="spotify-player">
                     <iframe src="https://open.spotify.com/embed/artist/21MZoYDTcbPsC5crOQVqho" style="width: 100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                     </div>
