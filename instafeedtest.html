@@ -124,9 +124,8 @@
 <div ng-app="myApp" ng-controller="customersCtrl"> 
 
 <table id="table">
-    <tr>
-        <td><img src="{{myData.url}}"></td>
-        <td></td>
+    <tr ng-repeat="x in myData">
+        <td><img src="{{x.images.standard_resolution.url}}"></td>
     </tr>
 </table>
 
@@ -152,7 +151,7 @@ var app = angular.module('myApp', []);
 app.controller('customersCtrl', function($scope, $http) {
     $http.get("https://api.instagram.com/v1/users/self/media/recent/?access_token=1163694981.2951133.69e9d39f57d34eabb2fe491b7c71bd6f").then(function(response) {
         
-        $scope.myData = response.data.data[0].images.standard_resolution;
+        $scope.myData = response.data.data;
     }, function(response){
         $('#table').html('Something very bad happened.')
     });
