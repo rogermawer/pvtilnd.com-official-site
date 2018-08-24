@@ -86,16 +86,26 @@ responsive media queries
     bottom:0;
     right:0;
     left:0;
-    background-color: rgba(0,0,0,0.6);
+  
     z-index: 99;
     cursor: pointer;
 }
+.blue-bg {
+    background-color: rgba(60, 124, 151, 0.6)
+}
+.gold-bg {
+    background-color: rgba(203, 145, 24, 0.6)
+}
+.red-bg {
+    background-color: rgba(169, 31, 10, 0.8)
+}
+
 
 .text-box{
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 80%;
+    width: 90%;
     height: 80%;
     overflow-y:scroll;
     background-color: rgba(0,0,0,0);
