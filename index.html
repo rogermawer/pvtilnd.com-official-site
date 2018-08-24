@@ -17,7 +17,7 @@
 
 
     
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
       
@@ -80,7 +80,6 @@
         
         }
     }
-}
 
     
 </style>
@@ -355,7 +354,16 @@ $(document).ready(function(){
                 <!-- instagram feed -->
                 <div class="text-box container">
                     <span class="boxclose"><i class="fas fa-times"></i></span>
-                 <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/759983e4090856ab8946d8be493a8a41.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+                 <div class="container" ng-app="myApp" ng-controller="customersCtrl"> 
+                    <div id="insta-table">
+                        <div ng-repeat="x in myData">
+                            <div class="row" ng-if="$even">
+                                <div class="col-sm-6"><img class="img-fluid" src="{{myData[$index].images.standard_resolution.url}}"></div>
+                                <div class="col-sm-6"><img class="img-fluid" src="{{myData[$index+1].images.standard_resolution.url}}"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 </div>
               </div>
             </div>
@@ -371,7 +379,18 @@ $(document).ready(function(){
       
       
       
-    
+<script>
+var app = angular.module('myApp', []);
+app.controller('customersCtrl', function($scope, $http) {
+    $http.get("https://api.instagram.com/v1/users/self/media/recent/?access_token=1163694981.2951133.69e9d39f57d34eabb2fe491b7c71bd6f").then(function(response) {
+        
+        $scope.myData = response.data.data;
+    }, function(response){
+        $('#insta-table').html('Something very bad happened.')
+    });
+
+});
+</script>
     <script src="js/jquery.easing.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/custom.js"></script>

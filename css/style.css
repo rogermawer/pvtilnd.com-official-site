@@ -253,3 +253,11 @@ responsive media queries
 .form-control{
     border-radius: 0px;
 }
+
+/* angular insta table */
+ #insta-table img{
+        width:400px;
+        height:400px;
+        object-fit: cover;
+    }
+    
