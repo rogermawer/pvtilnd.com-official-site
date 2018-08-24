@@ -212,8 +212,8 @@ $(document).ready(function(){
                         
                     
                     <div style="height: 50px">
-                        <p id="socials" style="display: none;transform: translate(-17%)">
-                            <a href="https://www.instagram.com/pvtilnd/" style="line-height: 28px"><img src="/img/instagram-2016-png-transparent-logo.png" style="width:20px;" width="20"></a><a href="https://www.facebook.com/PVTILND/"><i class="fab fa-facebook-square" style="color:#4267B2"></i></a><a href=""><iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:21MZoYDTcbPsC5crOQVqho&size=basic&theme=dark&show-count=0" width="95" height="50" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe></a><a href="https://open.spotify.com/artist/21MZoYDTcbPsC5crOQVqho?si=zwGlBnTETve0IFcdFnI5mg" target="_blank"><i class="fab fa-spotify" style="color:#1ED760"></i></a><a href="https://twitter.com/pvtilnd"><i class="fab fa-twitter" style="color:#1DA1F2"></i></a></p>
+                        <p id="socials" style="display: none;transform: translate(-16%)">
+                            <a href="https://www.instagram.com/pvtilnd/" style="line-height: 28px"><img src="/img/instagram-2016-png-transparent-logo.png" style="width:20px;" width="20"></a><a href="https://www.facebook.com/PVTILND/"><i class="fab fa-facebook-square" style="color:#4267B2"></i></a><a href=""><iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:21MZoYDTcbPsC5crOQVqho&size=basic&theme=dark&show-count=0" width="95" height="50" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe></a><a href="https://soundcloud.com/privateisland" target="_blank"><i class="fab fa-soundcloud" style="color:#FF4A04"></i></a><a href="https://twitter.com/pvtilnd"><i class="fab fa-twitter" style="color:#1DA1F2"></i></a></p>
                     </div>
 
                 </div>
@@ -388,10 +388,10 @@ $(document).ready(function(){
                     <span class="boxclose"><i class="fas fa-times"></i></span>
                  <div class="container" ng-app="myApp" ng-controller="customersCtrl"> 
                     <div id="insta-table">
-                        <div ng-repeat="x in myData">
+                        <div ng-repeat="x in myData" style="max-width: 800px;margin: auto">
                             <div class="row" ng-if="$even">
-                                <div class="col-sm-6"><img class="img-fluid" ng-src="{{myData[$index].images.standard_resolution.url}}"></div>
-                                <div class="col-sm-6"><img class="img-fluid" ng-src="{{myData[$index+1].images.standard_resolution.url}}"></div>
+                                <div class="col-m-6 mb-2" style="margin: auto;"><img class="img-fluid" ng-src="{{myData[$index].images.standard_resolution.url}}"></div>
+                                <div class="col-m-6 mb-2" style="margin: auto"><img class="img-fluid" ng-src="{{myData[$index+1].images.standard_resolution.url}}"></div>
                             </div>
                         </div>
                     </div>

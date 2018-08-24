@@ -403,8 +403,8 @@
                     <div id="insta-table">
                         <div ng-repeat="x in myData">
                             <div class="row" ng-if="$even">
-                                <div class="col-sm-6"><img class="img-fluid" src="{{myData[$index].images.standard_resolution.url}}"></div>
-                                <div class="col-sm-6"><img class="img-fluid" src="{{myData[$index+1].images.standard_resolution.url}}"></div>
+                                <div class="col-sm-6"><img class="img-fluid" ng-src="{{myData[$index].images.standard_resolution.url}}"></div>
+                                <div class="col-sm-6"><img class="img-fluid" ng-src="{{myData[$index+1].images.standard_resolution.url}}"></div>
                             </div>
                         </div>
                     </div>
