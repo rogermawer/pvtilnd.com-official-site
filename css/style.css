@@ -40,10 +40,10 @@ body {
 
 .title-text{
 	padding: 0;
-	font-size: 24px;
+	font-size: 32px;
     letter-spacing: 4px;
     text-align: center;
-    font-weight:bold;
+    font-weight:normal;
     color:#000;
     margin-bottom: 0;
     border-bottom: 1px solid #000;
@@ -253,3 +253,11 @@ responsive media queries
 .form-control{
     border-radius: 0px;
 }
+
+/* angular insta table */
+ #insta-table img{
+        width:400px;
+        height:400px;
+        object-fit: cover;
+    }
+    

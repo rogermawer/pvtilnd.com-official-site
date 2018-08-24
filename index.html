@@ -17,7 +17,7 @@
 
 
     
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
       
@@ -80,8 +80,18 @@
         
         }
     }
-}
+    .mgmt-line{
+        display: inline-block;padding-right:5px;border-right: 1px solid #000
+    }
 
+    @media only screen and (max-width: 770px) {.mgmt-line{
+        border-right:1px solid transparent;
+    }
+    }
+    .follow:hover{
+        text-decoration: underline;
+        cursor: pointer
+    }
     
 </style>
       
@@ -118,7 +128,7 @@
         $(document).ready(function(){
             setTimeout(function(){
                 looper();
-            }, 7000);
+            }, 5000);
             setInterval(function(){
                 looper();
             }, 60000);
@@ -138,7 +148,7 @@
                 var x = $(this);
                 setTimeout(function() {
                     x.toggleClass('bounce');
-                }, 10000*i);
+                }, 5000*i);
             });
       }
         
@@ -155,6 +165,20 @@
               }
               return array;
             }
+        
+        
+        /* shitty code but works */
+        
+//$(document).ready(function(){
+//    $('.boxclose').click(function(){
+//        theVideo = $('#drugz');
+//        var iframeSrc = theVideo.attr('src');
+//        theVideo.attr('src', '');
+//        theVideo.attr('src', iframeSrc);
+//    });
+//});
+
+
 
 
         
@@ -179,10 +203,10 @@ $(document).ready(function(){
           <div class="row">
               <div style="" class="col-md-12">
                 <div style="" class="banner-text">
-                 <h2 class="title-text">PVT&bull;ILND</h2>
+                 <p class="title-text">PVTILND</p>
                 <div class="quick-links">
                     <p><a href="/tour.html">Tour</a></p>
-                    <p id="links"><a href="javascript:void()"><span style="font-weight: 800">Follow</span></a></p>
+                    <p id="links"><span class="follow" style="color:#000;font-weight: 800">Follow</span></p>
                     <p><a href="/contact.html">MGMT</a></p>
                 </div>
                         
@@ -207,10 +231,17 @@ $(document).ready(function(){
               <div class="hidden content-box">
                 <div class="text-box container">
                     <span class="boxclose"><i class="fas fa-times"></i></span>
+                    <div id="video" class="epk-video mb-4">
+                      <div class="video-container">
+                          <iframe id="drugz" class="full-page-video" width="560" height="315" src="https://www.youtube.com/embed/BONJYMHfEQA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                      </div>
+                  </div>
+<!--
                     <div class="about-us">
                     <h1>-PVTILND-</h1>
                     <p class="text">An approachable band from Southern California. Uses powers for good.</p>
                   </div>
+-->
                   </div>
                   
               </div>
@@ -262,7 +293,7 @@ $(document).ready(function(){
                     <span class="boxclose"><i class="fas fa-times"></i></span>
                    <div style="background-color:#fffff4;padding:20px;color:#000">
                     <div style="text-align: center;margin-bottom:20px"> 
-                       <p style="display: inline-block;padding-right:5px;border-right: 1px solid #000"><strong>MGMT</strong><br> ALEX@TRIBEMGMTGROUP.COM</p>
+                       <p class="mgmt-line"><strong>MGMT</strong><br> ALEX@TRIBEMGMTGROUP.COM</p>
                        <p style="display: inline-block"><strong>BOOKING</strong><br>RBRANTLEY@APA-AGENCY.COM</p>
                     </div>
                      <form id="contact-form" data-toggle="validator" method="post" action="contact.php" role="form">
@@ -355,7 +386,16 @@ $(document).ready(function(){
                 <!-- instagram feed -->
                 <div class="text-box container">
                     <span class="boxclose"><i class="fas fa-times"></i></span>
-                 <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/759983e4090856ab8946d8be493a8a41.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+                 <div class="container" ng-app="myApp" ng-controller="customersCtrl"> 
+                    <div id="insta-table">
+                        <div ng-repeat="x in myData">
+                            <div class="row" ng-if="$even">
+                                <div class="col-sm-6"><img class="img-fluid" src="{{myData[$index].images.standard_resolution.url}}"></div>
+                                <div class="col-sm-6"><img class="img-fluid" src="{{myData[$index+1].images.standard_resolution.url}}"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 </div>
               </div>
             </div>
@@ -371,7 +411,18 @@ $(document).ready(function(){
       
       
       
-    
+<script>
+var app = angular.module('myApp', []);
+app.controller('customersCtrl', function($scope, $http) {
+    $http.get("https://api.instagram.com/v1/users/self/media/recent/?access_token=1163694981.2951133.69e9d39f57d34eabb2fe491b7c71bd6f").then(function(response) {
+        
+        $scope.myData = response.data.data;
+    }, function(response){
+        $('#insta-table').html('Something very bad happened.')
+    });
+
+});
+</script>
     <script src="js/jquery.easing.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/custom.js"></script>
