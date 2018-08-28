@@ -420,7 +420,7 @@ $(document).ready(function(){
 <script>
 var app = angular.module('myApp', []);
 app.controller('customersCtrl', function($scope, $http) {
-    $http.get("https://api.instagram.com/v1/users/self/media/recent/?access_token=1163694981.2951133.69e9d39f57d34eabb2fe491b7c71bd6f").then(function(response) {
+    $http.get("https://api.instagram.com/v1/users/self/media/recent/?access_token=1163694981.2951133.64f8504f83d04b368de0c2106b688552").then(function(response) {
         
         $scope.myData = response.data.data;
     }, function(response){
