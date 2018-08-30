@@ -65,6 +65,14 @@ responsive media queries
 	margin-bottom: 0px;
 	}
 }
+.mgmt-line{
+        display: inline-block;padding-right:5px;border-right: 1px solid #000
+    }
+
+ @media only screen and (max-width: 770px) {.mgmt-line{
+        border-right:1px solid transparent;
+    }
+    }
 
 
 .social-list i {
@@ -271,3 +279,6 @@ responsive media queries
         object-fit: cover;
     }
     
+.copyright{
+    font-size: 12px;
+}

@@ -7,17 +7,17 @@
 $from = 'PVTILND <roger@mangomeat.com>';
 
 // an email address that will receive the email with the output of the form
-$sendTo = 'PVTILND <rogermawer@gmail.com>';
+$sendTo = 'PVTILND <pvtilnd@gmail.com>';
 
 // subject of the email
-$subject = 'New signup to PVTILND email list';
+$subject = 'New message from PVTILND contact form';
 
 // form field names and their translations.
 // array variable name => Text to appear in the email
 $fields = array('name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'message' => 'Message'); 
 
 // message that will be displayed when everything is OK :)
-$okMessage = 'You have been signed up. Thank you!';
+$okMessage = "Thank you. We'll get back to you shortly.";
 
 // If something goes wrong, we will display this message.
 $errorMessage = 'There was an error while submitting the form. Please try again later';
