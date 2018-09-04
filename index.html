@@ -121,7 +121,7 @@
             elementID = '#' + elementID;
             // if back button is pushed, close box
             window.onpopstate = function(event) {
-                if (!(window.location.hash == elementID)){
+                if (!(window.location.hash === elementID)){
                      $('.content-box').fadeOut(100);
                 }
             }
@@ -307,7 +307,7 @@ $(document).ready(function(){
           
           <div id="contactus" style="">
                 <!-- red oval -->
-              <div class="nav-item" style="width:60px;height:30px;border-radius: 50%;position: absolute;right:13%;top:60%;background-color: #CE260C;overflow: hidden"></div>
+              <a class="nav-item" id="red-oval" style="width:60px;height:30px;border-radius: 50%;position: absolute;right:13%;top:60%;background-color: #CE260C;overflow: hidden" href="#red-oval"></a>
                 <div class="hidden content-box red-bg">
                 <div class="text-box container">
                     <span class="boxclose"><i class="fas fa-times"></i></span>
@@ -384,7 +384,7 @@ $(document).ready(function(){
           
           <div id="tourdates" style="">
               <!-- red rectangle -->
-              <div class="nav-item" style="width:80px;position: absolute;right:79%;top:30%;border-right:20px solid #CE260C;border-left: 20px solid #CE260C;border-bottom: 10px solid #CE260C;border-top:10px solid #CE260C;overflow: hidden"></div>
+              <a class="nav-item" id="red-rectangle" style="width:80px;position: absolute;right:79%;top:30%;border-right:20px solid #CE260C;border-left: 20px solid #CE260C;border-bottom: 10px solid #CE260C;border-top:10px solid #CE260C;overflow: hidden" href="#red-rectangle"></a>
                   
               <div class="hidden content-box red-bg">
                 <div class="text-box container">
