@@ -116,16 +116,18 @@
    $(document).ready(function(){
         $('.nav-item').click(function(){
             $(this).next().fadeIn(800);
-            // this needs work... make back button refresh screen by refreshing any url change
-//            var elementID = $(this).attr('id');
-//            window.onpopstate = function(event) {
-//                if (!(window.location.hash == elementID)){
-//                     location.reload();
-//                }
-//            }
+//             this needs work... make back button refresh screen by refreshing any url change
+            var elementID = $(this).attr('id');
+            elementID = '#' + elementID;
+            window.onpopstate = function(event) {
+                if (!(window.location.hash == elementID)){
+                     location.reload();
+                }
+            }
         });
         $('.boxclose').click(function(){
             $('.content-box').fadeOut(100);
+            removeHash();
         });
    });
    
@@ -172,6 +174,10 @@ function shuffle(array) {
         array[i] = t;
     }
     return array;
+}
+        
+function removeHash () { 
+    history.pushState("", document.title, window.location.pathname + window.location.search);
 }
         
         
@@ -387,12 +393,12 @@ $(document).ready(function(){
           
           <div id="pictures" style="">
               <!-- gold paralellagram -->
-              <a class="nav-item" style="height:80px;position: absolute;right:43%;top:18%;border-right:20px solid transparent;border-left: 20px solid #CB9118;border-bottom: 20px solid transparent;border-top:20px solid transparent;overflow: hidden;" href="#gold-paralellagram"></a>
+              <a class="nav-item" id="gold-paralellagram" style="height:80px;position: absolute;right:43%;top:18%;border-right:20px solid transparent;border-left: 20px solid #CB9118;border-bottom: 20px solid transparent;border-top:20px solid transparent;overflow: hidden;" href="#gold-paralellagram"></a>
               
                <div class="hidden content-box gold-bg">
                 
                 <!-- instagram feed -->
-                <div id="gold-paralellagram" class="text-box container">
+                <div class="text-box container">
                     <span class="boxclose"><i class="fas fa-times"></i></span>
                  <div class="container" ng-app="myApp" ng-controller="customersCtrl"> 
                     <div id="insta-table">
