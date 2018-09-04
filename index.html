@@ -180,7 +180,10 @@ function shuffle(array) {
 }
         
 function removeHash () { 
-    history.pushState("", document.title, window.location.pathname + window.location.search);
+    // this will keep history in tact... not sure if we want that yet...
+//    history.pushState("", document.title, window.location.pathname + window.location.search);
+    // for now treat box close like a back button
+    window.history.back();
 }
         
         
@@ -268,7 +271,7 @@ $(document).ready(function(){
            <div id="store" style="">
             
                 <!-- gold triangle -->
-              <div class="nav-item" style="height:20px;width:20px;position: absolute;right:60%;top:75%;overflow:hidden;border-color: #CB9118;border-right:20px solid transparent;border-left: 20px solid transparent;border-bottom: 20px solid #CB9118;border-top: 20px solid transparent"></div>
+              <a class="nav-item" id="gold-triangle" style="height:20px;width:20px;position: absolute;right:60%;top:75%;overflow:hidden;border-color: #CB9118;border-right:20px solid transparent;border-left: 20px solid transparent;border-bottom: 20px solid #CB9118;border-top: 20px solid transparent" href="#gold-triangle"></a>
                
                <div class="hidden content-box gold-bg">
                 <div class="text-box container">
@@ -286,9 +289,9 @@ $(document).ready(function(){
               
           </div>
           
-          <div style="">
+          <div id="music" style="">
               <!-- blue shape -->
-              <div class="nav-item" style="width:20px;position: absolute;right:88%;top:62%;height:20px;border-color: #3C7C97;border-right:20px solid #3C7C97;border-left: 20px solid transparent;border-bottom: 20px solid #3C7C97;overflow: hidden"></div>
+              <a class="nav-item" id="blue-shape" style="width:20px;position: absolute;right:88%;top:62%;height:20px;border-color: #3C7C97;border-right:20px solid #3C7C97;border-left: 20px solid transparent;border-bottom: 20px solid #3C7C97;overflow: hidden" href="#blue-shape"></a>
               
               <div class="hidden content-box blue-bg">
                 <div class="text-box container">
