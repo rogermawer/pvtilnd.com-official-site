@@ -282,3 +282,68 @@ responsive media queries
 .copyright{
     font-size: 12px;
 }
+.bounce {
+    animation:bounce .8s;
+    -webkit-animation:bounce .8s;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+}
+    
+.merch{
+    width:500px;
+    padding:15px;
+}
+    
+.merch:hover{
+/* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+
+    /* IE 5-7 */
+    filter: alpha(opacity=80);
+
+    /* Netscape */
+    -moz-opacity: 0.8;
+
+    /* Safari 1.x */
+    -khtml-opacity: 0.8;
+
+    /* Good browsers */
+    opacity: 0.8;
+}
+    
+.quick-links p, .quick-links iframe{
+    padding: 10px;
+    margin:0;
+    line-height: 32px;
+    height: 50px;
+    font-size: 14px;
+}
+.quick-links p a{
+    color: #000;
+}
+#links{
+    position: relative
+}
+  
+.quick-links {
+    display: flex;
+    margin-top:5px;
+    justify-content: center;
+}
+@media only screen and (max-width: 900px) {
+    .spotify-player{
+        width: 100%;
+        
+    }
+}
+   
+
+@media only screen and (max-height: 500px) {#gold-paralellagram{
+    top:2%!important;
+}
+}
+    
+.follow:hover{
+    text-decoration: underline;
+    cursor: pointer
+}
