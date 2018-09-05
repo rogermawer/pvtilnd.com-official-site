@@ -59,51 +59,6 @@
             removeHash();
         });
    });
-   
-
-   
-        /* bouncy class */
-           
-        $(document).ready(function(){
-            setTimeout(function(){
-                looper();
-            }, 5000);
-            setInterval(function(){
-                looper();
-            }, 60000);
-        
-        });
-        
-        /* random number booth min max included 
-        function rndNum(min, max) {
-            return Math.floor(Math.random() * (max - min + 1) ) + min;
-        }
-        */
-        
-     function looper(x){
-         var items = $('.nav-item');
-         var shuffledItems = shuffle(items);
-           $(shuffledItems).each(function(i){
-                var x = $(this);
-                setTimeout(function() {
-                    x.toggleClass('bounce');
-                }, 5000*i);
-            });
-      }
-        
-function shuffle(array) {
-    var m = array.length, t, i;
-    // While there remain elements to shuffle…
-    while (m) {
-        // Pick a remaining element…
-        i = Math.floor(Math.random() * m--);
-        // And swap it with the current element.
-        t = array[m];
-        array[m] = array[i];
-        array[i] = t;
-    }
-    return array;
-}
         
 function removeHash () { 
     // this will keep history in tact... not sure if we want that yet...
@@ -299,7 +254,7 @@ $(document).ready(function(){
                 <!-- instagram feed -->
                 <div class="text-box container">
                     <span class="boxclose"><i class="fas fa-times"></i></span>
-                 <div class="container" ng-app="myApp" ng-controller="customersCtrl"> 
+                 <div class="container" ng-app="PVTILND-FEED" ng-controller="customersCtrl"> 
                     <div id="insta-table">
                         <div ng-repeat="x in myData" style="max-width: 800px;margin: auto">
                             <div class="row" ng-if="$even">
@@ -326,10 +281,9 @@ $(document).ready(function(){
       
       
 <script>
-var app = angular.module('myApp', []);
+var app = angular.module('PVTILND-FEED', []);
 app.controller('customersCtrl', function($scope, $http) {
     $http.get("https://api.instagram.com/v1/users/self/media/recent/?access_token=1163694981.2951133.64f8504f83d04b368de0c2106b688552").then(function(response) {
-        
         $scope.myData = response.data.data;
     }, function(response){
         $('#insta-table').html('Something very bad happened.')
