@@ -283,7 +283,7 @@ $(document).ready(function(){
 <script>
 var app = angular.module('PVTILND-FEED', []);
 app.controller('customersCtrl', function($scope, $http) {
-    $http.get("https://api.instagram.com/v1/users/self/media/recent/?access_token=1163694981.2951133.64f8504f83d04b368de0c2106b688552").then(function(response) {
+    $http.get("https://api.instagram.com/v1/users/self/media/recent/?access_token=1163694981.2951133.a2582d1d4fca443a93bbead6387b36d9").then(function(response) {
         $scope.myData = response.data.data;
     }, function(response){
         $('#insta-table').html('Something very bad happened.')
