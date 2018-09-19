@@ -338,7 +338,7 @@ responsive media queries
 }
    
 
-@media only screen and (max-height: 500px) {#gold-paralellagram{
+@media only screen and (max-height: 500px) {#pictures{
     top:2%!important;
 }
 }
