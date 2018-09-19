@@ -26,74 +26,17 @@
       
       
 <style>
- 
-    
-    .ism-slider li.ism-slide {
-        background:transparent;
-    }
-    .ism-slider{
-        background-color: rgba(0,0,0,.0);
-    }
-    
 
 </style>
       
       
-    <script>
-        $(document).ready(function(){
-            var clicked = true;
-            $('#links').click(function(){
-                if (clicked === true){
-                    $('#socials').stop().fadeIn(800);
-                    clicked = false;
-
-                }else{
-                    $('#socials').stop().fadeOut(800);
-                    clicked = true;
-                }
-            });
-        });
-      
-        
-   $(document).ready(function(){
-        $('.nav-item').click(function(){
-            $(this).next().fadeIn(800);
-        });
-       /* use double click for desktop, but mobile? IDK */
-        $('.boxclose').click(function(){
-            $('.content-box').fadeOut(100);
-            
-        });
-   });
-      
-       
-        
-        
-      
-      
-      </script>
-  </head>
     
-  <body>
+</head>
+    
+<body>
   
-        <div class="bg-color">
-    <!--
-        <header id="main-header">
-        <nav class="navbar navbar-expand fixed-top">
-            <div class="navrbar-collapse">
-            <ul class="navbar-nav mr-auto pi-nav-links">
-                <li class="mr-2"><a href="/index.html" style="color:#212529">Home</a>
-                <li class="mr-2"><a href="https://open.spotify.com/artist/21MZoYDTcbPsC5crOQVqho?si=zwGlBnTETve0IFcdFnI5mg" target="_blank">Music</a></li>
-                <li class="mr-2"><a href="/pics.html">Pics</a></li>
-                <li class="mr-2"><a href="/live.html">Live</a></li>
-                <li class="mr-2"><a href="/contact.html">Contact</a></li>
-                <li class="mr-2"><a href="https://thehyv.shop/collections/private-island" target="_blank">Store</a></li>
-            </ul>
-            </div>
-        </nav>
-        </header>
+    <div class="bg-color">
 
-        -->
         
          
           
@@ -101,11 +44,11 @@
           <!-- body -->
           
           <div class="container" style="z-index: 1">
-               <div style="width:100%;margin: auto;text-align: center"><img style="min-width:250px;max-width:600px;width: 100%" src="img/red.png"></div>
+              <div style="width:100%;margin: auto;text-align: center"><a href="/"><img style="min-width:250px;max-width:600px;width: 100%" src="img/red.png"></a></div>
               <div>
                    <div style="text-align: center;margin-bottom:20px"> 
-                       <p class="mgmt-line"><strong>MGMT</strong><br> ALEX@TRIBEMGMTGROUP.COM</p>
-                       <p style="display: inline-block"><strong>BOOKING</strong><br>RBRANTLEY@APA-AGENCY.COM</p>
+                       <p class="mgmt-line"><strong>MGMT</strong><br><a style="font-weight: normal;color:#000" href="mailto:ALEX@TRIBEMGMTGROUP.COM?subject=RE:Private Island">ALEX@TRIBEMGMTGROUP.COM</a></p>
+                       <p style="display: inline-block"><strong>BOOKING</strong><br><a style="font-weight: normal;color:#000" href="mailto:RBRANTLEY@APA-AGENCY.COM?subject=Booking Private Island">RBRANTLEY@APA-AGENCY.COM</a></p>
                     </div>
                      <form id="contact-form" data-toggle="validator" method="post" action="pvtilnd-contact.php" role="form">
                          

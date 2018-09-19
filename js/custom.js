@@ -25,5 +25,41 @@ $(document).ready(function(){
   });
 });
 
+  /* bouncy class */
+           
+$(document).ready(function(){
+    setTimeout(function(){
+        looper();
+    }, 5000);
+    setInterval(function(){
+        looper();
+    }, 60000);
+});
+        
+function looper(x){
+    var items = $('.nav-item');
+    var shuffledItems = shuffle(items);
+    $(shuffledItems).each(function(i){
+        var x = $(this);
+        setTimeout(function() {
+            x.toggleClass('bounce');
+        }, 5000*i);
+    });
+}
+        
+function shuffle(array) {
+    var m = array.length, t, i;
+    // While there remain elements to shuffle…
+    while (m) {
+        // Pick a remaining element…
+        i = Math.floor(Math.random() * m--);
+        // And swap it with the current element.
+        t = array[m];
+        array[m] = array[i];
+        array[i] = t;
+    }
+    return array;
+}
+
 
 

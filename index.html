@@ -14,90 +14,16 @@
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
-
-
-    
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
-      
-      
+   
 <style>
-.bounce {
-    animation:bounce .8s;
-    -webkit-animation:bounce .8s;
-    animation-iteration-count: 1;
-    -webkit-animation-iteration-count: 1;
-}
-    
-    .merch{
-        width:500px;
-        padding:15px;
-    }
-    
-     .merch:hover{
-        /* IE 8 */
-          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
 
-          /* IE 5-7 */
-          filter: alpha(opacity=80);
-
-          /* Netscape */
-          -moz-opacity: 0.8;
-
-          /* Safari 1.x */
-          -khtml-opacity: 0.8;
-
-          /* Good browsers */
-          opacity: 0.8;
-    }
-    
-    .quick-links p, .quick-links iframe{
-        padding: 10px;
-        margin:0;
-        line-height: 32px;
-        height: 50px;
-        font-size: 14px;
-    }
-    .quick-links p a{
-        color: #000;
-    }
-    #links{
-        position: relative
-    }
-  
-    
-    .quick-links {
-        display: flex;
-        margin-top:5px;
-        justify-content: center;
-    }
-    
-    
-    @media only screen and (max-width: 900px) {
-        .spotify-player{
-            width: 100%;
-        
-        }
-    }
-   
-
-   
-    
-    @media only screen and (max-height: 500px) {#gold-paralellagram{
-        top:8%!important;
-    }
-    }
-    
-    .follow:hover{
-        text-decoration: underline;
-        cursor: pointer
-    }
     
 </style>
       
       
-    <script>
+<script>
         $(document).ready(function(){
             var clicked = true;
             $('#links').click(function(){
@@ -116,62 +42,29 @@
    $(document).ready(function(){
         $('.nav-item').click(function(){
             $(this).next().fadeIn(800);
-            // this needs work... make back button refresh screen by refreshing any url change
-//            var elementID = $(this).attr('id');
-//            window.onpopstate = function(event) {
-//                if (!(window.location.hash == elementID)){
-//                     location.reload();
-//                }
-//            }
+            // save hash in url in case user pushes back button
+            var elementID = $(this).attr('id');
+            elementID = '#' + elementID;
+            // if back button is pushed, close box
+            window.onpopstate = function(event) {
+                if (!(window.location.hash === elementID)){
+                     $('.content-box').fadeOut(100);
+                }
+            }
         });
+       // else, close box with 'x'
         $('.boxclose').click(function(){
             $('.content-box').fadeOut(100);
+            // then remove hash from url
+            removeHash();
         });
    });
-   
-
-   
-        /* bouncy class */
-           
-        $(document).ready(function(){
-            setTimeout(function(){
-                looper();
-            }, 5000);
-            setInterval(function(){
-                looper();
-            }, 60000);
         
-        });
-        
-        /* random number booth min max included 
-        function rndNum(min, max) {
-            return Math.floor(Math.random() * (max - min + 1) ) + min;
-        }
-        */
-        
-     function looper(x){
-         var items = $('.nav-item');
-         var shuffledItems = shuffle(items);
-           $(shuffledItems).each(function(i){
-                var x = $(this);
-                setTimeout(function() {
-                    x.toggleClass('bounce');
-                }, 5000*i);
-            });
-      }
-        
-function shuffle(array) {
-    var m = array.length, t, i;
-    // While there remain elements to shuffle…
-    while (m) {
-        // Pick a remaining element…
-        i = Math.floor(Math.random() * m--);
-        // And swap it with the current element.
-        t = array[m];
-        array[m] = array[i];
-        array[i] = t;
-    }
-    return array;
+function removeHash () { 
+    // this will keep history in tact... not sure if we want that yet...
+//    history.pushState("", document.title, window.location.pathname + window.location.search);
+    // for now treat box close like a back button
+    window.history.back();
 }
         
         
@@ -201,29 +94,25 @@ $(document).ready(function(){
 
 
       
-      </script>
-  </head>
+</script>
+</head>
     
   <body>
   
         <div class="bg-color centered">
-        
           <div class="row">
               <div style="" class="col-md-12">
                 <div style="" class="banner-text">
-                 <p class="title-text">PVTILND</p>
-                <div class="quick-links">
-                    <p><a href="/tour.html">Tour</a></p>
-                    <p id="links"><span class="follow" style="color:#000;font-weight: 800">Follow</span></p>
-                    <p><a href="/contact.html">MGMT</a></p>
-                </div>
-                        
-                    
+                <p class="title-text">PVTILND</p>
+                    <div class="quick-links">
+                        <p><a href="/tour.html">Tour</a></p>
+                        <p id="links"><span class="follow" style="color:#000;font-weight: 800">Follow</span></p>
+                        <p><a href="/contact.html">MGMT</a></p>
+                    </div>    
                     <div style="height: 50px">
                         <p id="socials" style="display: none;transform: translate(-16%)">
-                            <a href="https://www.instagram.com/pvtilnd/" style="line-height: 28px"><img src="/img/instagram-2016-png-transparent-logo.png" style="width:20px;" width="20"></a><a href="https://www.facebook.com/PVTILND/"><i class="fab fa-facebook-square" style="color:#4267B2"></i></a><a href=""><iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:21MZoYDTcbPsC5crOQVqho&size=basic&theme=dark&show-count=0" width="95" height="50" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe></a><a href="https://soundcloud.com/privateisland" target="_blank"><i class="fab fa-soundcloud" style="color:#FF4A04"></i></a><a href="https://twitter.com/pvtilnd"><i class="fab fa-twitter" style="color:#1DA1F2"></i></a></p>
+                            <a href="https://www.instagram.com/pvtilnd/" style="line-height: 28px"><img src="img/instagram-2016-png-transparent-logo.png" style="width:20px;" width="20"></a><a href="https://www.facebook.com/PVTILND/"><i class="fab fa-facebook-square" style="color:#4267B2"></i></a><a href=""><iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:21MZoYDTcbPsC5crOQVqho&size=basic&theme=dark&show-count=0" width="95" height="50" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" allowtransparency="true"></iframe></a><a href="https://soundcloud.com/privateisland" target="_blank"><i class="fab fa-soundcloud" style="color:#FF4A04"></i></a><a href="https://twitter.com/pvtilnd"><i class="fab fa-twitter" style="color:#1DA1F2"></i></a></p>
                     </div>
-
                 </div>
               </div>
           </div>
@@ -231,11 +120,9 @@ $(document).ready(function(){
           
           <!-- nav items -->
           
-          <div id="bio" style="">
-              <!-- blue box -->
-              
-                <div class="nav-item" style="position: absolute;right:25%;top:40px;height:50px;width:20px;border-right:20px solid #6A9FAD;border-left: 0px solid transparent;border-bottom: 0px solid transparent;border-top:0px solid transparent;overflow: hidden"></div>
-              
+            <div style="">
+            <!-- blue box -->
+            <a class="nav-item" id="video" style="position: absolute;right:25%;top:40px;height:50px;width:20px;border-right:20px solid #6A9FAD;border-left: 0px solid transparent;border-bottom: 0px solid transparent;border-top:0px solid transparent;overflow: hidden" href="#video"></a>
               <div class="hidden content-box blue-bg">
                 <div class="text-box container">
                     <span class="boxclose"><i class="fas fa-times"></i></span>
@@ -243,24 +130,14 @@ $(document).ready(function(){
                       <div class="video-container">
                           <iframe id="drugz" class="full-page-video" width="560" height="315" src="https://www.youtube.com/embed/BONJYMHfEQA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                       </div>
-                  </div>
-<!--
-                    <div class="about-us">
-                    <h1>-PVTILND-</h1>
-                    <p class="text">An approachable band from Southern California. Uses powers for good.</p>
-                  </div>
--->
-                  </div>
-                  
-              </div>
-              
-          </div>
+                    </div>
+                </div>
+              </div>  
+            </div>
           
-           <div id="store" style="">
-            
-                <!-- gold triangle -->
-              <div class="nav-item" style="height:20px;width:20px;position: absolute;right:60%;top:75%;overflow:hidden;border-color: #CB9118;border-right:20px solid transparent;border-left: 20px solid transparent;border-bottom: 20px solid #CB9118;border-top: 20px solid transparent"></div>
-               
+            <div style="">
+              <!-- gold triangle -->
+              <a class="nav-item" id="store" style="height:20px;width:20px;position: absolute;right:60%;top:75%;overflow:hidden;border-color: #CB9118;border-right:20px solid transparent;border-left: 20px solid transparent;border-bottom: 20px solid #CB9118;border-top: 20px solid transparent" href="#store"></a>
                <div class="hidden content-box gold-bg">
                 <div class="text-box container">
                     <span class="boxclose"><i class="fas fa-times"></i></span>
@@ -273,45 +150,37 @@ $(document).ready(function(){
                         <div class="md-col-6 mx-auto"><a href="https://thehyv.shop/collections/private-island/products/night-drive-tee" target="_blank"><img class="img-fluid merch" src="img/pi-ndshirt-blk.jpg"></a></div>
                     </div>
                   </div>
-              </div>
-              
-          </div>
+              </div> 
+            </div>
           
           <div style="">
               <!-- blue shape -->
-              <div class="nav-item" style="width:20px;position: absolute;right:88%;top:62%;height:20px;border-color: #3C7C97;border-right:20px solid #3C7C97;border-left: 20px solid transparent;border-bottom: 20px solid #3C7C97;overflow: hidden"></div>
-              
+              <a class="nav-item" id="music" style="width:20px;position: absolute;right:88%;top:62%;height:20px;border-color: #6A9FAD;border-right:20px solid #6A9FAD;border-left: 20px solid transparent;border-bottom: 20px solid #6A9FAD;overflow: hidden" href="#music"></a>
               <div class="hidden content-box blue-bg">
                 <div class="text-box container">
                 <span class="boxclose"><i class="fas fa-times"></i></span>
-                <div>
                     <div class="spotify-player">
                         <iframe src="https://open.spotify.com/embed/artist/21MZoYDTcbPsC5crOQVqho" style="width: 100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                     </div>
                 </div>
-                </div>
               </div>
           </div>
           
-          <div id="contactus" style="">
-                <!-- red oval -->
-              <div class="nav-item" style="width:60px;height:30px;border-radius: 50%;position: absolute;right:13%;top:60%;background-color: #CE260C;overflow: hidden"></div>
-                <div class="hidden content-box red-bg">
+          <div style="">
+              <!-- red oval -->
+              <a class="nav-item" id="contact" style="width:60px;height:30px;border-radius: 50%;position: absolute;right:13%;top:60%;background-color: #CE260C;overflow: hidden" href="#contact"></a>
+              <div class="hidden content-box red-bg">
                 <div class="text-box container">
-                    <span class="boxclose"><i class="fas fa-times"></i></span>
+                  <span class="boxclose"><i class="fas fa-times"></i></span>
                    <div style="background-color:#fffff4;padding:20px;color:#000">
                     <div style="text-align: center;margin-bottom:20px"> 
-                       <p class="mgmt-line"><strong>MGMT</strong><br> ALEX@TRIBEMGMTGROUP.COM</p>
-                       <p style="display: inline-block"><strong>BOOKING</strong><br>RBRANTLEY@APA-AGENCY.COM</p>
+                       <p class="mgmt-line"><strong>MGMT</strong><br><a style="font-weight: normal;color:#000" href="mailto:ALEX@TRIBEMGMTGROUP.COM?subject=RE:Private Island">ALEX@TRIBEMGMTGROUP.COM</a></p>
+                       <p style="display: inline-block"><strong>BOOKING</strong><br><a style="font-weight: normal;color:#000" href="mailto:RBRANTLEY@APA-AGENCY.COM?subject=Booking Private Island">RBRANTLEY@APA-AGENCY.COM</a></p>
                     </div>
-                     <form id="contact-form" data-toggle="validator" method="post" action="pvtilnd-contact.php" role="form">
-                         
-                         <p>Join our mailing list to be the first to know about new music, shows and other things</p>
-
+                    <form id="contact-form" data-toggle="validator" method="post" action="pvtilnd-contact.php" role="form">
+                        <p>Join our mailing list to be the first to know about new music, shows and other things</p>
                         <div class="messages"></div>
-
                         <div class="controls">
-
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -346,7 +215,6 @@ $(document).ready(function(){
                                 </div>
                                 -->
                             </div>
-                            
                             <div class="row">
                                 <!--
                                 <div class="col-md-12">
@@ -361,40 +229,32 @@ $(document).ready(function(){
                                     <input type="submit" class="btn btn-success btn-send" value="Submit">
                                 </div>
                             </div>
-                            
                         </div>
-
                     </form>
                     </div>
               </div>
                </div>
           </div>
           
-          <div id="tourdates" style="">
+          <div style="">
               <!-- red rectangle -->
-              <div class="nav-item" style="width:80px;position: absolute;right:79%;top:30%;border-right:20px solid #CE260C;border-left: 20px solid #CE260C;border-bottom: 10px solid #CE260C;border-top:10px solid #CE260C;overflow: hidden"></div>
-                  
+              <a class="nav-item" id="tour" style="width:80px;position: absolute;right:79%;top:30%;border-right:20px solid #CE260C;border-left: 20px solid #CE260C;border-bottom: 10px solid #CE260C;border-top:10px solid #CE260C;overflow: hidden" href="#tour"></a>
               <div class="hidden content-box red-bg">
                 <div class="text-box container">
-                   
-                    <span class="boxclose"><i class="fas fa-times"></i></span>
+                <span class="boxclose"><i class="fas fa-times"></i></span>
                    <script charset="utf-8" src="https://widget.bandsintown.com/main.min.js"></script><a class="bit-widget-initializer" data-artist-name="private island" data-display-local-dates="false" data-display-past-dates="true" data-auto-style="false" data-text-color="#3C7C97" data-link-color="#CB9118" data-popup-background-color="#fffff4" data-background-color="#fffff4" data-display-limit="15" data-link-text-color="#FFFFFF"></a>
                    </div>
-                
               </div>
-   
           </div>
           
-          <div id="pictures" style="">
+          <div style="">
               <!-- gold paralellagram -->
-              <a class="nav-item" style="height:80px;position: absolute;right:43%;top:18%;border-right:20px solid transparent;border-left: 20px solid #CB9118;border-bottom: 20px solid transparent;border-top:20px solid transparent;overflow: hidden;" href="#gold-paralellagram"></a>
-              
+              <a class="nav-item" id="pictures" style="height:80px;position: absolute;right:43%;top:18%;border-right:20px solid transparent;border-left: 20px solid #CB9118;border-bottom: 20px solid transparent;border-top:20px solid transparent;overflow: hidden;" href="#pictures"></a>
                <div class="hidden content-box gold-bg">
-                
                 <!-- instagram feed -->
-                <div id="gold-paralellagram" class="text-box container">
+                <div class="text-box container">
                     <span class="boxclose"><i class="fas fa-times"></i></span>
-                 <div class="container" ng-app="myApp" ng-controller="customersCtrl"> 
+                 <div class="container" ng-app="PVTILND-FEED" ng-controller="customersCtrl"> 
                     <div id="insta-table">
                         <div ng-repeat="x in myData" style="max-width: 800px;margin: auto">
                             <div class="row" ng-if="$even">
@@ -421,10 +281,9 @@ $(document).ready(function(){
       
       
 <script>
-var app = angular.module('myApp', []);
+var app = angular.module('PVTILND-FEED', []);
 app.controller('customersCtrl', function($scope, $http) {
-    $http.get("https://api.instagram.com/v1/users/self/media/recent/?access_token=1163694981.2951133.64f8504f83d04b368de0c2106b688552").then(function(response) {
-        
+    $http.get("https://api.instagram.com/v1/users/self/media/recent/?access_token=1163694981.2951133.a2582d1d4fca443a93bbead6387b36d9").then(function(response) {
         $scope.myData = response.data.data;
     }, function(response){
         $('#insta-table').html('Something very bad happened.')
