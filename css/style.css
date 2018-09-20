@@ -286,6 +286,7 @@ responsive media queries
     
 .copyright{
     font-size: 12px;
+    padding-left:10px;
 }
 .bounce {
     animation:bounce .8s;

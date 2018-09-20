@@ -33,7 +33,7 @@ $(document).ready(function(){
     }, 5000);
     setInterval(function(){
         looper();
-    }, 60000);
+    }, 30000);
 });
         
 function looper(x){
