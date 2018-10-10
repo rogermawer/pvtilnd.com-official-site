@@ -18,6 +18,61 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    
 <style>
+   
+
+/* Tooltip text */
+.tip-box .tip-box-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: transparent;
+    color: #000000;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+    
+.tip-box-left .tip-box-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: transparent;
+    color: #000000;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 105%;
+}
+/* Show the tooltip text when you mouse over the tooltip container */
+
+.tip-box-right .tip-box-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: transparent;
+    color: #000000;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 105%;
+}
+/* Show the tooltip text when you mouse over the tooltip container */
+.tip-box:hover .tip-box-text, .tip-box-right:hover .tip-box-text, .tip-box-left:hover .tip-box-text {
+    visibility: visible;
+}
+
+
 </style>
       
       
@@ -64,9 +119,13 @@ $(document).ready(function(){
           
           <!-- nav items -->
           
-            <div style="">
+            <div>
             <!-- blue box -->
-            <a class="nav-item" id="video" style="position: absolute;right:25%;top:40px;" href="#video"><img src="/img/icons/matchbox.png"></a>
+                
+                   
+            
+            <a class="nav-item tip-box" id="video" style="position: absolute;right:25%;top:40px;" href="#video"><img src="/img/icons/matchbox.png"><span class="tip-box-text">watch a video</span></a>
+                
               <div class="hidden content-box blue-bg">
                 <div class="text-box container">
                     <span class="boxclose"><i class="fas fa-times"></i></span>
@@ -81,7 +140,7 @@ $(document).ready(function(){
           
             <div style="">
               <!-- gold triangle -->
-              <a class="nav-item" id="store" style="position: absolute;right:60%;top:75%;" href="#store"><img src="/img/icons/teepee.png"></a>
+              <a class="nav-item tip-box" id="store" style="position: absolute;right:60%;top:75%;" href="#store"><img src="/img/icons/teepee.png"><span class="tip-box-text">buy some merch</span></a>
                <div class="hidden content-box gold-bg">
                 <div class="text-box container">
                     <span class="boxclose"><i class="fas fa-times"></i></span>
@@ -99,7 +158,7 @@ $(document).ready(function(){
           
           <div style="">
               <!-- blue shape -->
-              <a class="nav-item" id="music" style="position: absolute;right:88%;top:62%;" href="#music"><img src="/img/icons/rope%20trace%20copy.png"></a>
+              <a class="nav-item tip-box" id="music" style="position: absolute;right:88%;top:62%;" href="#music"><img src="/img/icons/rope%20trace%20copy.png"><span class="tip-box-text">listen to our music</span></a>
               <div class="hidden content-box blue-bg">
                 <div class="text-box container">
                 <span class="boxclose"><i class="fas fa-times"></i></span>
@@ -112,7 +171,7 @@ $(document).ready(function(){
           
           <div style="">
               <!-- red oval -->
-              <a class="nav-item" id="contact" style="width:60px;height:30px;border-radius: 50%;position: absolute;right:13%;top:60%;" href="#contact"><img src="/img/icons/fire.png"></a>
+              <a class="nav-item tip-box-left" id="contact" style="width:60px;height:30px;border-radius: 50%;position: absolute;right:13%;top:60%;" href="#contact"><span class="tip-box-text">contact us</span><img src="/img/icons/fire.png"></a>
               <div class="hidden content-box red-bg">
                 <div class="text-box container">
                   <span class="boxclose"><i class="fas fa-times"></i></span>
@@ -149,7 +208,7 @@ $(document).ready(function(){
           
           <div style="">
               <!-- red rectangle -->
-              <a class="nav-item" id="tour" style="width:80px;position: absolute;right:79%;top:30%;" href="#tour"><img src="/img/icons/canteen.png"></a>
+              <a class="nav-item tip-box-right" id="tour" style="width:80px;position: absolute;right:79%;top:30%;" href="#tour"><img src="/img/icons/canteen.png"><span class="tip-box-text">tour dates</span></a>
               <div class="hidden content-box red-bg">
                 <div class="text-box container">
                 <span class="boxclose"><i class="fas fa-times"></i></span>
@@ -160,7 +219,7 @@ $(document).ready(function(){
           
           <div style="">
               <!-- gold paralellagram -->
-              <a class="nav-item" id="pictures" style="height:80px;position: absolute;right:43%;top:18%;" href="#pictures"><img src="/img/icons/boot.png"></a>
+              <a class="nav-item tip-box-left" id="pictures" style="height:80px;position: absolute;right:43%;top:18%;" href="#pictures"><img src="/img/icons/boot.png"><span class="tip-box-text">the band</span></a>
                <div class="hidden content-box gold-bg">
                 <!-- instagram feed -->
                 <div class="text-box container">
