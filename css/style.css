@@ -3,7 +3,10 @@
     www.mangomeat.com
 */
 
-body, html {height:100%;background-color: #fffff4}
+body, html {
+    height:100%;
+    background-color: #fffff4;
+}
 body {
 	line-height: 1.4;
     font-size: 18px;
@@ -99,7 +102,7 @@ responsive media queries
     cursor: pointer;
 }
 .blue-bg {
-    background-color: rgba(60, 124, 151, 0.6)
+    background-color: rgba(60, 124, 151, 0.8)
 }
 .gold-bg {
     background-color: rgba(203, 145, 24, 0.6)
