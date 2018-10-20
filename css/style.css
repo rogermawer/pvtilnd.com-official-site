@@ -69,11 +69,13 @@ responsive media queries
 	}
 }
 .mgmt-line{
-        display: inline-block;padding-right:5px;border-right: 1px solid #000
+    display: inline-block;
+    padding-right:5px;
+    border-right: 1px solid #000;
     }
 
  @media only screen and (max-width: 770px) {.mgmt-line{
-        border-right:1px solid transparent;
+        border-right:2px solid transparent;
     }
     }
 
@@ -347,9 +349,17 @@ responsive media queries
 }
    
 
-@media only screen and (max-height: 500px) {#pictures{
-    top:2%!important;
+@media only screen and (max-height: 500px) {
+    #pictures{
+        top:69%!important;
+        right:40%!important;
 }
+    #store{
+        right:60%!important;
+    }
+    .pvtilnd-icons {
+        width:50px!important;
+    }
 }
     
 .follow:hover{
