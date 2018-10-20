@@ -7,17 +7,17 @@
 $from = 'PVTILND <no-reply@pvtilnd.com>';
 
 // an email address that will receive the email with the output of the form
-$sendTo = 'PVTILND <rogermawer@gmail.com>';
+$sendTo = 'PVTILND <contact@pvtilnd.com>';
 
 // subject of the email
-$subject = 'New signup to PVTILND email list';
+$subject = 'New message from PVTILND.com';
 
 // form field names and their translations.
 // array variable name => Text to appear in the email
-$fields = array('name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'message' => 'Message'); 
+$fields = array('name' => 'Name', 'surname' => 'Last Name', 'phone' => 'Phone', 'email' => 'Email', 'message' => 'Message'); 
 
 // message that will be displayed when everything is OK :)
-$okMessage = 'You have been signed up. Thank you!';
+$okMessage = 'Thank you for your message!';
 
 // If something goes wrong, we will display this message.
 $errorMessage = 'There was an error while submitting the form. Please try again later';
@@ -36,7 +36,7 @@ try
 
     if(count($_POST) == 0) throw new \Exception('Form is empty');
             
-    $emailText = "You have a signup to the PVTILND email list\n=============================\n";
+    $emailText = "You have a new message from PVTILND.com \n=============================\n";
 
     foreach ($_POST as $key => $value) {
         // If the field exists in the $fields array, include it in the email 
