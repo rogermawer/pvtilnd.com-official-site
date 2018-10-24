@@ -36,7 +36,11 @@ $(document).ready(function(){
         $(this).animate({'right': '+=500px', opacity: 0}); //send to left 500px
         $(this).animate({'right': '-=1000px'}); //send to opposite side
         $(this).animate({'right': '+=500px', opacity: 1}); //send from opposite side
-    });          
+    });
+    
+    $('.title-text').click(function(){
+        $('.tip-box-top .tip-box-text').toggle();
+    });
 });    
 
 

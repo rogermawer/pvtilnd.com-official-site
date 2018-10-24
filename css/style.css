@@ -339,7 +339,7 @@ responsive media queries
 .quick-links {
     display: flex;
     margin-top:5px;
-    justify-content: center;
+    justify-content: space-around;
 }
 @media only screen and (max-width: 900px) {
     .spotify-player{
@@ -388,7 +388,7 @@ responsive media queries
 }
 
 .tip-box-top .tip-box-text {
-    visibility: hidden;
+    display: none;
     width: 50px;
     background-color: transparent;
     color: #000000;
@@ -401,8 +401,8 @@ responsive media queries
     /* Position the tooltip text */
     position: absolute;
     z-index: 1;
-    top: -20px;
-    left: 30%;
+    top: -40px;
+    left: 45%;
 }
 .tip-box-top .tip-box-text:after {
 	content: '';
@@ -411,12 +411,12 @@ responsive media queries
 	left: 50%;
 	width: 0;
 	height: 0;
-	border: 20px solid transparent;
-	border-top-color: #00aabb;
+	border: 10px solid transparent;
+	border-top-color: #000000;
 	border-bottom: 0;
 	border-left: 0;
-	margin-left: -10px;
-	margin-bottom: -20px;
+	margin-left: -6px;
+	margin-bottom: -10px;
 }
     
 .tip-box-left .tip-box-text {
@@ -431,7 +431,7 @@ responsive media queries
     /* Position the tooltip text */
     position: absolute;
     z-index: 1;
-    top: -5px;
+    top: 25px;
     right: 105%;
 }
 /* Show the tooltip text when you mouse over the tooltip container */
@@ -452,7 +452,7 @@ responsive media queries
     left: 105%;
 }
 /* Show the tooltip text when you mouse over the tooltip container */
-.tip-box:hover .tip-box-text, .tip-box-top:hover .tip-box-text, .tip-box-right:hover .tip-box-text, .tip-box-left:hover .tip-box-text {
+.tip-box:hover .tip-box-text, .tip-box-right:hover .tip-box-text, .tip-box-left:hover .tip-box-text {
     visibility: visible;
 }
 
