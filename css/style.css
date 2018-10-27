@@ -341,7 +341,7 @@ responsive media queries
 .quick-links {
     display: flex;
     margin-top:5px;
-    justify-content: center;
+    justify-content: space-around;
 }
 @media only screen and (max-width: 900px) {
     .spotify-player{
@@ -372,4 +372,120 @@ responsive media queries
     width:100%;
     padding:5px;
     margin-bottom: 10px;
+}
+
+/* Tooltip text */
+.tip-box .tip-box-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: transparent;
+    color: #000000;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+ 
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+}
+
+.tip-box-top .tip-box-text {
+    display: none;
+    width: 50px;
+    background-color: transparent;
+    color: #000000;
+    font-size: 17px;
+    text-align: center;
+    padding: 5px 0;
+    border: 1px solid black;
+    border-radius: 6px;
+ 
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    top: -40px;
+    left: 45%;
+}
+.tip-box-top .tip-box-text:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-top-color: #000000;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -6px;
+	margin-bottom: -10px;
+}
+    
+.tip-box-left .tip-box-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: transparent;
+    color: #000000;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+ 
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    top: 25px;
+    right: 105%;
+}
+/* Show the tooltip text when you mouse over the tooltip container */
+
+.tip-box-right .tip-box-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: transparent;
+    color: #000000;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+ 
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 105%;
+}
+/* Show the tooltip text when you mouse over the tooltip container */
+.tip-box:hover .tip-box-text, .tip-box-right:hover .tip-box-text, .tip-box-left:hover .tip-box-text {
+    visibility: visible;
+}
+
+    .pvtilnd-icons{
+        width:80px;
+    }
+    
+    
+    /* for cell phones vertically displayed */
+    @media only screen and (max-width: 600px) {
+    .pvtilnd-icons {
+        width:50px;
+    }
+}
+     @media only screen and (min-width: 768px) {
+    #contact {
+        top:50%!important;
+        right:20%!important;
+    }
+}
+    
+
+    @media only screen and (max-width: 768px) and (min-width:601px) {
+        .pvtilnd-icons{
+            width: 65px;
+    }
+}
+    
+    
+    @media only screen and (max-width: 1500px) and (min-width:600px) {
+    .contact-div {
+        width:600px;
+    }
 }
