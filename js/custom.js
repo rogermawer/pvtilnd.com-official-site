@@ -1,4 +1,4 @@
-/* smooth scrolling */
+/* smooth scrolling 
 
 $(document).ready(function(){
   // Add smooth scrolling to all links
@@ -13,7 +13,7 @@ $(document).ready(function(){
       var hash = this.hash;
 
       // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      // The optional number (500) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 500, function(){
@@ -24,6 +24,7 @@ $(document).ready(function(){
     } // End if
   });
 });
+*/
 
   /* bouncy class */
            

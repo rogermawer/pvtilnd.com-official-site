@@ -99,9 +99,9 @@ responsive media queries
     bottom:0;
     right:0;
     left:0;
-  
     z-index: 99;
     cursor: pointer;
+    -webkit-backface-visibility: hidden;
 }
 .blue-bg {
     background-color: rgba(60, 124, 151, 0.8)
@@ -113,7 +113,6 @@ responsive media queries
     background-color: rgba(169, 31, 10, 0.8)
 }
 
-
 .text-box{
     position: absolute;
     top: 50%;
@@ -124,8 +123,11 @@ responsive media queries
     background-color: rgba(0,0,0,0);
     color: #fff;
     transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
     z-index: 100;
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
 }
 
 .hidden{
