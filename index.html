@@ -20,6 +20,89 @@
 <style>
    
 
+/* Tooltip text */
+.tip-box .tip-box-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: transparent;
+    color: #000000;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+    
+.tip-box-left .tip-box-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: transparent;
+    color: #000000;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 105%;
+}
+/* Show the tooltip text when you mouse over the tooltip container */
+
+.tip-box-right .tip-box-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: transparent;
+    color: #000000;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 105%;
+}
+/* Show the tooltip text when you mouse over the tooltip container */
+.tip-box:hover .tip-box-text, .tip-box-right:hover .tip-box-text, .tip-box-left:hover .tip-box-text {
+    visibility: visible;
+}
+
+    .pvtilnd-icons{
+        width:80px;
+    }
+    
+    
+    /* for cell phones vertically displayed */
+    @media only screen and (max-width: 600px) {
+    .pvtilnd-icons {
+        width:50px;
+    }
+}
+     @media only screen and (min-width: 768px) {
+    #contact {
+        top:50%!important;
+        right:20%!important;
+    }
+}
+    
+
+    @media only screen and (max-width: 768px) and (min-width:601px) {
+        .pvtilnd-icons{
+            width: 65px;
+    }
+}
+    
+    
+    @media only screen and (max-width: 1500px) and (min-width:600px) {
+    .contact-div {
+        width:600px;
+    }
+}
     
 </style>
       
@@ -36,11 +119,7 @@ $(document).ready(function(){
         $(this).animate({'right': '+=500px', opacity: 0}); //send to left 500px
         $(this).animate({'right': '-=1000px'}); //send to opposite side
         $(this).animate({'right': '+=500px', opacity: 1}); //send from opposite side
-    });
-    
-    $('.title-text').click(function(){
-        $('.tip-box-top .tip-box-text').toggle();
-    });
+    });          
 });    
 
 
@@ -54,7 +133,7 @@ $(document).ready(function(){
           <div class="row">
               <div style="" class="col-md-12">
                 <div style="" class="banner-text">
-                    <p class="title-text tip-box-top"><img src="img/red.png" style="width:200px"><span class="tip-box-text">hi!</span></p>
+                <p class="title-text"><img src="img/red.png" style="width:200px"></p>
                     <div class="quick-links">
                         <p><a href="/tour.html">Tour</a></p>
                         <p id="links"><span class="follow" style="color:#000;font-weight: 800">Follow</span></p>
@@ -121,13 +200,13 @@ $(document).ready(function(){
           <div style="">
               <!-- red oval -->
               <a class="nav-item tip-box-left" id="contact" style="width:60px;height:30px;border-radius: 50%;position: absolute;right:18%;top:56%;" href="#contact"><span class="tip-box-text">contact us</span><img class="pvtilnd-icons" alt="contact" src="/img/icons/fire.png"></a>
-              <div class="hidden content-box blue-bg">
+              <div class="hidden content-box red-bg">
                 <div class="text-box container contact-div">
                   <span class="boxclose"><i class="fas fa-times"></i></span>
                    <div style="background-color:#fffff4;padding:20px;color:#000">
                     <div style="text-align: center;margin-bottom:20px"> 
                        <p class="mgmt-line"><span style="font-weight: bold;font-size: 2em">MGMT</span><br><a style="font-weight: normal;color:#000" href="mailto:ALEX@TRIBEMGMTGROUP.COM?subject=RE:Private Island">ALEX@TRIBEMGMTGROUP.COM</a></p>
-                       <p style="display: inline-block"><span style="font-weight: bold;font-size: 2em">BOOKING</span><br><a style="font-weight: normal;color:#000" href="mailto:RBRANTLEY@APA-AGENCY.COM?subject=Booking Private Island">RUSSELL@EMPIREAGENCY.COM</a></p>
+                       <p style="display: inline-block"><span style="font-weight: bold;font-size: 2em">BOOKING</span><br><a style="font-weight: normal;color:#000" href="mailto:RBRANTLEY@APA-AGENCY.COM?subject=Booking Private Island">RBRANTLEY@APA-AGENCY.COM</a></p>
                     </div>
                        <!-- Begin MailChimp Signup Form -->
                         <div id="mc_embed_signup">
@@ -159,8 +238,6 @@ $(document).ready(function(){
           
           <div style="">
               <!-- red rectangle -->
-
-              
               <a class="nav-item tip-box-right" id="tour" style="width:80px;position: absolute;right:72%;top:25%;" href="#tour"><img class="pvtilnd-icons" alt="tour" src="/img/icons/boot.png"><span class="tip-box-text">tour dates</span></a>
               <div class="hidden content-box red-bg">
                 <div class="text-box container">
