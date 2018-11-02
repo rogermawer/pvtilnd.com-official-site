@@ -46,6 +46,7 @@ body {
 	font-size: 32px;
     letter-spacing: 4px;
     text-align: center;
+    margin: auto;
     font-weight:normal;
     color:#000;
     margin-bottom: 0;
@@ -375,6 +376,12 @@ responsive media queries
     margin-bottom: 10px;
 }
 
+.pvtilnd-logo{
+    width:200px;
+}
+
+
+
 /* Tooltip text */
 .tip-box .tip-box-text {
     visibility: hidden;
@@ -469,14 +476,25 @@ responsive media queries
         .pvtilnd-icons {
             width:50px;
     }
+        .title-text, .pvtilnd-logo{
+            width:150px;
+        }
         
 }
      @media only screen and (min-width: 768px) {
-    #contact {
-        top:50%!important;
-        right:20%!important;
+        #contact {
+            top:50%!important;
+            right:20%!important;
+        }
+        
+    } 
+     @media only screen and (max-width: 768px) { 
+        #main-page-contact .mgmt-line{
+            border-right: 1px solid transparent;
+        }
     }
-}
+    
+    
     
 
     @media only screen and (max-width: 768px) and (min-width:601px) {
@@ -486,7 +504,7 @@ responsive media queries
 }
     
     
-    @media only screen and (max-width: 1500px) and (min-width:600px) {
+    @media only screen and (max-width: 1920px) and (min-width:600px) {
     .contact-div {
         width:600px;
     }
