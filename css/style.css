@@ -74,7 +74,8 @@ responsive media queries
     border-right: 1px solid #000;
     }
 
- @media only screen and (max-width: 770px) {.mgmt-line{
+ @media only screen and (max-width: 518px) {
+     .mgmt-line{
         border-right:2px solid transparent;
     }
     }
