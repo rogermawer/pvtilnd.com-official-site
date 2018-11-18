@@ -96,8 +96,8 @@ responsive media queries
     flex-direction: column;
     justify-content: space-between;
     height: 50%;
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-left: 45px;
+    margin-right: 45px;
 }
 
 .content-box {
