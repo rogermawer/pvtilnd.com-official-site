@@ -36,8 +36,8 @@ body {
 }
     
 .banner-text{
-	padding: 15px 40px;
-	color: #fff;
+    padding-top: 10px;
+    padding-left: 10px;
 	margin-top: 0px;
     display: flex;
 
@@ -95,6 +95,7 @@ responsive media queries
     display:flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-top: 50px;
     height: 50%;
     margin-left: 45px;
     margin-right: 45px;
@@ -151,7 +152,6 @@ responsive media queries
     font-weight: 200;
 }
 .boxclose{
-    position: relative;
     top:0;
     left:98%;
     font-size: 30px;
@@ -402,7 +402,7 @@ responsive media queries
  
     /* Position the tooltip text */
     position: absolute;
-    right: 30%;
+    right: 25%;
     z-index: 1;
 }
 
@@ -430,21 +430,20 @@ responsive media queries
 	left: 0%;
 	width: 0;
 	height: 0;
-	border: 10px solid transparent;
-	border-top-color: #000000;
-	border-bottom: 0;
-	border-right: 0;
-	margin-left: -10px;
-	margin-top: 15px;
+	border: 7px solid transparent;
+	border-right-color: #000000;
+	border-left-color: #000000;
+	border-left: 0;
+	margin-left: -15px;
+	margin-top: 8px;
 }
 .tip-box-bottom .tip-box-text {
-    visibility: hidden;
+/*    visibility: hidden;*/
     width: 50px;
     background-color: transparent;
     color: #000000;
     text-align: center;
     padding: 2px;
-    border: 1px solid black;
     border-radius: 6px;
     font-size: 20px;
  
@@ -474,9 +473,7 @@ responsive media queries
         .pvtilnd-icons {
             width:50px;
     }
-        .title-text, .pvtilnd-logo{
-            width:150px;
-        }
+        
         
 }
      @media only screen and (min-width: 768px) {
@@ -506,4 +503,16 @@ responsive media queries
     .contact-div {
         width:600px;
     }
+}
+
+
+@media (max-width: 992px) and (min-width: 768px){
+.container {
+    max-width: 100%!important;
+}
+}
+@media (max-width: 768px) and (min-width: 576px){
+.container {
+    max-width: 100%!important;
+}
 }
