@@ -5,7 +5,15 @@
 
 body, html {
     height:100%;
-    background-color: #fffff4;
+    background-color: #ffffff
+}
+.newbgimg{
+    background-image:url(../img/backgroun.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    height: 100%;
+    width: 100%
 }
 body {
 	line-height: 1.4;
@@ -31,7 +39,8 @@ body {
 	padding: 15px 40px;
 	color: #fff;
 	margin-top: 0px;
-    text-align: center;
+    display: flex;
+
 }
 .banner-text h2{
 	font-size: 40px;
@@ -45,13 +54,9 @@ body {
 	padding: 0;
 	font-size: 32px;
     letter-spacing: 4px;
-    text-align: center;
-    margin: auto;
     font-weight:normal;
     color:#000;
     margin-bottom: 0;
-    border-bottom: 1px solid #000;
-
 }
 
 
@@ -86,11 +91,13 @@ responsive media queries
     color:#fff
 }
 
-.centered {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height:100%;
+.centered-left {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .content-box {
@@ -343,7 +350,8 @@ responsive media queries
 .quick-links {
     display: flex;
     margin-top:5px;
-    justify-content: space-around;
+    width:400px;
+    
 }
 @media only screen and (max-width: 900px) {
     .spotify-player{
@@ -385,15 +393,16 @@ responsive media queries
 /* Tooltip text */
 .tip-box .tip-box-text {
     visibility: hidden;
-    width: 120px;
+    width: 140px;
     background-color: transparent;
     color: #000000;
-    text-align: center;
+    text-align: left;
     padding: 5px 0;
     border-radius: 6px;
  
     /* Position the tooltip text */
     position: absolute;
+    left: 50px;
     z-index: 1;
 }
 
@@ -414,60 +423,48 @@ responsive media queries
     top: -40px;
     left: 45%;
 }
-.tip-box-top .tip-box-text:after {
+.tip-box-bottom .tip-box-text:after {
 	content: '';
 	position: absolute;
-	bottom: 0;
-	left: 50%;
+	top: 0;
+	left: 0%;
 	width: 0;
 	height: 0;
 	border: 10px solid transparent;
 	border-top-color: #000000;
 	border-bottom: 0;
-	border-left: 0;
-	margin-left: -6px;
-	margin-bottom: -10px;
+	border-right: 0;
+	margin-left: -10px;
+	margin-top: 15px;
 }
-    
-.tip-box-left .tip-box-text {
+.tip-box-bottom .tip-box-text {
     visibility: hidden;
-    width: 120px;
+    width: 50px;
     background-color: transparent;
     color: #000000;
     text-align: center;
-    padding: 5px 0;
+    padding: 2px;
+    border: 1px solid black;
     border-radius: 6px;
  
     /* Position the tooltip text */
-    position: absolute;
+    position: relative;
     z-index: 1;
-    top: 25px;
-    right: 105%;
+    bottom: -10px;
+    left: 30px;
 }
+
 /* Show the tooltip text when you mouse over the tooltip container */
 
-.tip-box-right .tip-box-text {
-    visibility: hidden;
-    width: 120px;
-    background-color: transparent;
-    color: #000000;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
- 
-    /* Position the tooltip text */
-    position: absolute;
-    z-index: 1;
-    top: -5px;
-    left: 105%;
-}
+
+
 /* Show the tooltip text when you mouse over the tooltip container */
-.tip-box:hover .tip-box-text, .tip-box-right:hover .tip-box-text, .tip-box-left:hover .tip-box-text {
+.tip-box:hover .tip-box-text, .tip-box-bottom:hover .tip-box-text {
     visibility: visible;
 }
 
     .pvtilnd-icons{
-        width:80px;
+        width:50px;
     }
     
     
@@ -499,7 +496,7 @@ responsive media queries
 
     @media only screen and (max-width: 768px) and (min-width:601px) {
         .pvtilnd-icons{
-            width: 65px;
+            width: 50px;
     }
 }
     

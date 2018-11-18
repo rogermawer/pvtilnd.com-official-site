@@ -45,16 +45,21 @@ $(document).ready(function(){
     
   <body>
   
-        <div class="bg-color centered">
-          <div class="row">
-              <div style="" class="col-md-12">
+        <div class="newbgimg">
+
+            
+            
+            <div class="row">
+              <div style="" class="col-md-6">
                 <div style="" class="banner-text">
-                <p class="title-text tip-box-top"><img class="pvtilnd-logo" src="img/red.png"><span class="tip-box-text">hi!</span></p>
+                <p class="title-text tip-box-bottom"><img class="pvtilnd-logo" src="img/red.png"><span class="tip-box-text">hi!</span></p>
+<!--
                     <div class="quick-links">
-                        <p><a href="tour.html">poop</a></p>
-                        <p id="links"><span class="follow" style="color:#000;font-weight: 800">Follow</span></p>
+                        <p><a href="tour.html">Tour</a></p>
                         <p><a href="contact.html">Contact</a></p>
+                        <p id="links"><span class="follow" style="color:#000;font-weight: 800">Follow</span></p>
                     </div>    
+-->
                     <div style="height: 50px">
                         <p id="socials" style="display: none;transform: translate(-16%)">
                             <a href="https://www.instagram.com/pvtilnd/" style="line-height: 28px"><img src="img/instagram-2016-png-transparent-logo.png" style="width:20px;" width="20"></a><a href="https://www.facebook.com/PVTILND/"><i class="fab fa-facebook-square" style="color:#4267B2"></i></a><a href=""><iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:21MZoYDTcbPsC5crOQVqho&size=basic&theme=dark&show-count=0" scrolling="no" frameborder="0" style="width:95px;height:50px;border:none; overflow:hidden;" allowtransparency="true"></iframe></a><a href="https://soundcloud.com/privateisland" target="_blank"><i class="fab fa-soundcloud" style="color:#FF4A04"></i></a><a href="https://twitter.com/pvtilnd"><i class="fab fa-twitter" style="color:#1DA1F2"></i></a></p>
@@ -65,10 +70,10 @@ $(document).ready(function(){
           
           
           <!-- nav items -->
-          
+          <div class="centered-left">
             <div>
             <!-- match box -->
-            <a class="nav-item tip-box-left" id="video" style="position: absolute;right:25%;top:25%;" href="#video"><img class="pvtilnd-icons" alt="watch" src="img/icons/matchbox.png"><span class="tip-box-text">watch a video</span></a>
+            <a class="nav-item tip-box" id="video" href="#video"><img class="pvtilnd-icons" alt="watch" src="img/icons/matchbox.png"><span class="tip-box-text">watch a video</span></a>
                 
               <div class="hidden content-box red-bg">
                 <div class="text-box container">
@@ -84,7 +89,7 @@ $(document).ready(function(){
           
             <div style="">
               <!-- teepee -->
-              <a class="nav-item tip-box" id="store" style="position: absolute;right:50%;top:75%;" href="#store"><img class="pvtilnd-icons" alt="store" src="img/icons/teepee.png"><span class="tip-box-text">buy some merch</span></a>
+              <a class="nav-item tip-box" id="store" href="#store"><img class="pvtilnd-icons" alt="store" src="img/icons/teepee.png"><span class="tip-box-text">buy some merch</span></a>
                <div class="hidden content-box gold-bg">
                 <div class="text-box container">
                     <span class="boxclose"><i class="fas fa-times"></i></span>
@@ -102,7 +107,7 @@ $(document).ready(function(){
           
           <div style="">
               <!-- rope -->
-              <a class="nav-item tip-box" id="music" style="position: absolute;right:75%;top:60%;" href="#music"><img class="pvtilnd-icons" alt="music" src="img/icons/rope%20trace%20copy.png"><span class="tip-box-text">listen to our music</span></a>
+              <a class="nav-item tip-box" id="music" href="#music"><img class="pvtilnd-icons" alt="music" src="img/icons/rope%20trace%20copy.png"><span class="tip-box-text">listen to our music</span></a>
               <div class="hidden content-box blue-bg">
                 <div class="text-box container">
                 <span class="boxclose"><i class="fas fa-times"></i></span>
@@ -112,10 +117,13 @@ $(document).ready(function(){
                 </div>
               </div>
           </div>
+        
           
+            
+        
           <div style="">
               <!-- fire -->
-              <a class="nav-item tip-box-left" id="contact" style="width:60px;height:30px;border-radius: 50%;position: absolute;right:18%;top:56%;" href="#contact"><span class="tip-box-text">contact us</span><img class="pvtilnd-icons" alt="contact" src="img/icons/fire.png"></a>
+              <a class="nav-item tip-box" id="contact" href="#contact"><img class="pvtilnd-icons" alt="contact" src="img/icons/fire.png"><span class="tip-box-text">contact us</span></a>
               <div id="main-page-contact" class="hidden content-box blue-bg">
                 <div class="text-box container contact-div">
                   <span class="boxclose"><i class="fas fa-times"></i></span>
@@ -154,7 +162,7 @@ $(document).ready(function(){
           
           <div style="">
               <!-- boot -->
-              <a class="nav-item tip-box-right" id="tour" style="width:80px;position: absolute;right:72%;top:25%;" href="#tour"><img class="pvtilnd-icons" alt="tour" src="img/icons/boot.png"><span class="tip-box-text">tour dates</span></a>
+              <a class="nav-item tip-box" id="tour" style="width:80px;" href="#tour"><img class="pvtilnd-icons" alt="tour" src="img/icons/boot.png"><span class="tip-box-text">tour dates</span></a>
               <div class="hidden content-box red-bg">
                 <div class="text-box container">
                 <span class="boxclose"><i class="fas fa-times"></i></span>
@@ -167,7 +175,7 @@ $(document).ready(function(){
           
           <div style="">
               <!-- canteen -->
-              <a class="nav-item tip-box-left" id="pictures" style="height:80px;position: absolute;right:47%;top:5%;" href="#pictures"><img class="pvtilnd-icons" alt="pictures" src="img/icons/canteen.png"><span class="tip-box-text">the band</span></a>
+              <a class="nav-item tip-box" id="pictures" href="#pictures"><img class="pvtilnd-icons" alt="pictures" src="img/icons/canteen.png"><span class="tip-box-text">the band</span></a>
                <div class="hidden content-box gold-bg">
                 <!-- instagram feed -->
                 <div class="text-box container">
@@ -185,6 +193,7 @@ $(document).ready(function(){
                 </div>
               </div>
             </div>
+        </div>
             <div class="fixed-bottom copyright">&copy;Private Island 2018</div>
         </div>
 
