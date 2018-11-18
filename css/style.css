@@ -402,7 +402,7 @@ responsive media queries
  
     /* Position the tooltip text */
     position: absolute;
-    left: 50px;
+    right: 30%;
     z-index: 1;
 }
 
@@ -446,6 +446,7 @@ responsive media queries
     padding: 2px;
     border: 1px solid black;
     border-radius: 6px;
+    font-size: 20px;
  
     /* Position the tooltip text */
     position: relative;
