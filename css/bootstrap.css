@@ -7326,9 +7326,9 @@ button.bg-dark:focus {
 
 .fixed-bottom {
   position: fixed;
-  right: 0;
+  right: 50%;
+  transform: translate(50%);
   bottom: 0;
-  right: 0;
   z-index: 1030;
 }
 
