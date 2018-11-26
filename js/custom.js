@@ -79,14 +79,20 @@ function shuffle(array) {
         
    $(document).ready(function(){
         $('.nav-item').click(function(){
+            $('.hidden').fadeOut(100);//fadeeverything in center out first
             $(this).next().fadeIn(800);
             // save hash in url in case back button is pushed
             var elementID = $(this).attr('id');
             elementID = '#' + elementID;
+            console.log(window.location.hash === elementID);
             // if back button is pushed, close box
             window.onpopstate = function(event) {
                 if (!(window.location.hash === elementID)){
-                     $('.content-box').fadeOut(100);
+                    $('.hidden').fadeOut(100);
+                    var previousContent = window.location.hash;//when url changes, get hash
+                    $(previousContent).next().fadeIn(800);
+                }else{
+                   
                 }
             }
         });
