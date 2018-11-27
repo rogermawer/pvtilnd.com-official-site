@@ -15,6 +15,15 @@ body, html {
     height: 100%;
     width: 100%
 }
+
+.bgimgfooter{
+    background-image:url(../img/backgroun-bottom.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    height: inherit;
+    
+}
 body {
 	line-height: 1.4;
     font-size: 18px;
@@ -124,6 +133,7 @@ responsive media queries
     overflow-y:scroll;
     background-color: rgba(0,0,0,0);
     color: #fff;
+    z-index: 0;
     -webkit-backface-visibility: hidden;
 }
 
@@ -285,9 +295,9 @@ responsive media queries
 
 /* angular insta table */
  #insta-table img{
-        width:400px;
-        height:400px;
-        object-fit: cover;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
     }
     
 .copyright{
@@ -455,11 +465,31 @@ responsive media queries
     
     /* for cell phones vertically displayed */
     @media only screen and (max-width: 600px) {
-        .pvtilnd-icons {
-            width:50px;
-    }
-        
-        
+        #video{
+            top:-50px!important;
+            right:320px
+        }
+        #store{
+            top:-50px!important;
+            right:260px
+            
+        }
+        #music{
+            top:-50px!important;
+            right:200px
+        }
+        #contact{
+            top:-50px!important;
+            right:130px
+        }
+        #tour{
+            top:-50px!important;
+            right:80px
+        }
+        #pictures{
+            top:-50px!important;
+            right:20px
+        }
 }
     
      @media only screen and (max-width: 768px) { 
