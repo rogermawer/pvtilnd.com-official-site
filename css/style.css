@@ -352,13 +352,8 @@ responsive media queries
    
 
 @media only screen and (max-height: 500px) {
-    #pictures{
-        top:69%!important;
-        right:40%!important;
-}
-    #store{
-        right:60%!important;
-    }
+    
+    
     .pvtilnd-icons {
         width:50px!important;
     }
