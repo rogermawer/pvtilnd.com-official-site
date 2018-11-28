@@ -258,7 +258,7 @@ responsive media queries
 .nav-item{
     cursor: pointer;
     position: absolute;
-    right: 0;
+    right: 0px;
     
 }
 .about-us {
@@ -304,12 +304,14 @@ responsive media queries
     font-size: 12px;
     padding-left:10px;
 }
+/*
 .bounce {
     animation:bounce .8s;
     -webkit-animation:bounce .8s;
     animation-iteration-count: 1;
     -webkit-animation-iteration-count: 1;
 }
+*/
     
 .merch{
     width:500px;
@@ -448,6 +450,12 @@ responsive media queries
     bottom: -10px;
     left: 30px;
 }
+.main-contain{
+    height: 50%;
+}
+.epk-video{
+    width:60%;
+    }
 
 /* Show the tooltip text when you mouse over the tooltip container */
 
@@ -463,34 +471,75 @@ responsive media queries
     }
     
     
-    /* for cell phones vertically displayed */
+    
+
+/* important tags necessary for nav items to return to original positions after animation on resize of screen */
     @media only screen and (max-width: 600px) {
         #video{
             top:-50px!important;
-            right:320px
+            right:320px!important;
         }
         #store{
             top:-50px!important;
-            right:260px
+            right:260px!important;
             
         }
         #music{
             top:-50px!important;
-            right:200px
+            right:200px!important;
         }
         #contact{
             top:-50px!important;
-            right:130px
+            right:130px!important;
         }
         #tour{
             top:-50px!important;
-            right:80px
+            right:80px!important;
         }
         #pictures{
             top:-50px!important;
-            right:20px
+            right:20px!important;
         }
 }
+
+@media only screen and (min-width: 601px) {
+        #video{
+            top:120px!important;
+            right:0px
+        }
+        #store{
+            top:160px!important;
+            right:0px
+            
+        }
+        #music{
+            top:200px!important;
+            right:0px
+        }
+        #contact{
+            top:240px!important;
+            right:0px
+        }
+        #tour{
+            top:280px;!important;
+            right:0px
+        }
+        #pictures{
+            top:320px!important;
+            right:0px
+        }
+}
+/* for cell phones vertically displayed */
+
+    @media only screen and (max-width: 600px) {
+        .main-contain{
+            height:75%;
+        }
+        .epk-video{
+            width:100%;
+        }
+}
+/*-----------------------------------------------*/
     
      @media only screen and (max-width: 768px) { 
         #main-page-contact .mgmt-line{
@@ -499,9 +548,10 @@ responsive media queries
     }
 
  @media only screen and (max-width: 993px) { 
-     .nav-item{
-         
-     }
+     .epk-video{
+            width:80%;
+        }
+     
     }
     
     
@@ -511,19 +561,30 @@ responsive media queries
         .pvtilnd-icons{
             width: 50px;
     }
+        .main-contain{
+            height:70%;
+        }
+        .epk-video{
+            width:90%;
+        }
 }
     
     
    
 
 
+/*
 @media (max-width: 992px) and (min-width: 768px){
 .container {
     max-width: 100%!important;
 }
+     .epk-video{
+            width:80%;
+        }
+    
 }
 @media (max-width: 768px) and (min-width: 576px){
 .container {
     max-width: 100%!important;
 }
-}
+}*/
