@@ -294,6 +294,10 @@ responsive media queries
 }
 
 /* angular insta table */
+
+#insta-table{
+    color:#000;
+}
  #insta-table img{
     width: 400px;
     height: 400px;
