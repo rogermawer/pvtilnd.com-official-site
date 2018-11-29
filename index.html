@@ -45,9 +45,9 @@ $(document).ready(function(){
 </script>
 </head>
     
-  <body>
+  <body class="container">
   
-        <div class="container bgimgfooter" style="height: 100%">
+        <div class="bgimgfooter" style="height: 100%">
 
             
             
@@ -62,10 +62,12 @@ $(document).ready(function(){
                         <p id="links"><span class="follow" style="color:#000;font-weight: 800">Follow</span></p>
 -->
                     </div>    
+<!--
                     <div style="height: 50px">
                         <p id="socials" style="display: none;transform: translate(-16%)">
                             <a href="https://www.instagram.com/pvtilnd/" style="line-height: 28px"><img src="img/instagram-2016-png-transparent-logo.png" style="width:20px;" width="20"></a><a href="https://www.facebook.com/PVTILND/"><i class="fab fa-facebook-square" style="color:#4267B2"></i></a><a href=""><iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:21MZoYDTcbPsC5crOQVqho&size=basic&theme=dark&show-count=0" scrolling="no" frameborder="0" style="width:95px;height:50px;border:none; overflow:hidden;" allowtransparency="true"></iframe></a><a href="https://soundcloud.com/privateisland" target="_blank"><i class="fab fa-soundcloud" style="color:#FF4A04"></i></a><a href="https://twitter.com/pvtilnd"><i class="fab fa-twitter" style="color:#1DA1F2"></i></a></p>
                     </div>
+-->
                 </div>
               </div>
           </div>
@@ -75,16 +77,28 @@ $(document).ready(function(){
    <div class="row main-contain" style="">
        <div class="col-12" style="">
            
-           <div class="content-box">
+           <div id="home" class="hidden content-box">
                 <div class="text-box container">
                     <div id="main" class="mx-auto">
                         <p style="color: #000">we released a <span style="text-decoration:underline">single</span>.</p>
-                        
                     </div>
                 </div>  
             </div>
            
-            <!-- match box -->
+           
+          
+              
+              <!-- music -->
+              <a class="nav-item tip-box" style="" id="music" href="#music"><span class="text-black">music</span></a>
+              <div class="hidden content-box">
+                <div class="text-box container">
+                    <div class="spotify-player">
+                        <iframe src="https://open.spotify.com/embed/artist/21MZoYDTcbPsC5crOQVqho" style="width: 100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </div>
+                </div>
+              </div>
+           
+            <!-- video -->
             <a class="nav-item tip-box" style="" id="video" href="#video"><span class="text-black">video</span></a>
               <div class="hidden content-box">
                 <div class="text-box container">
@@ -95,12 +109,40 @@ $(document).ready(function(){
                     </div>
                 </div>  
             </div>
+           
+           <!-- tour -->
+              <a class="nav-item tip-box" id="dates" style="" href="#dates"><span class="text-black">dates</span></a>
+              <div class="hidden content-box">
+                <div class="text-box container">
+                    <a href="https://www.songkick.com/artists/7884989" class="songkick-widget" data-theme="light" data-track-button="on"  data-detect-style="true" data-font-color="#000000" data-background-color="#ffffff">Private Island tour dates</a>
+                    <script src="//widget.songkick.com/7884989/widget.js"></script>
+                   </div>
+              </div>
           
-              <!-- teepee -->
+           
+           
+              <!-- band -->
+              <a class="nav-item tip-box" style="" id="pictures" href="#pictures"><span class="text-black">band</span></a>
+               <div class="hidden content-box">
+                <!-- instagram feed -->
+                <div class="text-box container">
+                 <div ng-app="PVTILND-FEED" ng-controller="customersCtrl" id="insta-table"> 
+                   
+                        <div ng-repeat="x in myData">
+                            <div class="row" ng-if="$even">
+                                <div class="col-md-6 mb-2 pr-2 text-center"><img class="img-fluid" ng-src="{{myData[$index].images.standard_resolution.url}}"></div>
+                                <div class="col-md-6 mb-2 text-center"><img class="img-fluid" ng-src="{{myData[$index+1].images.standard_resolution.url}}"></div>
+                            </div>
+                        </div>
+                </div>
+                </div>
+              </div>
+           
+           <!-- merch -->
               <a class="nav-item tip-box" style="" id="store" href="#store"><span class="text-black">merch</span></a>
                <div class="hidden content-box">
                 <div class="text-box container">
-                    <div class="row">
+                    <div class="merch-container row">
                         <div style="max-width: 300px" class="sm-col-6 mx-auto"><a href="https://thehyv.shop/collections/private-island/products/dad-hat" target="_blank"><img class="img-fluid merch" src="img/pi-dad-hat.png"></a></div>
                         <div style="max-width: 300px" class="lg-col-6 mx-auto"><a href="https://thehyv.shop/collections/private-island/products/sunbreak-ep" target="_blank"><img class="img-fluid merch" src="img/pi-sunbreak-cover.jpg"></a></div>
                     </div>
@@ -110,18 +152,9 @@ $(document).ready(function(){
                     </div>
                   </div>
               </div> 
-              <!-- rope -->
-              <a class="nav-item tip-box" style="" id="music" href="#music"><span class="text-black">music</span></a>
-              <div class="hidden content-box">
-                <div class="text-box container">
-                    <div class="spotify-player">
-                        <iframe src="https://open.spotify.com/embed/artist/21MZoYDTcbPsC5crOQVqho" style="width: 100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                    </div>
-                </div>
-              </div>
            
           
-              <!-- fire -->
+              <!-- contact -->
               <a class="nav-item tip-box" style="" id="contact" href="#contact"><span class="text-black">contact</span></a>
               <div id="main-page-contact" class="hidden content-box">
                 <div class="text-box container contact-div">
@@ -159,33 +192,7 @@ $(document).ready(function(){
 
            
             
-              <!-- boot -->
-              <a class="nav-item tip-box" id="tour" style="" href="#tour"><span class="text-black">tour</span></a>
-              <div class="hidden content-box">
-                <div class="text-box container">
-                    <a href="https://www.songkick.com/artists/7884989" class="songkick-widget" data-theme="light" data-track-button="on"  data-detect-style="true" data-font-color="#000000" data-background-color="#ffffff">Private Island tour dates</a>
-                    <script src="//widget.songkick.com/7884989/widget.js"></script>
-                   </div>
-              </div>
-          
-           
-           
-              <!-- canteen -->
-              <a class="nav-item tip-box" style="" id="pictures" href="#pictures"><span class="text-black">band</span></a>
-               <div class="hidden content-box">
-                <!-- instagram feed -->
-                <div class="text-box container">
-                 <div ng-app="PVTILND-FEED" ng-controller="customersCtrl" id="insta-table"> 
-                   
-                        <div ng-repeat="x in myData">
-                            <div class="row" ng-if="$even">
-                                <div class="col-md-6 mb-2 pr-2 text-center"><img class="img-fluid" ng-src="{{myData[$index].images.standard_resolution.url}}"></div>
-                                <div class="col-md-6 mb-2 text-center"><img class="img-fluid" ng-src="{{myData[$index+1].images.standard_resolution.url}}"></div>
-                            </div>
-                        </div>
-                </div>
-                </div>
-              </div>
+              
       
 
        </div>

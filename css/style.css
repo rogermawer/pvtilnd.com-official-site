@@ -7,22 +7,12 @@ body, html {
     height:100%;
     background-color: #ffffff
 }
-.newbgimg{
-    background-image:url(../img/backgroun.jpg);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: contain;
-    height: 100%;
-    width: 100%
-}
 
 .bgimgfooter{
-    background-image:url(../img/backgroun-bottom.jpg);
+    background-image:url(../img/rectangles.png);
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
-    height: inherit;
-    
 }
 body {
 	line-height: 1.4;
@@ -48,21 +38,14 @@ body {
     padding-top: 10px;
     padding-left: 10px;
 	margin-top: 0px;
-    display: flex;
+    text-align: right;
 
 }
-.banner-text h2{
-	font-size: 40px;
-	font-weight: 400;
-	font-family: 'Questrial', sans-serif;
-}
-
 
 
 .title-text{
 	padding: 0;
 	font-size: 22px;
-/*    letter-spacing: 4px;*/
     font-weight:normal;
     color:#000;
     margin-bottom: 0;
@@ -72,17 +55,7 @@ body {
 /*
 responsive media queries
 */
-@media (min-width: 551px) and (max-width: 980px){
-	.title-text{
-	margin-bottom: 0px;
-	}
-}
-@media (min-width: 100px) and (max-width: 550px) {
-	
-.title-text{
-	margin-bottom: 0px;
-	}
-}
+
 .mgmt-line{
     display: inline-block;
     padding-right:5px;
@@ -112,7 +85,6 @@ responsive media queries
 
 .content-box {
     height: 100%;
-    cursor: pointer;
     -webkit-backface-visibility: hidden;
 }
 .blue-bg {
@@ -308,6 +280,10 @@ responsive media queries
     font-size: 12px;
     padding-left:10px;
 }
+
+.merch-container div{
+    cursor: pointer;
+}
 /*
 .bounce {
     animation:bounce .8s;
@@ -470,9 +446,7 @@ responsive media queries
     visibility: visible;
 }
 
-    .pvtilnd-icons{
-        width:50px;
-    }
+   
     
     
     
@@ -480,57 +454,62 @@ responsive media queries
 /* important tags necessary for nav items to return to original positions after animation on resize of screen */
     @media only screen and (max-width: 600px) {
         #video{
-            top:-50px!important;
+            top:-60px!important;
             right:320px!important;
         }
         #store{
-            top:-50px!important;
+            top:-60px!important;
             right:260px!important;
             
         }
         #music{
-            top:-50px!important;
+            top:-60px!important;
             right:200px!important;
         }
         #contact{
-            top:-50px!important;
+            top:-60px!important;
             right:130px!important;
         }
-        #tour{
-            top:-50px!important;
+        #dates{
+            top:-60px!important;
             right:80px!important;
         }
         #pictures{
-            top:-50px!important;
+            top:-60px!important;
             right:20px!important;
+        }
+        
+        .title-text{
+            padding-top:20px
         }
 }
 
+/* style for screens over 600px */
 @media only screen and (min-width: 601px) {
-        #video{
-            top:120px!important;
-            right:0px
-        }
-        #store{
-            top:160px!important;
-            right:0px
-            
-        }
         #music{
-            top:200px!important;
-            right:0px
+            top:120px!important;
+            right:15px /* 15px padding, same as container */
         }
-        #contact{
-            top:240px!important;
-            right:0px
+        #video{
+            top:160px!important;
+            right:15px
         }
-        #tour{
-            top:280px;!important;
-            right:0px
+        #dates{
+            top:200px;!important;
+            right:15px
         }
         #pictures{
+            top:240px!important;
+            right:15px
+        }
+        #store{
+            top:280px!important;
+            right:15px
+            
+        }
+        #contact{
             top:320px!important;
-            right:0px
+            right:15px
         }
 }
 /* for cell phones vertically displayed */
@@ -562,9 +541,6 @@ responsive media queries
     
 
     @media only screen and (max-width: 768px) and (min-width:601px) {
-        .pvtilnd-icons{
-            width: 50px;
-    }
         .main-contain{
             height:70%;
         }

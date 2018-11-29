@@ -26,28 +26,28 @@ $(document).ready(function(){
 });
 */
 
-  /* bouncy class */
-           
-$(document).ready(function(){
-    setTimeout(function(){
-        looper();
-    }, 5000);
-    setInterval(function(){
-        looper();
-    }, 30000);
-});
-        
-function looper(x){
-    var items = $('.nav-item');
-    var shuffledItems = shuffle(items);
-    $(shuffledItems).each(function(i){
-        var x = $(this);
-        setTimeout(function() {
-            x.toggleClass('bounce');
-        }, 5000*i);
-    });
-}
-        
+//  /* bouncy class */
+//           
+//$(document).ready(function(){
+//    setTimeout(function(){
+//        looper();
+//    }, 5000);
+//    setInterval(function(){
+//        looper();
+//    }, 30000);
+//});
+//        
+//function looper(x){
+//    var items = $('.nav-item');
+//    var shuffledItems = shuffle(items);
+//    $(shuffledItems).each(function(i){
+//        var x = $(this);
+//        setTimeout(function() {
+//            x.toggleClass('bounce');
+//        }, 5000*i);
+//    });
+//}
+//        
 function shuffle(array) {
     var m = array.length, t, i;
     // While there remain elements to shuffle…
@@ -78,18 +78,22 @@ function shuffle(array) {
       
         
    $(document).ready(function(){
+        $('#home').fadeIn(100); //let title show when page loads
         $('.nav-item').click(function(){
             $('.hidden').stop().fadeOut(100);//fadeeverything in center out first
             $(this).next().fadeIn(800);
             // save hash in url in case back button is pushed
             var elementID = $(this).attr('id');
             elementID = '#' + elementID;
-            // if back button is pushed, close box
+            // if back button is pushed, change content to hash
             window.onpopstate = function(event) {
                 if (!(window.location.hash === elementID)){
                     $('.hidden').stop().fadeOut(100);
-                    var previousContent = window.location.hash;//when url changes, get hash
-                    $(previousContent).next().fadeIn(800);
+                    var previousHash = window.location.hash;
+                    $(previousHash).next().fadeIn(800);
+                }
+                if (window.location.hash == ''){
+                     $('#home').fadeIn(100);
                 }
             }
         });
@@ -99,6 +103,15 @@ function shuffle(array) {
             // then remove hash from url
             removeHash();
         });
+       
+       /* so title information shows when you click on the title */
+       $(document).ready(function(){
+           
+           $('.title-text').click(function(){
+               $('.hidden').stop().fadeOut(100);
+               $('#home').fadeIn(800);
+           })
+       });
    });
         
 function removeHash () { 
