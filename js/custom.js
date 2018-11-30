@@ -91,6 +91,7 @@ function shuffle(array) {
                     $('.hidden').stop().fadeOut(100);
                     var previousHash = window.location.hash;
                     $(previousHash).next().fadeIn(800);
+                    elementID = previousHash; //so forward button on browser recalls content
                 }
                 if (window.location.hash == ''){
                      $('#home').fadeIn(100);
@@ -110,6 +111,7 @@ function shuffle(array) {
            $('.title-text').click(function(){
                $('.hidden').stop().fadeOut(100);
                $('#home').fadeIn(800);
+               history.replaceState(null, null, ' '); //removes hash
            })
        });
    });

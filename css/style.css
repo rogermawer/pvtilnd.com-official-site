@@ -5,7 +5,7 @@
 
 body, html {
     height:100%;
-    background-color: #ffffff
+    background-color: #ffffff;
 }
 
 .bgimgfooter{
@@ -17,7 +17,8 @@ body, html {
 body {
 	line-height: 1.4;
     font-size: 18px;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'helvetica neue', sans-serif;
+    font-weight: 800;
     letter-spacing: 0.5px;
     font-size: 15px;
 	font-weight: 400;
@@ -30,7 +31,7 @@ body {
 }
 
 .bg-color{
-    background-color: #fffff4;
+    background-color: #ffffff;
     height:100%;
 }
     
@@ -46,6 +47,7 @@ body {
 .title-text{
 	padding: 0;
 	font-size: 22px;
+    letter-spacing: 2px;
     font-weight:normal;
     color:#000;
     margin-bottom: 0;
@@ -128,11 +130,15 @@ responsive media queries
 }
     
 #socials{
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.5em;
-    width:150%;
+    font-size: 1.2em;
 }
+#socials i{
+    color: #3e3e3e;
+}
+#socials a{
+    padding:5px;
+}
+
 #socials li{
     vertical-align: middle;
     padding-left: 0;
@@ -245,21 +251,21 @@ responsive media queries
 
 
 .btn-success {
-  color: #fff;
-  background-color: #CB9118;
-  border-color: #CB9118;
+  color: #000;
+  background-color: #fff;
+  border-color: #000;
 }
 
 .btn-success:hover {
   color: #fff;
-  background-color: #3C7C97;
-  border-color: #3C7C97;
+  background-color: #000;
+  border-color: #000;
 }
 
 .btn-success.disabled, .btn-success:disabled {
     color: #fff;
-    background-color: #CB9118;
-    border-color: #CB9118;
+    background-color: grey;
+    border-color: grey;
 }
 .form-control{
     border-radius: 0px;
@@ -431,13 +437,39 @@ responsive media queries
     left: 30px;
 }
 .main-contain{
-    height: 50%;
+    height: 70%;
 }
 .epk-video{
     width:60%;
     }
 
-/* Show the tooltip text when you mouse over the tooltip container */
+
+        #music{
+            top:120px;
+            right:15px /* 15px padding, same as container */
+        }
+        #video{
+            top:160px;
+            right:15px
+        }
+        #dates{
+            top:200px;
+            right:15px
+        }
+        #pictures{
+            top:240px;
+            right:15px
+        }
+        #store{
+            top:280px;
+            right:15px
+            
+        }
+        #contact{
+            top:320px;
+            right:15px
+        }
+
 
 
 
@@ -452,65 +484,51 @@ responsive media queries
     
 
 /* important tags necessary for nav items to return to original positions after animation on resize of screen */
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 600px), screen and (max-height:500px) {
         #video{
-            top:-60px!important;
+            top:-100px!important;
             right:320px!important;
         }
         #store{
-            top:-60px!important;
+            top:-100px!important;
             right:260px!important;
             
         }
         #music{
-            top:-60px!important;
+            top:-100px!important;
             right:200px!important;
         }
         #contact{
-            top:-60px!important;
+            top:-100px!important;
             right:130px!important;
         }
         #dates{
-            top:-60px!important;
-            right:80px!important;
+            top:-100px!important;
+            right:75px!important;
         }
         #pictures{
-            top:-60px!important;
+            top:-100px!important;
             right:20px!important;
         }
         
         .title-text{
             padding-top:20px
         }
+        
 }
+
+/* just for when when phone is horizontal */
+@media screen and (max-height:500px) {
+    #insta-table img{
+            width:300px;
+            height:300px;
+        }
+}
+
 
 /* style for screens over 600px */
 @media only screen and (min-width: 601px) {
-        #music{
-            top:120px!important;
-            right:15px /* 15px padding, same as container */
-        }
-        #video{
-            top:160px!important;
-            right:15px
-        }
-        #dates{
-            top:200px;!important;
-            right:15px
-        }
-        #pictures{
-            top:240px!important;
-            right:15px
-        }
-        #store{
-            top:280px!important;
-            right:15px
-            
-        }
-        #contact{
-            top:320px!important;
-            right:15px
-        }
+        
 }
 /* for cell phones vertically displayed */
 
@@ -541,8 +559,8 @@ responsive media queries
     
 
     @media only screen and (max-width: 768px) and (min-width:601px) {
-        .main-contain{
-            height:70%;
+        .spotify-player{
+            width:90%
         }
         .epk-video{
             width:90%;

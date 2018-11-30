@@ -4,11 +4,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Private Island Beta</title>
+    <title>Private Island :: Official Site</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/img/icons/fire.png"/>
     <meta name="description" content="">
     <meta name="keywords" content="">
-    
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans|Roboto:300,400|Questrial|Satisfy">
+
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,400,600,800" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
@@ -55,19 +55,9 @@ $(document).ready(function(){
               <div style="" class="col-md-12">
                 <div style="" class="banner-text">
                 <p class="title-text">PVTILND</p>
-                    <div class="quick-links">
-<!--
-                        <p><a href="tour.html">Tour</a></p>
-                        <p><a href="contact.html">Contact</a></p>
-                        <p id="links"><span class="follow" style="color:#000;font-weight: 800">Follow</span></p>
--->
-                    </div>    
-<!--
-                    <div style="height: 50px">
-                        <p id="socials" style="display: none;transform: translate(-16%)">
-                            <a href="https://www.instagram.com/pvtilnd/" style="line-height: 28px"><img src="img/instagram-2016-png-transparent-logo.png" style="width:20px;" width="20"></a><a href="https://www.facebook.com/PVTILND/"><i class="fab fa-facebook-square" style="color:#4267B2"></i></a><a href=""><iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:21MZoYDTcbPsC5crOQVqho&size=basic&theme=dark&show-count=0" scrolling="no" frameborder="0" style="width:95px;height:50px;border:none; overflow:hidden;" allowtransparency="true"></iframe></a><a href="https://soundcloud.com/privateisland" target="_blank"><i class="fab fa-soundcloud" style="color:#FF4A04"></i></a><a href="https://twitter.com/pvtilnd"><i class="fab fa-twitter" style="color:#1DA1F2"></i></a></p>
-                    </div>
--->
+                    <p id="socials">
+                        <a href="https://www.instagram.com/pvtilnd/"><i class="fab fa-instagram"></i></a><a href="https://www.facebook.com/PVTILND/"><i class="fab fa-facebook-square"></i></a><a href=""><i class="fab fa-spotify"></i></a><a href="https://soundcloud.com/privateisland" target="_blank"><i class="fab fa-soundcloud"></i></a><a href="https://twitter.com/pvtilnd"><i class="fab fa-twitter"></i></a></p>
+                    
                 </div>
               </div>
           </div>
@@ -129,9 +119,9 @@ $(document).ready(function(){
                  <div ng-app="PVTILND-FEED" ng-controller="customersCtrl" id="insta-table"> 
                    
                         <div ng-repeat="x in myData">
-                            <div class="row" ng-if="$even">
-                                <div class="col-md-6 mb-2 pr-2 text-center"><img class="img-fluid" ng-src="{{myData[$index].images.standard_resolution.url}}"></div>
-                                <div class="col-md-6 mb-2 text-center"><img class="img-fluid" ng-src="{{myData[$index+1].images.standard_resolution.url}}"></div>
+                            <div class="row" ng-if="$even" style="justify-content: center">
+                                <div class="p-2 text-center"><img class="img-fluid" ng-src="{{myData[$index].images.standard_resolution.url}}"></div>
+                                <div class="p-2 text-center"><img class="img-fluid" ng-src="{{myData[$index+1].images.standard_resolution.url}}"></div>
                             </div>
                         </div>
                 </div>
@@ -158,7 +148,9 @@ $(document).ready(function(){
               <a class="nav-item tip-box" style="" id="contact" href="#contact"><span class="text-black">contact</span></a>
               <div id="main-page-contact" class="hidden content-box">
                 <div class="text-box container contact-div">
-                   <div style="padding:20px;color:#000">
+                   <div style="padding:20px;color:#000;text-align: center">
+                       <p id="socials">
+                        <a href="https://www.instagram.com/pvtilnd/"><i class="fab fa-instagram"></i></a><a href="https://www.facebook.com/PVTILND/"><i class="fab fa-facebook-square"></i></a><a href=""><i class="fab fa-spotify"></i></a><a href="https://soundcloud.com/privateisland" target="_blank"><i class="fab fa-soundcloud"></i></a><a href="https://twitter.com/pvtilnd"><i class="fab fa-twitter"></i></a></p>
                     <div style="text-align: center;margin-bottom:20px"> 
                        <p class="mgmt-line"><span style="font-weight: bold;font-size: 2em">MGMT</span><br><a style="font-weight: normal;color:#000" href="mailto:ALEX@TRIBEMGMTGROUP.COM?subject=RE:Private Island">ALEX@TRIBEMGMTGROUP.COM</a></p>
                        <p style="display: inline-block"><span style="font-weight: bold;font-size: 2em">BOOKING</span><br><a style="font-weight: normal;color:#000" href="mailto:RUSSELL@EMPIREAGENCY.COM?subject=Booking Private Island">RUSSELL@EMPIREAGENCY.COM</a></p>
