@@ -125,10 +125,10 @@ $(document).ready(function(){
                 <!-- instagram feed -->
                 <div class="text-box container">
                  <div ng-app="PVTILND-FEED" ng-controller="customersCtrl" id="insta-table"> 
-                    <div ng-repeat="x in myData">
+                    <div ng-repeat="x in instaData">
                         <div class="row" ng-if="$even" style="justify-content: center">
-                            <div class="p-2 text-center"><img class="img-fluid" ng-src="{{myData[$index].images.standard_resolution.url}}"></div>
-                            <div class="p-2 text-center"><img class="img-fluid" ng-src="{{myData[$index+1].images.standard_resolution.url}}"></div>
+                            <div class="p-2 text-center"><img class="img-fluid" ng-if="isImage(instaData[$index])" ng-src="{{instaData[$index].images.standard_resolution.url}}"><video controls autoplay ng-if="isVideo(instaData[$index])"><source ng-src="{{instaData[$index].videos.standard_resolution.url}}" type="video/mp4"></video></div>
+                            <div class="p-2 text-center"><img class="img-fluid" ng-if="isImage(instaData[$index+1])" ng-src="{{instaData[$index+1].images.standard_resolution.url}}"><video controls autoplay ng-if="isVideo(instaData[$index+1])"><source ng-src="{{instaData[$index+1].videos.standard_resolution.url}}" type="video/mp4"></video></div>
                         </div>
                     </div>
                 </div>
@@ -200,10 +200,24 @@ $(document).ready(function(){
 var app = angular.module('PVTILND-FEED', []);
 app.controller('customersCtrl', function($scope, $http) {
     $http.get("https://api.instagram.com/v1/users/self/media/recent/?access_token=1163694981.2951133.5e90bab34ec743ddbd3a97fef474929e").then(function(response) {
-        $scope.myData = response.data.data;
+        $scope.instaData = response.data.data;
     }, function(response){
         $('#insta-table').html('Something very bad happened.')
     });
+    $scope.isImage = function isImage(instaData){
+        if (instaData.type == 'image'){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    $scope.isVideo = function isVideo(instaData){
+        if (instaData.type == 'video'){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
 });
 </script>

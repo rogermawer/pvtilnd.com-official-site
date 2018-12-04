@@ -304,7 +304,7 @@ responsive media queries
 #insta-table{
     color:#000;
 }
- #insta-table img{
+ #insta-table img, video{
     width: 400px;
     height: 400px;
     object-fit: cover;
