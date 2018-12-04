@@ -21,6 +21,19 @@
     .text-black{
         color: #000000;
     }
+    #socials a i:hover{
+        animation: bumper 0.2s;
+        animation-iteration-count:1;
+        -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+        -moz-animation-fill-mode: forwards;    /* FF 5+ */
+        -o-animation-fill-mode: forwards;      /* Not implemented yet */
+        -ms-animation-fill-mode: forwards;     /* IE 10+ */
+        animation-fill-mode: forwards;         /* When the spec is finished */
+    }
+    
+    @keyframes bumper{
+        100% {transform: translate(0px, -3px);}
+    }
 </style>
       
       
@@ -46,11 +59,11 @@ $(document).ready(function(){
 </head>
     
   <body class="container">
-        <div class="bgimgfooter" style="height: 100%">
+        <div class="bgimgfooter" style="">
             <div class="row">
               <div style="" class="col-md-12">
                 <div style="" class="banner-text">
-                <p class="title-text">PVTILND</p>
+                <p class="title-text">private island</p>
                     <p id="socials">
                         <a href="https://www.instagram.com/pvtilnd/"><i class="fab fa-instagram"></i></a><a href="https://www.facebook.com/PVTILND/"><i class="fab fa-facebook-square"></i></a><a href=""><i class="fab fa-spotify"></i></a><a href="https://soundcloud.com/privateisland" target="_blank"><i class="fab fa-soundcloud"></i></a><a href="https://twitter.com/pvtilnd"><i class="fab fa-twitter"></i></a>
                     </p>
@@ -59,7 +72,7 @@ $(document).ready(function(){
           </div>
         
           <!-- nav items -->
-   <div class="row main-contain" style="">
+   <div class="row main-contain">
        <div class="col-12" style="">
            <div id="home" class="hidden content-box">
                 <div class="text-box container">
@@ -79,6 +92,7 @@ $(document).ready(function(){
               <div class="hidden content-box">
                 <div class="text-box container">
                     <div class="spotify-player">
+                        <iframe src="https://open.spotify.com/embed/album/1TzwniNznVVYtHRvSacfV6" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                         <iframe src="https://open.spotify.com/embed/artist/21MZoYDTcbPsC5crOQVqho" style="width: 100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                     </div>
                 </div>

@@ -13,6 +13,7 @@ body, html {
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: contain;
+    height:100%;
 }
 body {
 	line-height: 1.4;
@@ -50,7 +51,7 @@ body {
     letter-spacing: 2px;
     font-weight:normal;
     color:#000;
-    margin-bottom: 0;
+    margin-bottom: 10px;
 }
 
 
@@ -102,7 +103,7 @@ responsive media queries
 .text-box{
     position: absolute;
     top:0px;
-    width: 90%;
+    width: 89%;
     height: 100%;
     overflow-y:scroll;
     background-color: rgba(0,0,0,0);
@@ -139,7 +140,8 @@ responsive media queries
 }
 
 .song-socials a{
-    padding:10px;
+    margin-right:10px;
+    margin-left: 10px;
 }
 
 #socials{
@@ -151,8 +153,10 @@ responsive media queries
     color: #3e3e3e;
 }
 #socials a{
-    padding:5px;
+    margin-right:5px;
+    margin-left:5px;
 }
+
 
 #socials-bottom{
     visibility: hidden;
@@ -167,11 +171,7 @@ responsive media queries
     padding:5px;
 }
 
-#socials li{
-    vertical-align: middle;
-    padding-left: 0;
-    padding-right: 20px
-}
+
 #socials p a img{
     vertical-align: middle;
     padding-left: 0;
@@ -369,22 +369,9 @@ responsive media queries
     width:400px;
     
 }
-@media only screen and (max-width: 900px) {
-    .spotify-player{
-        width: 100%;
-        
-    }
-}
    
 
-@media only screen and (max-height: 500px) {
-    
-    
-    .pvtilnd-icons {
-        width:50px!important;
-    }
-}
-    
+
 .follow:hover{
     text-decoration: underline;
     cursor: pointer
@@ -464,8 +451,31 @@ responsive media queries
     bottom: -10px;
     left: 30px;
 }
+    .song-socials a i:hover{
+        animation: bumper 0.2s;
+        animation-iteration-count:1;
+        -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+        -moz-animation-fill-mode: forwards;    /* FF 5+ */
+        -o-animation-fill-mode: forwards;      /* Not implemented yet */
+        -ms-animation-fill-mode: forwards;     /* IE 10+ */
+        animation-fill-mode: forwards;         /* When the spec is finished */
+    }
+
+    #socials a i:hover{
+        animation: bumper 0.2s;
+        animation-iteration-count:1;
+        -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+        -moz-animation-fill-mode: forwards;    /* FF 5+ */
+        -o-animation-fill-mode: forwards;      /* Not implemented yet */
+        -ms-animation-fill-mode: forwards;     /* IE 10+ */
+        animation-fill-mode: forwards;         /* When the spec is finished */
+    }
+    
+    @keyframes bumper{
+        100% {transform: translate(0px, -3px);}
+    }
 .main-contain{
-    height: 70%;
+    height: 68%;
 }
 .epk-video{
     width:60%;
@@ -513,35 +523,34 @@ responsive media queries
 
 /* important tags necessary for nav items to return to original positions after animation on resize of screen */
     @media only screen and (max-width: 600px), screen and (max-height:500px) {
-        #video{
-            top:-100px!important;
-            right:320px!important;
-        }
-        #store{
-            top:-100px!important;
-            right:260px!important;
-            
-        }
         #music{
-            top:-100px!important;
-            right:200px!important;
-        }
-        #contact{
-            top:-100px!important;
-            right:130px!important;
-        }
-        #dates{
-            top:-100px!important;
-            right:75px!important;
-        }
-        #pictures{
             top:-100px!important;
             right:20px!important;
         }
-        
-        .title-text{
-            padding-top:20px
+        #video{
+            top:-100px!important;
+            right:75px!important;
         }
+        #dates{
+            top:-100px!important;
+            right:130px!important;
+        }
+        #pictures{
+            top:-100px!important;
+            right:190px!important;
+        }
+        #store{
+            top:-100px!important;
+            right:240px!important;
+            
+        }
+        #contact{
+            top:-100px!important;
+            right:300px!important;
+        }
+        
+        
+        
         .banner-text{
             text-align: center
         }
@@ -560,6 +569,7 @@ responsive media queries
 }
 
 
+
 /* style for screens over 600px */
 @media only screen and (min-width: 601px) {
     
@@ -576,6 +586,14 @@ responsive media queries
         }
         #socials{
             visibility: hidden;
+        }
+        .title-text{
+            margin-top:15px
+        }
+        /* completely center text box when right nav is hidden */
+        .text-box{
+            right:50%;
+            transform: translate(50%, 0%);
         }
 }
 /*-----------------------------------------------*/
@@ -599,6 +617,12 @@ responsive media queries
         }
      
     }
+@media only screen and (max-width: 900px) {
+    .spotify-player{
+        width: 100%;
+        
+    }
+}
     
     
     
