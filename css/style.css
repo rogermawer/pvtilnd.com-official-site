@@ -567,12 +567,17 @@ responsive media queries
         .title-text{
             display: inline-block
         }
+        #insta-table img, video{
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
         
 }
 
 /* just for when when phone is horizontal */
 @media screen and (max-height:500px) {
-    #insta-table img{
+    #insta-table img, video{
             width:300px;
             height:300px;
         }
