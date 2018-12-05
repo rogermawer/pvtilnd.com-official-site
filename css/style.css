@@ -52,6 +52,7 @@ body {
     font-weight:normal;
     color:#000;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 
@@ -305,8 +306,8 @@ responsive media queries
     color:#000;
 }
  #insta-table img, video{
-    width: 400px;
-    height: 400px;
+    width: 360px;
+    height: 360px;
     object-fit: cover;
     }
     

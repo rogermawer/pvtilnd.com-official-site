@@ -77,9 +77,9 @@ $(document).ready(function(){
            <div id="home" class="hidden content-box">
                 <div class="text-box container">
                     <div id="main" class="mx-auto">
-                        <p style="color: #000">12-14-2018 we released a <span style="text-decoration:underline">single</span>.</p>
+                        <p style="color: #000">12-14-2018 we released a <a style="color:#000000;text-decoration: underline" href="/splash.html">single</a>.</p>
                         <div class="main-img text-center">
-                            <img src="/img/single-drawing.png" style="margin-left:400px;margin-top:70px;width:200px;">
+                            <a href="/splash.html"><img src="/img/single-drawing.png" style="margin-left:400px;margin-top:70px;width:200px;"></a>
                         </div>
                     </div>
                     
@@ -126,8 +126,8 @@ $(document).ready(function(){
                  <div ng-app="PVTILND-FEED" ng-controller="customersCtrl" id="insta-table"> 
                     <div ng-repeat="x in instaData">
                         <div class="row" ng-if="$even" style="justify-content: center">
-                            <div class="p-2 text-center"><img class="img-fluid" ng-if="isImage(instaData[$index])" ng-src="{{instaData[$index].images.standard_resolution.url}}"><video controls autoplay ng-if="isVideo(instaData[$index])"><source ng-src="{{instaData[$index].videos.standard_resolution.url}}" type="video/mp4"></video></div>
-                            <div class="p-2 text-center"><img class="img-fluid" ng-if="isImage(instaData[$index+1])" ng-src="{{instaData[$index+1].images.standard_resolution.url}}"><video controls autoplay ng-if="isVideo(instaData[$index+1])"><source ng-src="{{instaData[$index+1].videos.standard_resolution.url}}" type="video/mp4"></video></div>
+                            <div class="p-2 text-center"><img class="img-fluid" ng-if="isImage(instaData[$index])" ng-src="{{instaData[$index].images.standard_resolution.url}}"><video controls ng-if="isVideo(instaData[$index])"><source ng-src="{{instaData[$index].videos.standard_resolution.url}}" type="video/mp4"></video></div>
+                            <div class="p-2 text-center"><img class="img-fluid" ng-if="isImage(instaData[$index+1])" ng-src="{{instaData[$index+1].images.standard_resolution.url}}"><video controls ng-if="isVideo(instaData[$index+1])"><source ng-src="{{instaData[$index+1].videos.standard_resolution.url}}" type="video/mp4"></video></div>
                         </div>
                     </div>
                 </div>
@@ -143,8 +143,11 @@ $(document).ready(function(){
                         <div style="max-width: 300px" class="lg-col-6 mx-auto"><a href="https://thehyv.shop/collections/private-island/products/sunbreak-ep" target="_blank"><img class="img-fluid merch" src="img/pi-sunbreak-cover.jpg"></a></div>
                     </div>
                     <div class="row">
-                        <div style="max-width: 300px" class="sm-col-6 mx-auto"><a href="https://thehyv.shop/collections/private-island/products/night-drive-tee" target="_blank"><img class="img-fluid merch" src="img/pi-ndshirt-white.jpg"></a></div>
+                        <div style="max-width: 300px" class="sm-col-6 mx-auto"><a href="https://thehyv.shop/collections/private-island/products/survival-tee" target="_blank"><img class="img-fluid merch" src="img/survival-tee.png"></a></div>
                         <div style="max-width: 300px" class="md-col-6 mx-auto"><a href="https://thehyv.shop/collections/private-island/products/night-drive-tee" target="_blank"><img class="img-fluid merch" src="img/pi-ndshirt-blk.jpg"></a></div>
+                    </div>
+                    <div class="row">
+                        <div style="max-width: 300px" class="sm-col-6 mx-auto"><a href="https://thehyv.shop/collections/private-island/products/night-drive-tee" target="_blank"><img class="img-fluid merch" src="img/pi-ndshirt-white.jpg"></a></div>
                     </div>
                   </div>
               </div> 
