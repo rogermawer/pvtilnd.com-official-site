@@ -152,6 +152,7 @@ responsive media queries
 
 #socials i{
     color: #3e3e3e;
+    vertical-align: middle;
 }
 #socials a{
     margin-right:5px;
@@ -159,16 +160,15 @@ responsive media queries
 }
 
 
-#socials-bottom{
-    visibility: hidden;
+#socials-contact{
     text-align: center;
     font-size: 1.2em;
 }
 
-#socials-bottom i{
+#socials-contact i{
     color: #3e3e3e;
 }
-#socials-bottom a{
+#socials-contact a{
     padding:5px;
 }
 
@@ -517,46 +517,55 @@ responsive media queries
     visibility: visible;
 }
 
-   
-    
-    
+/* for super tiny screens */
+@media only screen and (max-width: 361px){
+   .text-black{
+            font-size: 0.8em!important
+        } 
+}
     
 
 /* important tags necessary for nav items to return to original positions after animation on resize of screen */
     @media only screen and (max-width: 600px), screen and (max-height:500px) {
         #music{
-            top:-100px!important;
+            top:-35px!important;
             right:20px!important;
         }
         #video{
-            top:-100px!important;
+            top:-35px!important;
             right:75px!important;
         }
         #dates{
-            top:-100px!important;
+            top:-35px!important;
             right:130px!important;
         }
         #pictures{
-            top:-100px!important;
+            top:-35px!important;
             right:190px!important;
         }
         #store{
-            top:-100px!important;
+            top:-35px!important;
             right:240px!important;
             
         }
         #contact{
-            top:-100px!important;
+            top:-35px!important;
             right:300px!important;
         }
         
-        
-        
         .banner-text{
-            text-align: center
+            text-align: left;
+            margin-bottom: 40px
         }
         #socials-bottom{
             visibility: visible;
+        }
+        #socials{
+            display: inline-block;
+            float: right;
+        }
+        .title-text{
+            display: inline-block
         }
         
 }
@@ -585,11 +594,9 @@ responsive media queries
         .epk-video{
             width:100%;
         }
-        #socials{
-            visibility: hidden;
-        }
+      
         .title-text{
-            margin-top:15px
+            margin-top:0px
         }
         /* completely center text box when right nav is hidden */
         .text-box{
