@@ -520,8 +520,11 @@ responsive media queries
 /* for super tiny screens */
 @media only screen and (max-width: 361px){
    .text-black{
-            font-size: 0.8em!important
-        } 
+        font-size: 0.8em!important
+    }
+    .title-text{
+        font-size: 1.5em
+    }
 }
     
 
@@ -556,9 +559,6 @@ responsive media queries
         .banner-text{
             text-align: left;
             margin-bottom: 40px
-        }
-        #socials-bottom{
-            visibility: visible;
         }
         #socials{
             display: inline-block;
