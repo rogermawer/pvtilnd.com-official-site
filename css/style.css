@@ -486,6 +486,15 @@ responsive media queries
     max-width: 200px;
     width: 100%;
 }
+
+.the-stripe{
+    width:100%;
+    height:100px;
+    position: absolute;
+    bottom: 0px;
+    right:50%;
+    transform: translate(50%)
+}
 #socials-mobile{
     visibility: hidden;
 }
@@ -596,6 +605,9 @@ responsive media queries
         }
         .song-socials{
             font-size: 3em;
+        }
+        .the-stripe{
+            height:70px
         }
         
 }
