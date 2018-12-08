@@ -133,7 +133,7 @@ responsive media queries
     
 
 .song-socials{
-    font-size: 6em;
+    font-size: 5em;
 }
 
 .song-socials i{
@@ -461,6 +461,15 @@ responsive media queries
         -ms-animation-fill-mode: forwards;     /* IE 10+ */
         animation-fill-mode: forwards;         /* When the spec is finished */
     }
+    #socials-mobile a i:hover{
+        animation: bumper 0.2s;
+        animation-iteration-count:1;
+        -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+        -moz-animation-fill-mode: forwards;    /* FF 5+ */
+        -o-animation-fill-mode: forwards;      /* Not implemented yet */
+        -ms-animation-fill-mode: forwards;     /* IE 10+ */
+        animation-fill-mode: forwards;         /* When the spec is finished */
+    }
 
     #socials a i:hover{
         animation: bumper 0.2s;
@@ -495,9 +504,7 @@ responsive media queries
     right:50%;
     transform: translate(50%)
 }
-#socials-mobile{
-    visibility: hidden;
-}
+
 
 
         #music{
@@ -553,11 +560,11 @@ responsive media queries
         }
         #video{
             top:-35px!important;
-            right:250px!important;
+            right:240px!important;
         }
         #dates{
             top:-35px!important;
-            right:195px!important;
+            right:200px!important;
         }
         #pictures{
             top:-35px!important;
