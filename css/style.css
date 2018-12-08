@@ -25,12 +25,6 @@ body {
 	font-weight: 400;
 }
 
-.header {
-    background-size: cover;
-    min-height: 630px;
-    position: relative;
-}
-
 .bg-color{
     background-color: #ffffff;
     height:100%;
