@@ -29,6 +29,11 @@ body {
     background-color: #ffffff;
     height:100%;
 }
+ .text-black{
+        color: #000000;
+        font-size: 1em;
+        font-weight: 500
+    }
     
 .banner-text{
     padding-top: 10px;
@@ -43,7 +48,7 @@ body {
 	padding: 0;
 	font-size: 22px;
     letter-spacing: 2px;
-    font-weight:normal;
+    font-weight:500;
     color:#000;
     margin-bottom: 10px;
     cursor: pointer;
@@ -127,7 +132,7 @@ responsive media queries
     
 
 .song-socials{
-    font-size: 6em;
+    font-size: 5em;
 }
 
 .song-socials i{
@@ -455,6 +460,15 @@ responsive media queries
         -ms-animation-fill-mode: forwards;     /* IE 10+ */
         animation-fill-mode: forwards;         /* When the spec is finished */
     }
+    #socials-mobile a i:hover{
+        animation: bumper 0.2s;
+        animation-iteration-count:1;
+        -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+        -moz-animation-fill-mode: forwards;    /* FF 5+ */
+        -o-animation-fill-mode: forwards;      /* Not implemented yet */
+        -ms-animation-fill-mode: forwards;     /* IE 10+ */
+        animation-fill-mode: forwards;         /* When the spec is finished */
+    }
 
     #socials a i:hover{
         animation: bumper 0.2s;
@@ -489,34 +503,32 @@ responsive media queries
     right:50%;
     transform: translate(50%)
 }
-#socials-mobile{
-    visibility: hidden;
-}
+
 
 
         #music{
-            top:120px;
+            top:140px;
             right:15px /* 15px padding, same as container */
         }
         #video{
-            top:160px;
+            top:180px;
             right:15px
         }
         #dates{
-            top:200px;
+            top:220px;
             right:15px
         }
         #pictures{
-            top:240px;
+            top:260px;
             right:15px
         }
         #store{
-            top:280px;
+            top:300px;
             right:15px
             
         }
         #contact{
-            top:320px;
+            top:340px;
             right:15px
         }
 
@@ -547,11 +559,11 @@ responsive media queries
         }
         #video{
             top:-35px!important;
-            right:250px!important;
+            right:240px!important;
         }
         #dates{
             top:-35px!important;
-            right:195px!important;
+            right:200px!important;
         }
         #pictures{
             top:-35px!important;
