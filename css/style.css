@@ -60,6 +60,7 @@ responsive media queries
 */
 
 .mgmt-line{
+    display: inline-block;
     padding-right:5px;
     border-right: 1px solid #000;
     }
