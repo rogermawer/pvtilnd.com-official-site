@@ -541,64 +541,64 @@ responsive media queries
 }
 
 /* for super tiny screens */
-@media only screen and (max-width: 321px){
+@media only screen and (max-width: 356px){
     .title-text{
         font-size: 1.2em
     }
-    #music{
+        #music{
             top:-35px!important;
-            right:210px!important;
+            right:240px!important;
         }
         #video{
             top:-35px!important;
-            right:255px!important;
+            right:170px!important;
         }
         #dates{
             top:-35px!important;
-            right:210px!important;
+            right:110px!important;
         }
         #pictures{
             top:-35px!important;
-            right:155px!important;
+            right:45px!important;
         }
         #store{
-            top:-35px!important;
-            right:95px!important;
+            top:-15px!important;
+            right:185px!important;
             
         }
         #contact{
-            top:-35px!important;
-            right:20px!important;
+            top:-15px!important;
+            right:90px!important;
         }
 }
     
 
 /* important tags necessary for nav items to return to original positions after animation on resize of screen */
-    @media only screen and (max-width: 600px) and (min-width:322px), screen and (max-height:578px) {
+    @media only screen and (max-width: 600px), screen and (max-height:578px) {
         #music{
-            top:-35px!important;
-            right:310px!important;
+            top:-35px;
+            right:305px;
         }
         #video{
-            top:-35px!important;
-            right:255px!important;
+            top:-35px;
+            right:250px;
         }
         #dates{
-            top:-35px!important;
-            right:210px!important;
+            top:-35px;
+            right:208px;
         }
         #pictures{
-            top:-35px!important;
-            right:155px!important;
+            top:-35px;
+            right:155px;
         }
         #store{
-            top:-35px!important;
-            right:95px!important;
+            top:-35px;
+            right:90px;
             
         }
         #contact{
-            top:-35px!important;
-            right:20px!important;
+            top:-35px;
+            right:15px;
         }
         
         .banner-text{
