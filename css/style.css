@@ -60,7 +60,6 @@ responsive media queries
 */
 
 .mgmt-line{
-    display: inline-block;
     padding-right:5px;
     border-right: 1px solid #000;
     }
@@ -570,11 +569,39 @@ responsive media queries
             top:-15px!important;
             right:90px!important;
         }
+    #socials{
+        visibility: hidden
+    }
+        #insta-table img, video{
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+        #socials-mobile{
+            visibility: visible;
+            display: block;
+            float: none;
+            text-align: center;
+            margin-top: 15px
+        }
+        .text-box{
+            right:50%;
+            transform: translate(50%, 0%);
+        }
+        .song-socials{
+            font-size: 3em;
+        }
+        .the-stripe{
+            height:70px
+        }
+        .nav-item span{
+            font-size: .8em!important
+        }
 }
     
 
 /* important tags necessary for nav items to return to original positions after animation on resize of screen */
-    @media only screen and (max-width: 600px), screen and (max-height:578px) {
+    @media only screen and (max-width: 600px) and (min-width: 357px), screen and (max-height:578px) {
         #music{
             top:-35px;
             right:305px;
@@ -600,18 +627,7 @@ responsive media queries
             top:-35px;
             right:15px;
         }
-        
-        .banner-text{
-            text-align: left;
-            margin-bottom: 40px
-        }
-        #socials{
-            display: inline-block;
-            float: right;
-        }
-        .title-text{
-            display: inline-block
-        }
+       
         #insta-table img, video{
             width: 300px;
             height: 300px;
@@ -715,7 +731,9 @@ responsive media queries
         .epk-video{
             width:90%;
         }
-        
+        .text-box{
+            max-width: 80%;
+        }
 }
     
     
