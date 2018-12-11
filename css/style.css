@@ -451,6 +451,25 @@ responsive media queries
     bottom: -10px;
     left: 30px;
 }
+ .text-black{
+        color: #000000;
+        font-size: 1em;
+        font-weight: 500
+    }
+    #socials a i:hover{
+        animation: bumper 0.2s;
+        animation-iteration-count:1;
+        -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+        -moz-animation-fill-mode: forwards;    /* FF 5+ */
+        -o-animation-fill-mode: forwards;      /* Not implemented yet */
+        -ms-animation-fill-mode: forwards;     /* IE 10+ */
+        animation-fill-mode: forwards;         /* When the spec is finished */
+    }
+    
+    @keyframes bumper{
+        100% {transform: translate(0px, -3px);}
+    }
+
     .song-socials a i:hover{
         animation: bumper 0.2s;
         animation-iteration-count:1;
@@ -470,19 +489,7 @@ responsive media queries
         animation-fill-mode: forwards;         /* When the spec is finished */
     }
 
-    #socials a i:hover{
-        animation: bumper 0.2s;
-        animation-iteration-count:1;
-        -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
-        -moz-animation-fill-mode: forwards;    /* FF 5+ */
-        -o-animation-fill-mode: forwards;      /* Not implemented yet */
-        -ms-animation-fill-mode: forwards;     /* IE 10+ */
-        animation-fill-mode: forwards;         /* When the spec is finished */
-    }
-    
-    @keyframes bumper{
-        100% {transform: translate(0px, -3px);}
-    }
+   
 .main-contain{
     height: 68%;
 }
@@ -508,28 +515,28 @@ responsive media queries
 
         #music{
             top:140px;
-            right:15px /* 15px padding, same as container */
+            right:15px; /* 15px padding, same as container */
         }
         #video{
             top:180px;
-            right:15px
+            right:15px;
         }
         #dates{
             top:220px;
-            right:15px
+            right:15px;
         }
         #pictures{
             top:260px;
-            right:15px
+            right:15px;
         }
         #store{
             top:300px;
-            right:15px
+            right:15px;
             
         }
         #contact{
             top:340px;
-            right:15px
+            right:15px;
         }
 
 
@@ -602,31 +609,31 @@ responsive media queries
     
 
 /* important tags necessary for nav items to return to original positions after animation on resize of screen */
-    @media only screen and (max-width: 600px) and (min-width: 357px), screen and (max-height:578px) {
+    @media only screen and (max-width: 600px) and (min-width: 357px), screen and (max-height:567px) {
         #music{
-            top:-35px;
-            right:305px;
+            top:-35px!important;
+            right:305px!important;
         }
         #video{
-            top:-35px;
-            right:250px;
+            top:-35px!important;
+            right:250px!important;
         }
         #dates{
-            top:-35px;
-            right:208px;
+            top:-35px!important;
+            right:208px!important;
         }
         #pictures{
-            top:-35px;
-            right:155px;
+            top:-35px!important;
+            right:155px!important;
         }
         #store{
-            top:-35px;
-            right:90px;
+            top:-35px!important;
+            right:90px!important;
             
         }
         #contact{
-            top:-35px;
-            right:15px;
+            top:-35px!important;
+            right:15px!important;
         }
        
         #insta-table img, video{
@@ -717,7 +724,7 @@ responsive media queries
     }
 @media only screen and (max-width: 900px) {
     .spotify-player{
-        width: 100%;
+        width: 90%;
         
     }
 }

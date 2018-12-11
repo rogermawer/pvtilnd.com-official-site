@@ -47,7 +47,28 @@ $(document).ready(function(){
 //        }, 5000*i);
 //    });
 //}
-//        
+//   
+$(document).ready(function(){
+    var winWidth = $(window).width();
+    if(winWidth >= 601) {
+        $('#links, .nav-item').click(function(){
+            $(this).parent().css('overflow','');
+            $(this).animate({'right': '+=500px', opacity: 0}); //send to left 500px
+            $(this).animate({'right': '-=1000px'}); //send to opposite side
+            $(this).animate({'right': '+=500px', opacity: 1}); //send from opposite side
+        });
+    }else{
+        $('#links, .nav-item').click(function(){
+            $(this).parent().css('overflow','');
+            $(this).animate({opacity: 0});
+            $(this).animate({opacity: 1});
+        });
+    }
+    
+});  
+    
+
+
 function shuffle(array) {
     var m = array.length, t, i;
     // While there remain elements to shuffle…
