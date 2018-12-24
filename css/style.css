@@ -711,7 +711,7 @@ responsive media queries
             font-size: 3em;
         }
          .main-img img{
-             margin:0px!important
+             margin-left:0px!important
          }
          
     }
