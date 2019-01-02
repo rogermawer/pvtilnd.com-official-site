@@ -99,6 +99,8 @@ function shuffle(array) {
       
         
    $(document).ready(function(){
+       
+        //if url does not have hash tag then...
         $('#home').fadeIn(100); //let title show when page loads
         $('.nav-item').click(function(){
             $('.hidden').stop().fadeOut(100);//fadeeverything in center out first
@@ -119,6 +121,13 @@ function shuffle(array) {
                 }
             }
         });
+       // if user requested a specific page i.e. hashtage with url
+       if (!(window.location.hash === "")){
+           var pageId = window.location.hash;
+           console.log(pageId);
+           $('.hidden').stop().fadeOut(100);//fadeeverything in center out first
+           $(pageId).next().fadeIn(800);
+       }
        // else, close box with 'x'
         $('.boxclose').click(function(){
             $('.content-box').fadeOut(100);
