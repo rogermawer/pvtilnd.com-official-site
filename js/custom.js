@@ -124,10 +124,18 @@ function shuffle(array) {
        // if user requested a specific page i.e. hashtage with url
        if (!(window.location.hash === "")){
            var pageId = window.location.hash;
-           console.log(pageId);
            $('.hidden').stop().fadeOut(100);//fadeeverything in center out first
            $(pageId).next().fadeIn(800);
        }
+         window.onpopstate = function(event) {
+           var pageId = window.location.hash;
+           $('.hidden').stop().fadeOut(100);//fadeeverything in center out first
+           $(pageId).next().fadeIn(800);
+            if (window.location.hash == ''){
+                $('#home').fadeIn(100);
+            }
+         }
+       
        // else, close box with 'x'
         $('.boxclose').click(function(){
             $('.content-box').fadeOut(100);
