@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css?v=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -26,6 +26,7 @@
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130853897-1"></script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -36,8 +37,10 @@
 
 </head>
     
+    
   <body class="container">
-        <div class="" style="height: 100%;position: relative">
+        <div id="loading">loading...</div>
+        <div class="main-content" style="height: 100%;position: relative;display: none">
             
             <div class="row">
               <div style="" class="col-md-12">
@@ -57,13 +60,19 @@
                 <div class="text-box container">
                     <br>
                     <div id="main" class="mx-auto">
-                       
-                        <p class="text-black">12-14-2018 we released a <a style="color:#000000;text-decoration: underline" href="/">single</a>.</p>
-                        <div class="main-img text-center">
-                    
-                            <a href="/"><img src="/img/single-drawing.png" style="margin-left:340px;margin-top:70px;width:200px;"></a>
-
-                        </div>
+                        <p class="text-black">4-23-2019 NEW ALBUM <a style="color:#000000;text-decoration: underline" href="https://orcd.co/pvtilnd5xx">5xx</a> out now.</p>
+                        <p><a href="/img/5xx-promo-700w.png" target="_blank"><img class="splash-page-img" src="/img/5xx-promo-700w.png"></a></p>
+                        <p class="text-black">4-12-2019 stream <a style="color:#000000;text-decoration: underline" href="/splash">'3BadSoSad'</a>.</p>
+                        <p><a href="/splash" target="_blank"><img class="splash-page-img" src="/img/3badsosad-official.jpg"></a></p>
+                        <p class="text-black">3-26-2019 our new album '5xx' to be released April 23, 2019.</p>
+                        <p class="text-black">3-9-2019 check us out at <a style="color:#000000;text-decoration: underline" href="https://schedule.sxsw.com/2019/artists/2004480">SXSW</a>.</p>
+                        <p><a href="/img/pvtilnd_sxsw19.jpg" target="_blank"><img class="splash-page-img" src="/img/pvtilnd_sxsw19.jpg"></a></p>
+                        <p class="text-black">1-9-2019 we announced winter <a style="color:#000000;text-decoration: underline" href="/tour">tour dates</a>.</p>
+                        <p><a href="/img/website-tour.jpg" target="_blank"><img class="splash-page-img" src="/img/website-tour.jpg"></a></p>
+                        <p class="text-black">12-14-2018 we released a <a style="color:#000000;text-decoration: underline" href="/splash">single</a>.</p>
+                        <p>
+                            <a href="/splash"><img src="/img/single-drawing.png" style="width:200px;"></a>
+                        </p>
                     </div>
                     
                     
@@ -76,6 +85,8 @@
                 <div class="text-box container">
                     <br>
                     <div class="spotify-player">
+                        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/604962747&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                        <br><br>
                         <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/544907061&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
                         <br><br>
                         <iframe src="https://open.spotify.com/embed/artist/21MZoYDTcbPsC5crOQVqho" style="width: 100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
@@ -90,6 +101,10 @@
                     <br>
                     <div id="video" class="epk-video mx-auto">
                       <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/HKEzsizdq_Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
+                      <p></p>
+                      <div class="video-container">
                           <iframe id="drugz" class="" width="560" height="315" src="https://www.youtube.com/embed/BONJYMHfEQA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                       </div>
                     </div>
@@ -97,7 +112,7 @@
             </div>
            
            <!-- tour -->
-              <a class="nav-item tip-box" id="dates" style="" href="#dates"><span class="text-black">LIVE</span></a>
+              <a class="nav-item tip-box" id="dates" style="" href="#dates"><span class="text-black">TIX</span></a>
               <div class="hidden content-box">
                 <div class="text-box container">
                     <br>
@@ -115,8 +130,8 @@
                  <div ng-app="PVTILND-FEED" ng-controller="customersCtrl" id="insta-table"> 
                     <div ng-repeat="x in instaData">
                         <div class="row" ng-if="$even" style="justify-content: center">
-                            <div class="p-2 text-center"><img class="img-fluid" ng-if="isImage(instaData[$index])" ng-src="{{instaData[$index].images.standard_resolution.url}}"><video controls ng-if="isVideo(instaData[$index])"><source ng-src="{{instaData[$index].videos.standard_resolution.url}}" type="video/mp4"></video></div>
-                            <div class="p-2 text-center"><img class="img-fluid" ng-if="isImage(instaData[$index+1])" ng-src="{{instaData[$index+1].images.standard_resolution.url}}"><video controls ng-if="isVideo(instaData[$index+1])"><source ng-src="{{instaData[$index+1].videos.standard_resolution.url}}" type="video/mp4"></video></div>
+                            <div class="p-2 text-center"><img class="img-fluid" ng-if="isImage(instaData[$index])" ng-src="{{instaData[$index].images.standard_resolution.url}}"><video class="img-fluid" controls ng-if="isVideo(instaData[$index])"><source ng-src="{{instaData[$index].videos.standard_resolution.url}}" type="video/mp4"></video></div>
+                            <div class="p-2 text-center"><img class="img-fluid" ng-if="isImage(instaData[$index+1])" ng-src="{{instaData[$index+1].images.standard_resolution.url}}"><video class="img-fluid" controls ng-if="isVideo(instaData[$index+1])"><source ng-src="{{instaData[$index+1].videos.standard_resolution.url}}" type="video/mp4"></video></div>
                         </div>
                     </div>
                 </div>
@@ -197,7 +212,7 @@ app.controller('customersCtrl', function($scope, $http) {
         $('#insta-table').html('Something very bad happened. You should <a href="mailto:pvtilnd@gmail.com?subject=Your shit broke">tell us about it.')
     });
     $scope.isImage = function isImage(instaData){
-        if (instaData.type == 'image'){
+        if (instaData.type == 'image' || instaData.type == 'carousel'){
             return true;
         }else{
             return false;
@@ -216,7 +231,22 @@ app.controller('customersCtrl', function($scope, $http) {
     <script src="js/jquery.easing.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/custom.js"></script>
-    
+
+<!-- Start AEG Pixel Snippet -->
+<script>
+!function(e,t,n,a,i,l,o,s,r){e[i]||(o=e[i]=function(){o.process?o.process.apply(o,arguments):o.queue.push(arguments)},o.queue=[],o.t=1*new Date,s=t.createElement(n),s.async=1,s.src=a+"?t="+Math.ceil(new Date/l)*l,r=t.getElementsByTagName(n)[0],r.parentNode.insertBefore(s,r))}(window,document,"script","//tracking.aegpresents.com/universalpixel/universalpixel.js","kl",864e5),kl("event","pageload");
+</script>
+<!-- End AEG Pixel Snippet -->
+      
+      <!-- load whole page, then show content -->
+      <script>
+        const loadingDiv = document.querySelector('#loading')
+        const pageContent = document.querySelector('.main-content');
+        window.onload = () => {
+            pageContent.classList += (' loaded');
+            loadingDiv.style.display=('none')
+          };
+      </script>
     
   </body>
 </html>

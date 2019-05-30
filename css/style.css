@@ -741,6 +741,9 @@ responsive media queries
             max-width: 80%;
         }
 }
+.loaded{
+    display: block!important;
+}
     
     
    

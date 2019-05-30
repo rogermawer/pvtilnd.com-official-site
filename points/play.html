@@ -1,0 +1,500 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+     <!--original meta tag. very secure-->
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *">-->
+  
+   <link rel="shortcut icon" type="image/x-icon" href="/img/icons/fire.png"/>
+   
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">-->
+    
+    <!-- use this one for total unsafe insanity 
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+-->
+    
+    
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- google, dont index -->
+    <META NAME="robots" CONTENT="noindex,nofollow">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/logout.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+ 
+    <script>
+        if (window.localStorage.getItem("username") === null){
+            window.location = "/points/home";
+        }
+    </script>
+        
+       
+       
+    
+
+
+    <!-- Your app title -->
+    <title>My App</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+
+    
+    
+    <style>
+        body, div, p{
+            font-family: 'Roboto', sans-serif;
+        }
+        #myModal{
+            top:0; /* vertical align modal box in middle */
+        }
+        
+        body{
+            font-family: "helvetica", sans-serif;
+        }
+        #mainDisplay, #recentAction{
+            width: 100%;
+        }
+        #mainDisplay td{
+            font-size: 1.5em;
+            color:black;
+        }
+        #mainDisplay td.value:hover{
+            color:#cc5500;
+        }
+        .display-points{
+            padding-left:0px;
+            margin-left: auto
+            
+        }
+        .page{
+            width:100%;
+/*             background: linear-gradient(to bottom, #fffff4,#037971);*/
+            background-color: #fffff4
+        }
+        .point-header{
+            font-size: 1.5em!important;
+            color: #000000;
+        }
+        .point-header-style{
+            color:#000;
+        }
+        .navbar-inner{
+            background-color: ;
+        }
+          .centered{
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: -webkit-flex;
+              display: flex;
+              justify-content: center;
+        }
+        .logout-button{
+            margin-top:30px;
+            width:100%;
+            background-color: #fffff4;
+            border: none;
+            font-weight: 600
+        }
+        
+        .short-box{
+            width:50px;
+        }
+        .modal-content{
+            border: 1px solid black;
+            background: ;
+        }
+        .modal-close{
+            background: #000;
+            color:#fff;
+            border:1px solid;
+            font-size: 1em
+        }
+        .modal-body{
+            background:#fff;
+        }
+        .modal-title{
+            color:#cc5500;
+            font-size: 2em;
+            text-align: left;
+            
+        }
+        
+        .modal-header{
+            font-size: .5em!important
+        }
+        
+        .modal{
+            width:220px;
+            margin-left: -110px;
+            text-align: left;
+        }
+        .hiding{
+            display: none;
+        }
+        .addPoints-container, .recentAction-container{
+            min-width: 300px!important;
+            width:100%;
+        }
+        
+        #pointvalue{
+            width:95%;
+        }
+        #pointsTable{
+            -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+        
+        #recentAction{
+            -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+        
+       
+        
+.points-loader, action-loader {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+}
+.points-loader:after, .action-loader:after {
+  content: " ";
+  display: block;
+  width: 46px;
+  height: 46px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  border-color: #000 transparent #000 transparent;
+  animation: loader 1.2s linear infinite;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+    </style>
+    
+</head>
+
+<body ng-app="myApp">
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+<!--
+            <p>Edit my profile</p>
+            <p>Upload a new picture</p>
+-->
+            <button class="logout-button" onclick="logOut();">Log Out</button>
+        </div>
+    </div>
+
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Top Navbar-->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+                    <div ng-controller="headerInfo" style="margin: auto" class="point-header sliding" ng-cloak>{{loggedInUser}}</div>
+                    <div class="right">
+                        <!--
+                          Right link contains only icon - additional "icon-only" class
+                          Additional "open-panel" class tells app to open panel when we click on this link
+                        -->
+                        
+                       
+                        <a href="#" class="link icon-only open-panel"><i style="color: #000" class="fas fa-ellipsis-v"></i></a>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-through toolbar-through">
+                <!-- Page, "data-page" contains page name -->
+                <div data-page="index" class="page">
+                    <!-- Scrollable page content -->
+                    <div class="page-content centered">
+                        <div class="content-block">
+                            <div class="addPoints-container">
+                                <p style="font-weight: 600;color:#cc5500;">Tap a user to add points:</p>
+                                <div style="text-align: center;">
+                                <div id="points-spinner" class="points-loader"></div>
+                                </div>
+                                <div id="insert" class="pointBox" style="">
+                                    <div ng-controller="customersCtrl" ng-cloak>
+                                        
+                                    <table class="hiding" style="width:100%" id="pointsTable">
+                                        <p ng-show="errorGetDB">Something went terribly wrong</p>
+                                    <tr ng-repeat="x in userData | orderBy:'-points'">
+                                        <td class="openModal" ng-click="openModal();getData($event);">
+                                        {{ x.user_name}}
+                                        </td>
+                                        <td>{{x.points}}</td>
+                                    </tr>
+                                </table>
+                                        
+                                        <div>{{info}}</div>
+                                            
+                                
+                                        
+                                        <!-- this is the pop up box to add points in -->
+
+                                
+                                <div class="modal fade" id="myModal" role="dialog">
+                                    <div class="modal-dialog modal-sm modal-dialog-centered">
+                                          <!-- Modal content-->
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <h4 class="modal-title">Give {{receiver}} Points?</h4>
+                                                
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                
+                                            </div>
+                                            <div class="modal-body">
+                                              <form id="pointsForm" class="points-form" action="" name="submitForm" ng-submit="">
+
+                                                <input style="display:none" id="point-receiver" type="text" name="receiver" ng-value="receiver">
+                                                  
+                                                <label>Points</label><br>
+                                                <input style="border: 1px solid black" id="pointvalue" type="tel" min="-100" max="100" ng-model="formData.points" required><br><br>
+
+                                                <textarea style="border: 1px solid black" id="commentvalue" type="text" placeholder="comment (optional)" maxlength="50" ng-model="formData.comment"></textarea><br>
+
+                                                <input class="modal-close" ng-disabled="submitForm.$invalid" ng-click="insertInfo();getAction();closeModal();" type="button" value="Submit" />
+
+                                              </form>
+                                            </div>
+<!--
+                                            <div class="modal-footer">
+                                              <button type="button" class="modal-close btn btn-default" data-dismiss="modal">Close</button>
+                                            </div>
+-->
+                                          </div>
+                                    </div>
+                                </div>
+                                    </div>
+                                    
+
+                                </div>
+                            </div>
+                            
+                            <div class="recentAction-container" ng-controller="customersCtrl" ng-cloak>
+                                 <p style="font-weight: 600;color:#cc5500;margin-top:40px">Recent Action:</p>
+                                <div style="text-align: center;">
+                                <div id="action-spinner" class="action-loader"></div>
+                                </div>
+                                 <table class="hiding" style="width:100%;" id="recentAction">
+                                    <p ng-show="errorGetDB">Something went terribly wrong</p>
+                                     <tr ng-repeat="x in actionData">
+                                        <td>
+                                        {{ x.giver}} <i style='color:#000' class='fas fa-arrow-right'></i> {{x.receiver}}
+                                            <p style="padding:5px;margin: 0"><em>"{{x.comment}}"</em></p>
+                                        </td>
+                                        <td style="vertical-align: top" ng-if="x.points >= 0"><i style='color:#32CD32;' class='fas fa-arrow-up'></i> {{x.points}}</td>
+                                        <td ng-if="x.points < 0" style="vertical-align: top"><i style='color:red' class='fas fa-arrow-down'></i> {{x.points}}
+                                        </td>
+                                         
+                                     </tr>
+                                </table>
+                                <br>
+                                <input type="button" value="manually refresh action" ng-click="getAction();">
+                               
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom Toolbar
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                    
+                    <a href="#" class="link">Link 1</a>
+                    <a href="#" class="link">Link 2</a>
+                </div>
+            </div>
+-->
+        </div>
+    </div>
+ 
+
+    
+
+    
+<script>
+function pointsLoaded(){
+    var spinner = document.getElementById("points-spinner");
+    spinner.classList.remove("points-loader");
+    var pointsTable = document.getElementById('pointsTable');
+    pointsTable.classList.remove('hiding');
+};
+        
+function actionLoaded(){
+    var spinner = document.getElementById("action-spinner");
+    spinner.classList.remove("action-loader");
+    var pointsTable = document.getElementById('recentAction');
+    pointsTable.classList.remove('hiding');
+};
+
+
+</script>
+    
+<script>
+    
+
+   
+var app = angular.module('myApp', []);
+    
+app.controller('headerInfo', function($scope) {
+    $scope.loggedInUser = localStorage.getItem('username');
+});
+app.controller('customersCtrl', function($rootScope, $scope, $http) {
+    getInfo();
+    function getInfo(){
+        $http.get("/points/showdb.php").then(function(response) {
+            $scope.userData = response.data;
+            pointsLoaded(); //remove spinner
+        }, function(response){
+            $scope.errorGetDB = "Something went terribly wrong"; //var only created if error is produced
+            pointsLoaded();
+    });
+    }
+    getAction(); //to get initial action
+    $rootScope.getAction = function(){
+       setTimeout(getAction, 1000); //updating is not instantaneous, so need timeout.
+    };
+    function getAction(){
+        $http.get("/points/showcomments.php").then(function(response) {
+            $scope.actionData = response.data;
+            actionLoaded(); //remove spinner
+    }, function(response){
+        $scope.errorGetDB = "Something went terribly wrong"; //var only created if error is produced
+        actionLoaded();
+    });
+    }
+    
+//-----------------------------------//
+    
+    $scope.openModal = function(){
+        $("#myModal").modal('show');
+    }
+    $scope.closeModal = function(){
+        $("#myModal").modal('hide');
+    }
+        
+    //this will return an obj with all info needed for db
+    $scope.getData = function(e){
+        var thisElement = e.currentTarget;
+        var innerText = thisElement.innerHTML.trim();
+        $scope.receiver = innerText; // bind value of clicked user to form's hidden receiver input value
+        var giver = window.localStorage.getItem("username");
+        $scope.formData = {'receiver': innerText,'giver': giver, 'points': '', 'comment': ''}
+        formData = $scope.formData; //global variable
+        return formData;
+    }
+    $scope.insertInfo = function(){
+        var config = {
+            method: "POST",
+            url: '/points/insert.php',
+            headers: {'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8'},
+            data: {
+                'receiver': formData.receiver,
+                'giver': formData.giver,
+                'points': formData.points,
+                'comment': formData.comment
+            }
+        };
+        var request = $http(config);
+        request.then(function(response){
+            $scope.msg = response.data;
+            getInfo(); //update users
+            $rootScope.getAction; //this is why it needs to be $rootScope
+        }, function(error){
+            $scope.msg = error.data;
+        });
+    };
+});
+
+</script>
+    
+
+    
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <script src="js/popper.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+</body>
+
+</html>

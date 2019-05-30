@@ -1,0 +1,35 @@
+[11-Jan-2019 12:31:50 America/Chicago] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[11-Jan-2019 12:43:31 America/Chicago] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[16-Jan-2019 12:34:03 America/Chicago] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[12-Feb-2019 15:54:37 America/Chicago] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[12-Feb-2019 15:54:37 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'Wrong Password' in /home3/pvtilnd/public_html/points/login.php:35
+Stack trace:
+#0 {main}
+  thrown in /home3/pvtilnd/public_html/points/login.php on line 35
+[12-Feb-2019 15:54:42 America/Chicago] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[20-Mar-2019 19:56:13 America/Chicago] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[28-May-2019 18:25:29 America/Chicago] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[28-May-2019 18:25:29 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'No user found by that name' in /home3/pvtilnd/public_html/points/login.php:43
+Stack trace:
+#0 {main}
+  thrown in /home3/pvtilnd/public_html/points/login.php on line 43
+[28-May-2019 18:25:33 America/Chicago] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[28-May-2019 18:25:33 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'No user found by that name' in /home3/pvtilnd/public_html/points/login.php:43
+Stack trace:
+#0 {main}
+  thrown in /home3/pvtilnd/public_html/points/login.php on line 43
+[28-May-2019 18:25:43 America/Chicago] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[28-May-2019 18:25:43 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'No user found by that name' in /home3/pvtilnd/public_html/points/login.php:43
+Stack trace:
+#0 {main}
+  thrown in /home3/pvtilnd/public_html/points/login.php on line 43
+[28-May-2019 18:25:47 America/Chicago] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[28-May-2019 18:25:47 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'No user found by that name' in /home3/pvtilnd/public_html/points/login.php:43
+Stack trace:
+#0 {main}
+  thrown in /home3/pvtilnd/public_html/points/login.php on line 43
+[29-May-2019 22:17:34 America/Chicago] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[29-May-2019 22:17:34 America/Chicago] PHP Fatal error:  Uncaught exception 'Exception' with message 'No user found by that name' in /home3/pvtilnd/public_html/points/login.php:43
+Stack trace:
+#0 {main}
+  thrown in /home3/pvtilnd/public_html/points/login.php on line 43
